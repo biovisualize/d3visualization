@@ -1,46 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>D3visualization by biovisualize</title>
-  </head>
+<head>
+    <title></title>
+    <meta charset=utf-8>
+    <script type="text/javascript" src="./d3.v3.js"></script>
+    <style>
+        body {
+            font-size: 100%;
+            font-family: 'Monda', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        #nav {
+            background-color: rgba(250,250,250,0.7);
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 20%;
+            max-height: 100%;
+            overflow-y: auto;
+            border-left: 1px solid #CCC;
+        }
+        #nav li {
+            margin-top: 4px;
+        }
+        .menu1-container {
+            height: 210px;
+            z-index: 9;
+            width: 100%;
+            padding: 4px 12px;
+            position: fixed;
+            top: 0;
+            background-color: rgba(250,250,250,0.92);
+            overflow-y: auto;
+            -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Saf3.0+, Chrome
+            -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //FF3.5+
+            box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Opera 10.5, IE 9.0
+            text-transform: capitalize;
+        }
+        .menu2-container {
+            padding: 12px;
+            margin-top: 210px;
+            text-transform:capitalize;
+        }
+        .menu2-search{
+            background: url('http://icons.iconarchive.com/icons/gakuseisean/radium-neue/128/Search-icon.png') no-repeat scroll left;
+            background-size: 15px 15px;
+            padding-left:20px;
+        }
+        #list {
+            width: 80%;
+        }
+        #list li {
+            cursor: default;
+            border-radius: 2px;
+            margin-top: 2.5%;
+            display: inline-block;
+            margin-right: 1.6em;
+            border-left: 6px solid #CCC;
+            padding: 2px 6px;
+            -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* Saf3.0+, Chrome */
+            -moz-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* FF3.5+ */
+            box-shadow:0 0 10px 0 rgba(0,0,0,0.1); /* Opera 10.5, IE 9.0 */
+            -webkit-transition:all .28s ease-out;
+        }
+        #list li:hover {
+            -webkit-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Saf3.0+, Chrome */
+            -moz-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* FF3.5+ */
+            box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Opera 10.5, IE 9.0 */
+        }
+        li {
+            list-style: none;
+        }
+        li a:link {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+        li a:visited {
+            color: black;
+        }
+        .menu3-container li a:visited {
+            color: #888;
+        }
+        .menu3-container li {
+            width: 200px;
+            height: auto;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .value {
+            opacity: 0.2;
+        }
+        .thumbnail {
+            /*height: 200px;*/
+            width: 200px;
+            /*width: auto;*/
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid white;
+            border-radius: 2px;
+        }
+        .info{
+            background: #eee;
+            padding: 5px;
+        }
+        .about-box{
+            border: 1px solid silver;
+            background: white;
+            position: absolute;
+            width: 500px;
+            font-size: 12px;
+            padding: 20px;
+            display: none;
+        }
+        .about-close{
 
-  <body>
-    <div id="container">
-      <div class="inner">
+        }
+    </style>
 
-        <header>
-          <h1>D3visualization</h1>
-          <h2>An alternative gallery for d3.js</h2>
-        </header>
+    <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="info">D3.js Gallery || <a class="about-link" href="">About</a></div>
+<div class="about-box">
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/biovisualize/d3visualization/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/biovisualize/d3visualization/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/biovisualize/d3visualization" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <span class="about-close">X</span>
 
-        <hr>
+    <h1>Why an alternative gallery?</h1>
 
-        <section id="main_content">
-          <p>This is a placeholder for the upcoming gallery</p>
-        </section>
+    <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url:
 
-        <footer>
-          D3visualization is maintained by <a href="https://github.com/biovisualize">biovisualize</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+    <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="">fork this gallery</a> or load the data directly from the spreadsheet.
 
-        
-      </div>
+    <h1>How to contribute?</h1>
+
+    <p>You can share your work on the official gallery and a group of maintainers will cherrypick them here. You can also add it yourself to the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">spreadsheet</a>.</p>
+
+    <p>We really need help tagging the entries, adding screenshots, crediting the correct authors, removing duplicates, etc.</p>
+
+    <p>If you want to see some new functionalities, feel free to <a href="">contribute</a> or to send a <a href="">feature request</a>.</p>
+
+    <h1>Credits</h1>
+
+    <p>D3.js is the work of Mike Bostock and a group of dedicated geniuses.</p>
+
+    <p>Every entry in this gallery is copyrighted by its author. If you want your work to be removed, a special copyright mention to be added or credit information changed, just <a href="">file a request</a> and we will answer your request promptly, as we strongly feel open-source is about respect for the creators.</p>
+
+    <p>This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.</p>
+
+</div>
+<div class="gallery">
+    <div id="nav">
+        <div class="menu1-container"></div>
+        <div class="menu2-container">
+            <input type="text" class="menu2-search" />
+        </div>
     </div>
-  </body>
+    <div id="list">
+        <div class="menu3-container"></div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+    d3.select('.about-link').on('click', function(d, i){
+        d3.event.preventDefault();
+        d3.select('.about-box').style({display: 'block'});
+    })
+    d3.select('.about-close').on('click', function(d, i){ d3.select('.about-box').style({display: 'none'}); });
+
+    var vizTypeScale = d3.scale.category20c();
+    var splitChar = '; ';
+    var json;
+
+    var data1 = {
+        href: function(d, i){return '#'+ d.dimension+'=all';},
+        html: function(d, i){ return d.displayName;}
+    };
+
+    var data2 = {
+        href: function(d, i){ return '#'+ d.dimension+'='+d.key; },
+        html: function(d, i){ return d.key+'<span class="value">'+ d.value+'</span>';}
+    };
+
+    var data3 = {
+        href: function(d, i){return d.url;},
+        html: function(d, i){
+            var content = d.title;
+            if(d.author) content += '-'+ d.author;
+            if(d.thumbnail) content += "<br /> <img src='"+d.thumbnail+"' class='thumbnail'/><br />";
+            return content;}
+    };
+
+    d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
+        json = _json;
+        buildList(dataTransformMenu1(), '.menu1-container', data1);
+        buildList(dataTransformMenu2('visualizationType'), '.menu2-container', data2);
+        buildList(dataTransformMenu3('title', 'all'), '.menu3-container', data3);
+        processLocationHash();
+    });
+
+    function dataTransformMenu1(){
+        //TODO: change in spreadsheet
+        var dimensionsMap = {author: 'Author', documentType: 'Format', sourceName:
+                'Source', visualizationType: 'Visualization', technology: 'Tag', title: 'Title', url: 'URL'};
+        return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
+    }
+
+    function dataTransformMenu2(dimension, filter){
+        var splitted = d3.merge(json.map(function(d, i){
+            return splitter(d[dimension]);
+        }));
+        var filtered = (filter) ? splitted.filter(function(d, i){ return d.toLowerCase().indexOf(filter.toLowerCase()) != -1; }) : splitted;
+        var unemptied = filtered.map(function(d, i){return (d == '') ? 'untagged' : d;});
+        var grouped = groupCount(unemptied);
+        var prepared = d3.entries(grouped).map(function(d, i){
+                d.dimension = dimension;
+                return d;
+            });
+        var sorted = prepared.sort(function(a, b){return b.value - a.value});
+        return sorted;
+    }
+
+    function splitter(data){
+        return (data.indexOf(splitChar) !== -1) ? data.split(splitChar) : data;
+    }
+
+    function groupCount(arr) {
+        var uniques = {}, val;
+        var dups = {};
+        for (var i = 0, len = arr.length; i < len; i++) {
+            val = arr[i];
+            if (val in uniques) {
+                uniques[val]++;
+                dups[val] = uniques[val];
+            } else uniques[val] = 1;
+        }
+//        return(dups);
+        return(uniques);
+    }
+
+    function dataTransformMenu3(dimension, value){
+        var filtered = json.filter(function(d, i){
+            var splitted = splitter(d[dimension]);
+            if (value == 'all') return true;
+            else if(value == 'untagged') return (splitted == '');
+            else if(splitted.indexOf(value) >= 0) return true;
+            else return false;
+        });
+        var sorted = filtered.sort(function(a, b){
+                return (a.thumbnail == '') - (b.thumbnail == '');
+            });
+        return sorted;
+    }
+
+    function buildList(data, containerSelector, content){
+        var entries = d3.select(containerSelector)
+            .selectAll("li.entry")
+            .data(data);
+        entries.enter().append("li")
+            .attr('class', 'entry')
+            .append('a');
+        entries.each(function(d, i){
+            d3.select(this)
+                .select('a')
+                .attr('href', content.href)
+                .html(content.html)
+        });
+        entries.exit().remove();
+    }
+
+    d3.select('.menu2-search')
+        .on('change', function(d, i){ filterList(this.value); })
+        .on('keyup', function(d, i){ filterList(this.value); });
+    d3.select('body').on('mouseover', function(){
+            if (d3.event.target.nodeName == 'A') d3.select('.menu2-search').node().blur();
+        });
+
+    function filterList(value){
+        var dimension = window.location.hash.substring(1).split('=')[0] || 'visualizationType';
+        buildList(dataTransformMenu2(dimension, value), '.menu2-container', data2);
+    }
+
+    function processLocationHash(){
+        if(window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            var hashSplit = hash.split('=');
+            if(hashSplit[1] == 'all') buildList(dataTransformMenu2(hashSplit[0]), '.menu2-container', data2);
+            buildList(dataTransformMenu3(hashSplit[0], hashSplit[1]), '.menu3-container', data3);
+        }
+    }
+
+    d3.select(window).on('hashchange', function () {
+        processLocationHash();
+    });
+
+
+</script>
+
+</body>
+>>>>>>> 02d7861... First prototype
 </html>
