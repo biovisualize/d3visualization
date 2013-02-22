@@ -132,23 +132,23 @@
 
     <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url:
 
-    <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="">fork this gallery</a> or load the data directly from the spreadsheet.
+    <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="https://github.com/biovisualize/d3visualization">fork this gallery</a> or load the data directly from the spreadsheet.
 
     <h1>How to contribute?</h1>
 
-    <p>You can share your work on the official gallery and a group of maintainers will cherrypick them here. You can also add it yourself to the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">spreadsheet</a>.</p>
+    <p>You can share your work on the official gallery and a group of maintainers will cherrypick them here. You can also add it yourself to the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">spreadsheet</a>, though it will sometimes be closed for maintenance.</p>
 
     <p>We really need help tagging the entries, adding screenshots, crediting the correct authors, removing duplicates, etc.</p>
 
-    <p>If you want to see some new functionalities, feel free to <a href="">contribute</a> or to send a <a href="">feature request</a>.</p>
+    <p>If you want to see some new functionalities, feel free to <a href="https://github.com/biovisualize/d3visualization/pulls">contribute</a> or to send a <a href="https://github.com/biovisualize/d3visualization/issues">feature request</a>.</p>
 
     <h1>Credits</h1>
 
     <p>D3.js is the work of Mike Bostock and a group of dedicated geniuses.</p>
 
-    <p>Every entry in this gallery is copyrighted by its author. If you want your work to be removed, a special copyright mention to be added or credit information changed, just <a href="">file a request</a> and we will answer your request promptly, as we strongly feel open-source is about respect for the creators.</p>
+    <p>Every entry in this gallery is copyrighted by its author. If you want your work to be removed, a special copyright mention to be added or credit information changed, just <a href="https://github.com/biovisualize/d3visualization/issues">file a request</a> and we will answer your request promptly, as we strongly feel open-source is about respect for the creators.</p>
 
-    <p>This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.</p>
+    <p>This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community and support from <a href="http://www.datameer.com/">Datameer</a>. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.</p>
 
 </div>
 <div class="gallery">
@@ -297,6 +297,16 @@
         processLocationHash();
     });
 
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38721366-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
 </script>
 
