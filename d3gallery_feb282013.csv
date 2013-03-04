@@ -1,0 +1,1127 @@
+title,url,author,documentType,sourceName,visualizationType,technology,thumbnail,date
+The business of Bond,http://007.lucklaboratories.com/,,,,,,,
+Get dirty with data using d3.js,http://2011.12devsofxmas.co.uk/2012/01/data-visualisation/,Clinton Montague,Introductory tutorials,,,,,
+Bubbles generator using a simplex noise,http://2013.poster.thirteen23.com/generator/,Adam Luikart,standalone visualization,,experiment,,,
+A Race to Entitlement,http://3angular.roberryarts.com/,,,,,,,
+Presentation on Visualizing Data in D3.js and mapping tools at NetTuesday,http://affinitybridge.com/blog/presentation-visualizing-data-d3js-and-mapping-tools-nettuesday,Mack Hardy,video,,,,,
+D3 Tutorials,http://alignedleft.com/tutorials/d3/,Scott Murray,Introductory tutorials,,,,,
+OECD Health Government Spending and Obesity Rates (nvd3),http://ameliamango.com/fatness.html,Amelia Mango,,,,,,
+Daily data return rates for seismic networks in the EarthScope USArray,http://anf.ucsd.edu/tools/data_return_rates/,Rob Newman,,,,,,
+Chart Wheel Visualization,http://anilomanwar.github.com/d3jsExperiments/ChartWheel.html,Anil Omanwar,code library,github page,,,,
+D3.js: Data-Driven Delight,http://anna.ps/talks/fel/#/,Anna Powell-Smith,talk slides,,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%209.33.27%20AM.png,
+Running Away Balloons - simple game,http://astekfoto.blogspot.be/2012/11/running-away-ballons.html,Astek,blog post,,experiment,,http://kwout.com/cutout/m/p9/k7/gyj_w200.jpg,
+"Data Visualization with D3.js, slides and video",http://benclinkinbeard.com/talks/2012/NCDevCon/#/,Ben Clinkinbeard,talks,NCDevCon,,,,
+Sparklines,http://benjchristensen.com/2011/08/08/simple-sparkline-using-svg-path-and-d3-js/,Ben J. Christensen,blog post,,sparkline,,http://kwout.com/cutout/f/n3/sd/c36_w200.jpg,
+Dual scale line chart,http://benjchristensen.com/2012/05/02/line-graphs-using-d3-js/,,,,,,,
+Interactive Line Graph,http://benjchristensen.com/2012/05/15/interactive-line-graph-using-d3-js/,,,,line chart,,,
+Interactive visual breakpoint detection on SegAnnDB,http://bioviz.rocq.inria.fr/plotter/,Toby Dylan Hocking,,,,,,
+SCION simulation environment,http://bit.ly/PvWgUH,,,,network,,,
+Confidence interval in poll surveys,http://bit.ly/QHVOU0,,,,,,,
+Comparing the same surveys by different polling organizations (polish),http://bit.ly/US45pL,,,,,,,
+Marimekko Chart,http://bl.ocks.org/1005090,Mike Bostock,code viewer,bl.ocks,marimekko,,http://bl.ocks.org/d/1005090/thumbnail.png,12/19/2012
+Zoomable Icicle,http://bl.ocks.org/1005873,Mike Bostock,code viewer,bl.ocks,icicle,,https://gist.github.com/mbostock/1005873/raw/thumbnail.png,10/11/2012
+Matrix Layout,http://bl.ocks.org/1009139,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1009139/raw/thumbnail.png,12/20/2012
+External SVG,http://bl.ocks.org/1014829,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1014829/raw/thumbnail.png,10/11/2012
+Line Tension,http://bl.ocks.org/1016220,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1016220/raw/thumbnail.png,10/11/2012
+Superformula Tweening,http://bl.ocks.org/1020902,Mike Bostock,code viewer,bl.ocks,experiment,,https://gist.github.com/mbostock/1020902/raw/thumbnail.png,10/11/2012
+Superformula Tweening,http://bl.ocks.org/1020902,,code viewer,bl.ocks,experiment,,,
+Superformula Explorer,http://bl.ocks.org/1021103,,code viewer,bl.ocks,experiment,,,
+Multi-Foci Force Layout,http://bl.ocks.org/1021841,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1021841/raw/thumbnail.png,12/20/2012
+Force-directed layout with multiple Foci,http://bl.ocks.org/1021953,,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1021953/raw/thumbnail.png,
+Hierarchical Edge Bundling,http://bl.ocks.org/1044242,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1044242/raw/thumbnail.png,12/19/2012
+Chord Diagram,http://bl.ocks.org/1046712,Mike Bostock,code viewer,bl.ocks,chord diagram,,,
+Area Transition,http://bl.ocks.org/1059602,Ricardo Marimón,code viewer,bl.ocks,area chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.24.22%20PM.png,
+Collapsible tree,http://bl.ocks.org/1061834,Mike Bostock,code viewer,bl.ocks,tree,,,
+Collapsible Force Layout,http://bl.ocks.org/1062288,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1062288/raw/thumbnail.png,12/20/2012
+Force-Directed Symbols,http://bl.ocks.org/1062383,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1062383/raw/thumbnail.png,12/20/2012
+OMG Particles!,http://bl.ocks.org/1062544,Mike Bostock,code viewer,bl.ocks,experiment,,https://gist.github.com/mbostock/1062544/raw/thumbnail.png,12/17/2012
+Venn Diagram with Opacity,http://bl.ocks.org/1067616,Mike Bostock,code viewer,bl.ocks,venn diagram,,https://gist.github.com/mbostock/1067616/raw/thumbnail.png,12/20/2012
+Venn Diagram with Clipping,http://bl.ocks.org/1067636,Mike Bostock,code viewer,bl.ocks,venn diagram,,https://gist.github.com/mbostock/1067636/raw/thumbnail.png,12/20/2012
+Date Ticks,http://bl.ocks.org/1071269,Mike Bostock,code viewer,bl.ocks,axis,,https://gist.github.com/mbostock/1071269/raw/thumbnail.png,10/11/2012
+Force-Directed States of America,http://bl.ocks.org/1073373,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/1073373/raw/thumbnail.png,10/11/2012
+Candlestick charts,http://bl.ocks.org/1074045,Aaron Beppu,code viewer,bl.ocks,candlestick chart,,,
+Force-Directed Layout from XML,http://bl.ocks.org/1080941,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1080941/raw/thumbnail.png,10/11/2012
+Linear Gradient,http://bl.ocks.org/1086421,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1086421/raw/thumbnail.png,1/6/2013
+HTML Overlay with pageX / pageY,http://bl.ocks.org/1087001,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1087001/raw/thumbnail.png,10/11/2012
+Collapsible Indented Tree,http://bl.ocks.org/1093025,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1093025/raw/thumbnail.png,1/22/2013
+Collapsible Force Layout,http://bl.ocks.org/1093130,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1093130/raw/thumbnail.png,12/20/2012
+Modifying a Force Layout,http://bl.ocks.org/1095795,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1095795/raw/thumbnail.png,1/11/2013
+PolarClock,http://bl.ocks.org/1096355,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1096355/raw/thumbnail.png,1/13/2013
+Arc Tween (Clock),http://bl.ocks.org/1098617,Mike Bostock,code viewer,bl.ocks,arc,,https://gist.github.com/mbostock/1098617/raw/thumbnail.png,10/11/2012
+Segmented Lines and Slope Coloring,http://bl.ocks.org/1117287,,code viewer,bl.ocks,,,,
+Rounded Rectangles,http://bl.ocks.org/1123639,Mike Bostock,code viewer,bl.ocks,experiment,,https://a248.e.akamai.net/camo.github.com/7cfce378de825a886f29b9b4f112f413099785e1/687474703a2f2f64336a732e6f72672f65782f726f6e6465642d726563742e706e67,
+Chained Transitions,http://bl.ocks.org/1125997,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1125997/raw/thumbnail.png,10/11/2012
+Bounded Force Layout,http://bl.ocks.org/1129492,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1129492/raw/thumbnail.png,10/11/2012
+Stacked Bar Chart,http://bl.ocks.org/1134768,Mike Bostock,code viewer,bl.ocks,stacked bar chart,,https://gist.github.com/mbostock/1134768/raw/thumbnail.png,10/11/2012
+Spermatozoa,http://bl.ocks.org/1136236,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1136236/raw/thumbnail.png,1/23/2013
+Force-Directed Tree,http://bl.ocks.org/1138500,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1138500/raw/thumbnail.png,10/11/2012
+Dial examples,http://bl.ocks.org/1144047,Ricardo Marimón,code viewer,bl.ocks,dial,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.22.13%20PM.png,
+Mobile Patent Suits,http://bl.ocks.org/1153292,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1153292/raw/thumbnail.png,1/28/2013
+Small Multiples,http://bl.ocks.org/1157787,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1157787/raw/thumbnail.png,10/11/2012
+getBBox,http://bl.ocks.org/1160929,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1160929/raw/thumbnail.png,10/11/2012
+Axis Component,http://bl.ocks.org/1166403,Mike Bostock,code viewer,bl.ocks,axis,,https://gist.github.com/mbostock/1166403/raw/thumbnail.png,1/9/2013
+Dots,http://bl.ocks.org/1169680,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1169680/raw/thumbnail.png,10/11/2012
+Transition End,http://bl.ocks.org/1171371,Mike Bostock,code viewer,bl.ocks,,,,8/25/2011
+Array Subclassing Test,http://bl.ocks.org/1174302,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1174302/raw/thumbnail.png,10/11/2012
+Transition Example,http://bl.ocks.org/1175688,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1175688/raw/thumbnail.png,10/11/2012
+style.setProperty,http://bl.ocks.org/1177588,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1177588/raw/thumbnail.png,10/11/2012
+Pixymaps (Dragging),http://bl.ocks.org/1177827,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1177827/raw/thumbnail.png,1/28/2013
+Pixymaps (Scrolling),http://bl.ocks.org/1177880,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1177880/raw/thumbnail.png,10/11/2012
+SVG Patterns,http://bl.ocks.org/1178682,Ricardo Marimón,code viewer,bl.ocks,doughnut chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.20.54%20PM.png,
+"Line chart with zoom, pan, and axis rescale",http://bl.ocks.org/1182434,Stephen Bannasch,code viewer,bl.ocks,line chart,,,
+Global Surface Temperature: 500 ... 2009,http://bl.ocks.org/1184766,Stephen Bannasch,code viewer,bl.ocks,line chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.17.17%20PM.png,
+Force Layout from Adjacency List,http://bl.ocks.org/1199811,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1199811/raw/thumbnail.png,10/11/2012
+Force Layout with Tooltips,http://bl.ocks.org/1212197,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1212197/raw/thumbnail.png,10/11/2012
+Force Layout with Mouseover Labels,http://bl.ocks.org/1212215,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1212215/raw/thumbnail.png,10/11/2012
+D3.js nested data,http://bl.ocks.org/1219585,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1219585/raw/thumbnail.png,10/11/2012
+Table Sorting,http://bl.ocks.org/1226718,,code viewer,bl.ocks,table,,,
+Merge Sort,http://bl.ocks.org/1243323,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1243323/raw/thumbnail.png,12/19/2012
+Spinny Globe,http://bl.ocks.org/1246403,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1246403/raw/thumbnail.png,10/11/2012
+Collapsible tree with labels,http://bl.ocks.org/1249394,,code viewer,bl.ocks,tree,,,
+Multi-Foci Force Layout,http://bl.ocks.org/1249681,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1249681/raw/thumbnail.png,12/20/2012
+D3 Show Reel,http://bl.ocks.org/1256572,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1256572/raw/thumbnail.png,12/11/2012
+DOM-to-Canvas using D3,http://bl.ocks.org/1276463,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1276463/raw/thumbnail.png,10/11/2012
+Hierarchical Bar Chart,http://bl.ocks.org/1283663,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1283663/raw/thumbnail.png,10/11/2012
+D3 Hello World,http://bl.ocks.org/1300016,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1300016/raw/thumbnail.png,10/11/2012
+Pie Multiples,http://bl.ocks.org/1305111,Mike Bostock,code viewer,bl.ocks,pie chart,,https://gist.github.com/mbostock/1305111/raw/thumbnail.png,10/11/2012
+Pie Multiples with Nesting,http://bl.ocks.org/1305337,Mike Bostock,code viewer,bl.ocks,pie chart,,https://gist.github.com/mbostock/1305337/raw/thumbnail.png,11/29/2012
+Autoforking,http://bl.ocks.org/1305347,Mike Bostock,code viewer,bl.ocks,,,,12/18/2012
+Sunburst with Distortion,http://bl.ocks.org/1306365,Mike Bostock,code viewer,bl.ocks,sunburst,,https://gist.github.com/mbostock/1306365/raw/thumbnail.png,10/11/2012
+The Euro Debt Crisis,http://bl.ocks.org/1308257,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1308257/raw/thumbnail.png,12/12/2012
+Point-Along-Path Interpolation,http://bl.ocks.org/1313857,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1313857/raw/thumbnail.png,10/11/2012
+Stacked layout with time axis,http://bl.ocks.org/1314483,,code viewer,bl.ocks,,,,
+Case-Sensitivity and SVG-in-HTML,http://bl.ocks.org/1322814,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1322814/raw/thumbnail.png,10/11/2012
+Poor Anti-Aliasing in SVG #1,http://bl.ocks.org/1322907,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1322907/raw/thumbnail.png,10/11/2012
+Poor Anti-Aliasing in SVG #2,http://bl.ocks.org/1322948,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1322948/raw/thumbnail.png,10/11/2012
+D3 and Custom Data Attributes,http://bl.ocks.org/1323729,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1323729/raw/thumbnail.png,10/11/2012
+Reorderable Stacked Bar Chart,http://bl.ocks.org/1327441,,code viewer,bl.ocks,stacked bar chart,,,
+2D Matrix Decomposition,http://bl.ocks.org/1340727,Mike Bostock,code viewer,bl.ocks,,,,11/4/2011
+Parallel Coordinates,http://bl.ocks.org/1341021,Mike Bostock,code viewer,bl.ocks,parallel coordinates,,https://gist.github.com/mbostock/1341021/raw/thumbnail.png,1/17/2013
+Parallel Coordinates,http://bl.ocks.org/1341281,,code viewer,bl.ocks,parallel coordinates,,,
+Oliver Rolle / Logarithmic Line Chart,http://bl.ocks.org/1341679,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1341679/raw/thumbnail.png,10/11/2012
+SVG feGaussianBlur,http://bl.ocks.org/1342359,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1342359/raw/thumbnail.png,10/11/2012
+Bay Area earthquake responses by zip code,http://bl.ocks.org/1343714,,code viewer,bl.ocks,map,yahoo pipes,,
+Transform Transitions,http://bl.ocks.org/1345853,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1345853/raw/thumbnail.png,10/11/2012
+Pie Chart Update I,http://bl.ocks.org/1346395,Mike Bostock,code viewer,bl.ocks,pie chart,,https://gist.github.com/mbostock/1346395/raw/thumbnail.png,10/28/2012
+Pie Chart Update II,http://bl.ocks.org/1346410,Mike Bostock,code viewer,bl.ocks,pie chart,,https://gist.github.com/mbostock/1346410/raw/thumbnail.png,10/28/2012
+Epicyclic Gearing,http://bl.ocks.org/1353700,Mike Bostock,code viewer,bl.ocks,experiment,,https://gist.github.com/mbostock/1353700/raw/thumbnail.png,1/23/2013
+Prototype Chart Template (WIP),http://bl.ocks.org/1364304,Mike Bostock,code viewer,bl.ocks,,,,11/14/2011
+d3.create + selection.adopt,http://bl.ocks.org/1365279,Mike Bostock,code viewer,bl.ocks,,,,11/14/2011
+D3 PJAX,http://bl.ocks.org/1367999,Mike Bostock,code viewer,bl.ocks,,pjax,https://gist.github.com/mbostock/1367999/raw/thumbnail.png,10/11/2012
+Labeled Force Layout,http://bl.ocks.org/1377729,Mike Bostock,code viewer,bl.ocks,network,,https://a248.e.akamai.net/camo.github.com/d5244235a87c55b9062c4dfcab6603e1e61e826a/687474703a2f2f64336a732e6f72672f65782f666f7263652d6c6162656c732e706e67,
+Force-Based Label Placement,http://bl.ocks.org/1377729,,code viewer,bl.ocks,label,,,
+Square Circle Spiral Illusion,http://bl.ocks.org/1386444,Mike Bostock,code viewer,bl.ocks,experiment,,https://gist.github.com/mbostock/1386444/raw/thumbnail.png,12/10/2012
+A Bar Chart,http://bl.ocks.org/1389927,Mike Bostock,code viewer,bl.ocks,bar chart,,https://gist.github.com/mbostock/1389927/raw/thumbnail.png,10/11/2012
+Left-Aligned Ticks,http://bl.ocks.org/1399097,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1399097/raw/thumbnail.png,10/11/2012
+Voronoi Picking,http://bl.ocks.org/1405439,,code viewer,bl.ocks,voronoi,,https://a248.e.akamai.net/camo.github.com/5aba1607a06f0eaa4b739a3e4db9ca01f980d203/687474703a2f2f64336a732e6f72672f65782f766f726f6e6f692d7069636b65722e706e67,
+SVG foreignObject Example,http://bl.ocks.org/1424037,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1424037/raw/thumbnail.png,10/11/2012
+selection.order,http://bl.ocks.org/1440766,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1440766/raw/thumbnail.png,10/11/2012
+Table of Progress,http://bl.ocks.org/1468715,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1468715/raw/thumbnail.png,10/11/2012
+Image tiles with float: left,http://bl.ocks.org/1479319,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1479319/raw/thumbnail.png,10/11/2012
+Horizon Chart,http://bl.ocks.org/1483226,Mike Bostock,code viewer,bl.ocks,horizon chart,,https://gist.github.com/mbostock/1483226/raw/thumbnail.png,12/17/2012
+Masking with external svg elements,http://bl.ocks.org/1503463,,code viewer,bl.ocks,,,,
+Expandable Menu,http://bl.ocks.org/1541816,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1541816/raw/thumbnail.png,10/11/2012
+The first commented line is your dabblet’s title,http://bl.ocks.org/1548215,Mike Bostock,code viewer,bl.ocks,,,,1/1/2012
+Alpha-shapes aka concave hulls,http://bl.ocks.org/1552725,Gregor Aisch,code viewer,bl.ocks,concave hull,,,
+Drag Multiples,http://bl.ocks.org/1557377,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1557377/raw/thumbnail.png,1/21/2013
+Cube Metrics Client (Node.js + WebSockets),http://bl.ocks.org/1557990,Mike Bostock,code viewer,bl.ocks,,,,1/3/2012
+Cost of Living - Parallel Coordinates,http://bl.ocks.org/1558011,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1558011/raw/thumbnail.png,12/9/2012
+Cube Realtime Map,http://bl.ocks.org/1573240,Mike Bostock,code viewer,bl.ocks,,,,1/6/2012
+One Path for All Links,http://bl.ocks.org/1579132,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1579132/raw/thumbnail.png,12/20/2012
+Quicksort,http://bl.ocks.org/1582075,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1582075/raw/thumbnail.png,10/11/2012
+Sortable Bar Chart,http://bl.ocks.org/1584697,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1584697/raw/thumbnail.png,10/11/2012
+Transition Speed Test,http://bl.ocks.org/1616423,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1616423/raw/thumbnail.png,10/11/2012
+Irregular Histogram (Lollipop),http://bl.ocks.org/1624656,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1624656/raw/thumbnail.png,10/11/2012
+Variable-width Histogram,http://bl.ocks.org/1624660,Mike Bostock,code viewer,bl.ocks,histogram,,https://gist.github.com/mbostock/1624660/raw/thumbnail.png,10/11/2012
+Circle Packing with Zero Values,http://bl.ocks.org/1627378,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1627378/raw/thumbnail.png,10/11/2012
+Autofocus,http://bl.ocks.org/1627439,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1627439/raw/thumbnail.png,10/11/2012
+Circle Packing Zero Values,http://bl.ocks.org/1628131,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1628131/raw/thumbnail.png,12/20/2012
+Drag rectangle,http://bl.ocks.org/1629464,,code viewer,bl.ocks,,,,
+Line Chart with tooltips,http://bl.ocks.org/1629644,,code viewer,bl.ocks,line chart,,,
+Simple Radar Chart,http://bl.ocks.org/1630683,Jeff Bordogna,code viewer,bl.ocks,radar chart,,http://kwout.com/cutout/s/kg/w2/ukn_w200.jpg,
+Line Transition,http://bl.ocks.org/1642874,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1642874/raw/thumbnail.png,1/20/2013
+Spline Transition,http://bl.ocks.org/1642989,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1642989/raw/thumbnail.png,12/12/2012
+Line Transition (Broken),http://bl.ocks.org/1643051,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1643051/raw/thumbnail.png,10/11/2012
+Monday-based Calendar,http://bl.ocks.org/1648635,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1648635/raw/thumbnail.png,10/11/2012
+Smooth Scrolling,http://bl.ocks.org/1649463,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1649463/raw/thumbnail.png,10/11/2012
+Mercator,http://bl.ocks.org/1653763,,code viewer,bl.ocks,map,,,
+Static Force Layout,http://bl.ocks.org/1667139,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1667139/raw/thumbnail.png,10/11/2012
+Focus+Context via Brushing,http://bl.ocks.org/1667367,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1667367/raw/thumbnail.png,1/5/2013
+Automatic floating labels using d3 force-layout,http://bl.ocks.org/1691430,,code viewer,bl.ocks,label,,,
+Queue.js Demo,http://bl.ocks.org/1696080,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1696080/raw/thumbnail.png,10/11/2012
+Order,http://bl.ocks.org/1696372,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1696372/raw/thumbnail.png,10/11/2012
+Point-Along-Path Interpolation,http://bl.ocks.org/1705868,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1705868/raw/thumbnail.png,10/11/2012
+Elastic collisions,http://bl.ocks.org/1706523,,code viewer,bl.ocks,,,,
+Clustered Force Layout,http://bl.ocks.org/1747543,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1747543/raw/thumbnail.png,10/11/2012
+Clustered Force Layout,http://bl.ocks.org/1748247,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1748247/raw/thumbnail.png,12/20/2012
+Input Value Interpolation,http://bl.ocks.org/1771630,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1771630/raw/thumbnail.png,10/11/2012
+Force Layout Multiples (Independent),http://bl.ocks.org/1804889,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1804889/raw/thumbnail.png,10/11/2012
+Multi-Foci Force Layout,http://bl.ocks.org/1804919,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/1804919/raw/thumbnail.png,12/20/2012
+Automatically sizing text,http://bl.ocks.org/1846692,Mike Bostock,code viewer,bl.ocks,bubble chart,,https://gist.github.com/mbostock/1846692/raw/thumbnail.png,
+Month Axis,http://bl.ocks.org/1849162,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1849162/raw/thumbnail.png,10/11/2012
+offsetX / offsetY,http://bl.ocks.org/1854471,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1854471/raw/thumbnail.png,10/11/2012
+offsetX / offsetY,http://bl.ocks.org/1865422,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1865422/raw/thumbnail.png,10/11/2012
+Mitchell's Best-Candidate,http://bl.ocks.org/1893974,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1893974/raw/thumbnail.png,10/11/2012
+Histogram Chart,http://bl.ocks.org/1933560,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/1933560/raw/thumbnail.png,10/11/2012
+Streamgraph,http://bl.ocks.org/1935509,,code viewer,bl.ocks,streamgraph,,,
+Swimlane,http://bl.ocks.org/1962173,Bill Scheidel,code viewer,bl.ocks,timeline,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.04.42%20PM.png,
+Chernoff faces,http://bl.ocks.org/2011590,,code viewer,bl.ocks,chernoff faces,,,
+Hive Plot (Links),http://bl.ocks.org/2066415,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2066415/raw/thumbnail.png,12/19/2012
+Hive Plot (Areas),http://bl.ocks.org/2066421,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2066421/raw/thumbnail.png,12/19/2012
+mousewheel-zoom + click-to-center,http://bl.ocks.org/2206340,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2206340/raw/thumbnail.png,1/14/2013
+click-to-center,http://bl.ocks.org/2206489,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2206489/raw/thumbnail.png,1/15/2013
+click-to-center via transform,http://bl.ocks.org/2206529,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2206529/raw/thumbnail.png,10/11/2012
+click-to-zoom via transform,http://bl.ocks.org/2206590,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2206590/raw/thumbnail.png,1/23/2013
+Flows of refugees between the world countries in 2008,http://bl.ocks.org/2209220,,code viewer,bl.ocks,,,,
+Pictograms,http://bl.ocks.org/2280295,,code viewer,bl.ocks,pictogram,,,
+SVG to Canvas,http://bl.ocks.org/2294676,,code viewer,bl.ocks,,canvas,,
+Templating ala Mustache with Chernoff faces example,http://bl.ocks.org/2295155,,code viewer,bl.ocks,chernoff faces,,,
+Map from GeoJSON data with zoom/pan,http://bl.ocks.org/2322933,,code viewer,bl.ocks,map,,,
+Timeline,http://bl.ocks.org/2338034,Bill Scheidel,code viewer,bl.ocks,timeline,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.03.23%20PM.png,
+Bar Chart with Negative Values,http://bl.ocks.org/2368837,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2368837/raw/thumbnail.png,10/11/2012
+Conway's game of life with JS and D3.js,http://bl.ocks.org/2369589,Sylvain Gizard,code viewer,bl.ocks,cellular automaton,,,
+d3.geo.path and d3.behavior.zoom,http://bl.ocks.org/2374239,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2374239/raw/thumbnail.png,10/11/2012
+Curved textPath,http://bl.ocks.org/2565344,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2565344/raw/thumbnail.png,12/4/2012
+Simple scatterplot,http://bl.ocks.org/2595950,Bill Scheidel,code viewer,bl.ocks,scatterplot,,,
+Canvas Swarm,http://bl.ocks.org/2647922,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2647922/raw/thumbnail.png,10/11/2012
+SVG Swarm,http://bl.ocks.org/2647924,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2647924/raw/thumbnail.png,10/11/2012
+Force-Directed Graph with Mouseover,http://bl.ocks.org/2706022,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2706022/raw/thumbnail.png,10/11/2012
+D3 heatmap using Backbone.js and CoffeeScript,http://bl.ocks.org/2759731,,code viewer,bl.ocks,heatmap,backbone; coffeescript,,
+SVG Path Cleaning,http://bl.ocks.org/2839676,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2839676/raw/thumbnail.png,10/11/2012
+Force-directed layout with from Matrix Market format,http://bl.ocks.org/2846454,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/2846454/raw/thumbnail.png,10/11/2012
+Simplifying and cleaning Shapefiles.,http://bl.ocks.org/2846726,Mike Bostock,code viewer,bl.ocks,,,,5/31/2012
+Mercator Projection,http://bl.ocks.org/2869760,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2869760/raw/thumbnail.png,12/21/2012
+Albers Projection,http://bl.ocks.org/2869871,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2869871/raw/thumbnail.png,10/11/2012
+Albers USA Projection,http://bl.ocks.org/2869946,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2869946/raw/thumbnail.png,10/11/2012
+Orthographic Projection,http://bl.ocks.org/2870030,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2870030/raw/thumbnail.png,10/11/2012
+Force-directed layout with drag and drop,http://bl.ocks.org/2883411,,code viewer,bl.ocks,network,,,
+Force-directed layout with multi Foci and Convex Hulls,http://bl.ocks.org/2920551,,code viewer,bl.ocks,network,,,
+Squares ↔ Hexagons,http://bl.ocks.org/2932721,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2932721/raw/thumbnail.png,10/11/2012
+W3C Validation Errors,http://bl.ocks.org/2941604,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2941604/raw/thumbnail.png,10/11/2012
+Force Layout from CSV,http://bl.ocks.org/2949937,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2949937/raw/thumbnail.png,10/11/2012
+Tree Layout from CSV,http://bl.ocks.org/2949981,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2949981/raw/thumbnail.png,12/15/2012
+Fisheye Grid,http://bl.ocks.org/2962761,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2962761/raw/thumbnail.png,10/11/2012
+Rectilinear Grid,http://bl.ocks.org/2962888,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2962888/raw/thumbnail.png,10/11/2012
+Pedigree Tree,http://bl.ocks.org/2966094,Mike Bostock,code viewer,bl.ocks,tree,,https://gist.github.com/mbostock/2966094/raw/thumbnail.png,10/11/2012
+Orthographic Grid,http://bl.ocks.org/2974930,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2974930/raw/thumbnail.png,10/11/2012
+Manual Axis Interpolation,http://bl.ocks.org/2983699,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2983699/raw/thumbnail.png,10/11/2012
+Zero Ticks,http://bl.ocks.org/2996766,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2996766/raw/thumbnail.png,10/11/2012
+Extent Ticks,http://bl.ocks.org/2996785,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/2996785/raw/thumbnail.png,10/11/2012
+Exoplanets,http://bl.ocks.org/3007180,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3007180/raw/thumbnail.png,10/11/2012
+L*a*b* and HCL color spaces,http://bl.ocks.org/3014589,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3014589/raw/thumbnail.png,12/11/2012
+Margin Convention,http://bl.ocks.org/3019563,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3019563/raw/thumbnail.png,12/29/2012
+Stacked Area via Nest,http://bl.ocks.org/3020685,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3020685/raw/thumbnail.png,10/11/2012
+Orthographic Clipping,http://bl.ocks.org/3021474,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3021474/raw/thumbnail.png,10/11/2012
+UT1 - UTC,http://bl.ocks.org/3025699,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3025699/raw/thumbnail.png,11/29/2012
+Orthographic Shading,http://bl.ocks.org/3031319,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3031319/raw/thumbnail.png,10/11/2012
+Area with Missing Data,http://bl.ocks.org/3035090,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3035090/raw/thumbnail.png,12/19/2012
+Molecule,http://bl.ocks.org/3037015,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3037015/raw/thumbnail.png,10/11/2012
+Fixed-width Histogram of Durations log-normal distribution,http://bl.ocks.org/3048166,Mike Bostock,code viewer,bl.ocks,histogram,,https://gist.github.com/mbostock/3048166/raw/thumbnail.png,10/11/2012
+D3 Bookmarklet,http://bl.ocks.org/3048168,Mike Bostock,code viewer,bl.ocks,,,,7/4/2012
+Fixed-width Histogram Irwin-Hall distribution,http://bl.ocks.org/3048450,Mike Bostock,code viewer,bl.ocks,histogram,,https://gist.github.com/mbostock/3048450/raw/thumbnail.png,10/11/2012
+Stacked Radial Area,http://bl.ocks.org/3048740,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3048740/raw/thumbnail.png,12/5/2012
+Icosahedron,http://bl.ocks.org/3055104,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3055104/raw/thumbnail.png,10/11/2012
+Geodesic Rainbow,http://bl.ocks.org/3057239,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3057239/raw/thumbnail.png,10/11/2012
+Geodesic Grid,http://bl.ocks.org/3058685,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3058685/raw/thumbnail.png,10/11/2012
+Icosahedron,http://bl.ocks.org/3061181,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3061181/raw/thumbnail.png,10/11/2012
+Heatmap with Canvas,http://bl.ocks.org/3074470,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3074470/raw/thumbnail.png,12/8/2012
+Shape Tweening,http://bl.ocks.org/3081153,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3081153/raw/thumbnail.png,12/13/2012
+Cross-linked Mouseover,http://bl.ocks.org/3087986,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3087986/raw/thumbnail.png,10/11/2012
+Read File or HTTP,http://bl.ocks.org/3092303,Mike Bostock,code viewer,bl.ocks,,,,7/11/2012
+Twitter SVG Logo,http://bl.ocks.org/3094619,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3094619/raw/thumbnail.png,10/11/2012
+Circle-Circle Intersection,http://bl.ocks.org/3095037,Mike Bostock,code viewer,bl.ocks,,,,7/11/2012
+Mirrored Easing,http://bl.ocks.org/3145795,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3145795/raw/thumbnail.png,10/11/2012
+Animated textPath,http://bl.ocks.org/3151228,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3151228/raw/thumbnail.png,10/11/2012
+Animated Clipped textPath,http://bl.ocks.org/3151318,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3151318/raw/thumbnail.png,10/11/2012
+Loading Adobe Photoshop ASE color palette,http://bl.ocks.org/3173233,,code viewer,bl.ocks,,,,
+Transform Interpolation,http://bl.ocks.org/3173784,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3173784/raw/thumbnail.png,10/11/2012
+Force Layout with Canvas,http://bl.ocks.org/3180395,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3180395/raw/thumbnail.png,10/11/2012
+Scatterplot with Multiple Series,http://bl.ocks.org/3183403,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3183403/raw/thumbnail.png,10/11/2012
+Tree Layout Orientations,http://bl.ocks.org/3184089,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3184089/raw/thumbnail.png,10/11/2012
+Chrome Circle Precision Bug,http://bl.ocks.org/3194190,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3194190/raw/thumbnail.png,10/11/2012
+Chrome Circle Precision Bug,http://bl.ocks.org/3201606,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3201606/raw/thumbnail.png,10/11/2012
+Heatmap and 2D Histogram,http://bl.ocks.org/3202354,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3202354/raw/thumbnail.png,10/11/2012
+Ordinal Tick Filtering,http://bl.ocks.org/3212294,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3212294/raw/thumbnail.png,10/11/2012
+Scatterplot Matrix,http://bl.ocks.org/3213173,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3213173/raw/thumbnail.png,11/12/2012
+Collision Detection,http://bl.ocks.org/3231298,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3231298/raw/thumbnail.png,10/11/2012
+Collision Detection (Canvas),http://bl.ocks.org/3231307,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3231307/raw/thumbnail.png,12/13/2012
+Scatterplot with Shapes,http://bl.ocks.org/3244058,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3244058/raw/thumbnail.png,10/11/2012
+Click-to-Zoom via Transform,http://bl.ocks.org/3258821,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3258821/raw/thumbnail.png,10/11/2012
+Ordinal Axis,http://bl.ocks.org/3259783,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3259783/raw/thumbnail.png,10/11/2012
+Simple Dashboard Example,http://bl.ocks.org/3287802,,code viewer,bl.ocks,,,,
+Heightmap,http://bl.ocks.org/3289530,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3289530/raw/thumbnail.png,12/23/2012
+Parallel coordinates with fisheye distortion,http://bl.ocks.org/3290263,,code viewer,bl.ocks,parallel coordinates,,,
+Rainbows are Harmful,http://bl.ocks.org/3290752,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3290752/raw/thumbnail.png,10/11/2012
+Multi-Value Maps,http://bl.ocks.org/3305515,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3305515/raw/thumbnail.png,10/11/2012
+Interpolating with d3.tween,http://bl.ocks.org/3305854,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3305854/raw/thumbnail.png,10/11/2012
+d3.tsv,http://bl.ocks.org/3305937,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3305937/raw/thumbnail.png,10/11/2012
+d3.time.scale nice,http://bl.ocks.org/3306147,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3306147/raw/thumbnail.png,10/11/2012
+d3.time.format localization,http://bl.ocks.org/3306234,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3306234/raw/thumbnail.png,10/11/2012
+Threshold Choropleth,http://bl.ocks.org/3306362,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3306362/raw/thumbnail.png,12/4/2012
+Monotone Interpolation Bug,http://bl.ocks.org/3310187,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3310187/raw/thumbnail.png,10/11/2012
+Monotone Line Interpolation,http://bl.ocks.org/3310233,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3310233/raw/thumbnail.png,10/11/2012
+Line Interpolation,http://bl.ocks.org/3310323,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3310323/raw/thumbnail.png,10/11/2012
+Letter Frequency,http://bl.ocks.org/3310560,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3310560/raw/thumbnail.png,10/11/2012
+Force-Directed Graph,http://bl.ocks.org/3311124,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3311124/raw/thumbnail.png,10/11/2012
+Pack Test,http://bl.ocks.org/3315291,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3315291/raw/thumbnail.png,10/11/2012
+Pack Test,http://bl.ocks.org/3315318,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3315318/raw/thumbnail.png,10/11/2012
+CSV Syntax Definition,http://bl.ocks.org/3344600,Mike Bostock,code viewer,bl.ocks,,,,8/13/2012
+Resizable Force Layout,http://bl.ocks.org/3355967,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3355967/raw/thumbnail.png,10/11/2012
+Git-backed Node Blob Server,http://bl.ocks.org/3371488,Mike Bostock,code viewer,bl.ocks,,,,8/16/2012
+Axis Styling,http://bl.ocks.org/3371592,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3371592/raw/thumbnail.png,12/17/2012
+MathJax label,http://bl.ocks.org/3391642,Chris B. Rich,code viewer,bl.ocks,label,mathjax,,
+Circular Segment,http://bl.ocks.org/3422480,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3422480/raw/thumbnail.png,1/28/2013
+Rounded Rectangle,http://bl.ocks.org/3468167,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3468167/raw/thumbnail.png,10/11/2012
+Lazy Scale Domain,http://bl.ocks.org/3517374,Mike Bostock,code viewer,bl.ocks,,,,8/29/2012
+Spiral for John Hunter,http://bl.ocks.org/3543186,,code viewer,bl.ocks,,,,
+Axis Examples,http://bl.ocks.org/3605124,,code viewer,bl.ocks,axis,,,
+Multiple Area charts and a brush tool,http://bl.ocks.org/3630001,Tyler Craft,code viewer,bl.ocks,area chart,,,
+Aitoff Graticule,http://bl.ocks.org/3664045,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3664045/raw/thumbnail.png,12/6/2012
+Winkel Tripel Graticule,http://bl.ocks.org/3664049,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3664049/raw/thumbnail.png,12/6/2012
+SVG Semantic Zooming,http://bl.ocks.org/3680957,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3680957/raw/thumbnail.png,10/11/2012
+Canvas Geometric Zooming,http://bl.ocks.org/3680958,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3680958/raw/thumbnail.png,10/11/2012
+SVG Geometric Zooming,http://bl.ocks.org/3680999,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3680999/raw/thumbnail.png,10/11/2012
+Canvas Semantic Zooming,http://bl.ocks.org/3681006,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3681006/raw/thumbnail.png,10/11/2012
+Winkel Tripel Projection,http://bl.ocks.org/3682676,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3682676/raw/thumbnail.png,1/4/2013
+Aitoff,http://bl.ocks.org/3682698,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3682698/raw/thumbnail.png,1/11/2013
+Clean Up for Natural Earth GeoJSON,http://bl.ocks.org/3682990,Mike Bostock,code viewer,bl.ocks,,,,9/8/2012
+Long Scroll,http://bl.ocks.org/3689677,Jason Davies,code viewer,bl.ocks,table,,,
+Map Projection Distortions,http://bl.ocks.org/3709000,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3709000/raw/thumbnail.png,10/11/2012
+Kavrayskiy VII Projection,http://bl.ocks.org/3710082,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3710082/raw/thumbnail.png,12/6/2012
+Wagner VI Projection,http://bl.ocks.org/3710148,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3710148/raw/thumbnail.png,12/23/2012
+Robinson Projection,http://bl.ocks.org/3710566,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3710566/raw/thumbnail.png,12/23/2012
+Projection Transitions,http://bl.ocks.org/3711652,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/3711652/raw/thumbnail.png,1/14/2013
+Hammer,http://bl.ocks.org/3712397,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3712397/raw/thumbnail.png,1/12/2013
+Sinusoidal,http://bl.ocks.org/3712399,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3712399/raw/thumbnail.png,1/9/2013
+Cylindrical Equal-Area,http://bl.ocks.org/3712408,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3712408/raw/thumbnail.png,1/7/2013
+Larrivée Projection,http://bl.ocks.org/3719042,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3719042/raw/thumbnail.png,12/23/2012
+Sortable Table with Bars,http://bl.ocks.org/3719724,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3719724/raw/thumbnail.png,10/11/2012
+Polygonal Lasso Selection,http://bl.ocks.org/3732612,Ger Hobbelt,code viewer,bl.ocks,selection brush,,,
+Rotating Orthographic,http://bl.ocks.org/3734168,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734168/raw/thumbnail.png,12/6/2012
+Rotating Equirectangular,http://bl.ocks.org/3734273,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734273/raw/thumbnail.png,12/18/2012
+Albers Equal-Area Conic,http://bl.ocks.org/3734308,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734308/raw/thumbnail.png,12/23/2012
+Bonne Projection,http://bl.ocks.org/3734313,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734313/raw/thumbnail.png,12/23/2012
+Collignon Projection,http://bl.ocks.org/3734316,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734316/raw/thumbnail.png,12/6/2012
+Equidistant Conic Projection,http://bl.ocks.org/3734317,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734317/raw/thumbnail.png,12/23/2012
+Lambert Conformal Conic Projection,http://bl.ocks.org/3734321,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734321/raw/thumbnail.png,1/23/2013
+Eckert I Projection,http://bl.ocks.org/3734322,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734322/raw/thumbnail.png,12/6/2012
+Eckert II Projection,http://bl.ocks.org/3734324,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734324/raw/thumbnail.png,12/23/2012
+Eckert III Projection,http://bl.ocks.org/3734325,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734325/raw/thumbnail.png,12/23/2012
+Eckert IV Projection,http://bl.ocks.org/3734327,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734327/raw/thumbnail.png,12/23/2012
+Eckert V Projection,http://bl.ocks.org/3734328,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734328/raw/thumbnail.png,12/23/2012
+Eckert VI Projection,http://bl.ocks.org/3734329,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734329/raw/thumbnail.png,12/6/2012
+Goode Homolosine,http://bl.ocks.org/3734330,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734330/raw/thumbnail.png,1/9/2013
+Miller Projection,http://bl.ocks.org/3734333,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734333/raw/thumbnail.png,12/6/2012
+Mollweide,http://bl.ocks.org/3734336,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734336/raw/thumbnail.png,1/16/2013
+Nell–Hammer Projection,http://bl.ocks.org/3734342,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734342/raw/thumbnail.png,12/23/2012
+Polyconic Projection,http://bl.ocks.org/3734343,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3734343/raw/thumbnail.png,12/23/2012
+Sticky Force-Directed Graph,http://bl.ocks.org/3750558,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3750558/raw/thumbnail.png,1/22/2013
+Shared Data,http://bl.ocks.org/3750900,Mike Bostock,code viewer,bl.ocks,,,,12/5/2012
+Progress Events,http://bl.ocks.org/3750941,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3750941/raw/thumbnail.png,12/7/2012
+Lambert Azimuthal Equal-Area,http://bl.ocks.org/3757101,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757101/raw/thumbnail.png,1/9/2013
+Azimuthal Equidistant,http://bl.ocks.org/3757110,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757110/raw/thumbnail.png,12/23/2012
+Equirectangular (Plate Carrée),http://bl.ocks.org/3757119,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757119/raw/thumbnail.png,12/23/2012
+Orthographic,http://bl.ocks.org/3757125,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757125/raw/thumbnail.png,1/19/2013
+Spherical Mercator,http://bl.ocks.org/3757132,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757132/raw/thumbnail.png,12/23/2012
+Stereographic,http://bl.ocks.org/3757137,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757137/raw/thumbnail.png,12/23/2012
+Gnomonic,http://bl.ocks.org/3757349,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3757349/raw/thumbnail.png,12/23/2012
+Interactive Stereographic,http://bl.ocks.org/3763057,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3763057/raw/thumbnail.png,12/6/2012
+Guyou Projection,http://bl.ocks.org/3763867,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3763867/raw/thumbnail.png,12/23/2012
+d3.geo.path + Canvas,http://bl.ocks.org/3783604,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3783604/raw/thumbnail.png,12/6/2012
+Antimeridian Cutting,http://bl.ocks.org/3788999,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3788999/raw/thumbnail.png,12/19/2012
+Rotating Winkel Tripel,http://bl.ocks.org/3790085,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3790085/raw/thumbnail.png,12/6/2012
+Satellite Projection,http://bl.ocks.org/3790444,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3790444/raw/thumbnail.png,1/18/2013
+Satellite Projection Test,http://bl.ocks.org/3791255,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3791255/raw/thumbnail.png,12/6/2012
+Interactive Orthographic,http://bl.ocks.org/3795040,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3795040/raw/thumbnail.png,1/4/2013
+Interactive Gnomonic,http://bl.ocks.org/3795048,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3795048/raw/thumbnail.png,12/6/2012
+Adaptive Resampling,http://bl.ocks.org/3795544,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3795544/raw/thumbnail.png,12/23/2012
+Van der Grinten Projection,http://bl.ocks.org/3796831,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3796831/raw/thumbnail.png,12/23/2012
+August Projection,http://bl.ocks.org/3797581,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3797581/raw/thumbnail.png,12/23/2012
+Eisenlohr Projection,http://bl.ocks.org/3797585,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3797585/raw/thumbnail.png,12/23/2012
+Lagrange Projection,http://bl.ocks.org/3797591,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3797591/raw/thumbnail.png,12/23/2012
+Projection Contexts,http://bl.ocks.org/3804779,Mike Bostock,code viewer,bl.ocks,,,,9/29/2012
+General Update Pattern I,http://bl.ocks.org/3808218,Mike Bostock,Introductory tutorials,bl.ocks,,,https://gist.github.com/mbostock/3808218/raw/thumbnail.png,1/26/2013
+General Update Pattern II,http://bl.ocks.org/3808221,Mike Bostock,Introductory tutorials,bl.ocks,,,https://gist.github.com/mbostock/3808221/raw/thumbnail.png,10/11/2012
+General Update Pattern III,http://bl.ocks.org/3808234,Mike Bostock,Introductory tutorials,bl.ocks,,,https://gist.github.com/mbostock/3808234/raw/thumbnail.png,12/4/2012
+van Wijk Smooth Zooming,http://bl.ocks.org/3828981,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3828981/raw/thumbnail.png,1/23/2013
+Voronoi tests,http://bl.ocks.org/3846051,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3846051/raw/thumbnail.png,1/23/2013
+WebPlatform.org SVG Logo,http://bl.ocks.org/3853405,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3853405/raw/thumbnail.png,10/11/2012
+Walmart locations,http://bl.ocks.org/3854614,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3854614/raw/thumbnail.png,10/11/2012
+Loximuthal,http://bl.ocks.org/3867220,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3867220/raw/thumbnail.png,12/23/2012
+The Gist to Clone All Gists,http://bl.ocks.org/3883098,Mike Bostock,code viewer,bl.ocks,,,,1/4/2013
+Area Chart,http://bl.ocks.org/3883195,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3883195/raw/thumbnail.png,12/9/2012
+Line Chart,http://bl.ocks.org/3883245,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3883245/raw/thumbnail.png,1/12/2013
+Bivariate Area Chart,http://bl.ocks.org/3884914,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3884914/raw/thumbnail.png,10/13/2012
+Multi-Series Line Chart,http://bl.ocks.org/3884955,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3884955/raw/thumbnail.png,1/26/2013
+Stacked Area Chart,http://bl.ocks.org/3885211,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3885211/raw/thumbnail.png,1/24/2013
+Bar Chart,http://bl.ocks.org/3885304,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3885304/raw/thumbnail.png,1/13/2013
+Sortable Bar Chart,http://bl.ocks.org/3885705,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3885705/raw/thumbnail.png,1/16/2013
+Stacked Bar Chart,http://bl.ocks.org/3886208,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3886208/raw/thumbnail.png,1/13/2013
+Normalized Stacked Bar Chart,http://bl.ocks.org/3886394,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3886394/raw/thumbnail.png,10/13/2012
+Grouped Bar Chart,http://bl.ocks.org/3887051,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3887051/raw/thumbnail.png,1/5/2013
+Scatterplot,http://bl.ocks.org/3887118,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3887118/raw/thumbnail.png,10/13/2012
+Donut Chart,http://bl.ocks.org/3887193,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3887193/raw/thumbnail.png,1/16/2013
+Pie Chart,http://bl.ocks.org/3887235,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3887235/raw/thumbnail.png,12/11/2012
+Donut Multiples,http://bl.ocks.org/3888852,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3888852/raw/thumbnail.png,10/14/2012
+Pan+Zoom,http://bl.ocks.org/3892919,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3892919/raw/thumbnail.png,10/25/2012
+Programmatic Pan+Zoom,http://bl.ocks.org/3892928,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3892928/raw/thumbnail.png,1/15/2013
+Difference Chart,http://bl.ocks.org/3894205,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3894205/raw/thumbnail.png,1/10/2013
+Update-Only Transition,http://bl.ocks.org/3900925,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3900925/raw/thumbnail.png,10/25/2012
+X-Value Mouseover,http://bl.ocks.org/3902569,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3902569/raw/thumbnail.png,1/5/2013
+Chained Transitions,http://bl.ocks.org/3903818,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3903818/raw/thumbnail.png,10/16/2012
+Path Tween,http://bl.ocks.org/3916621,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3916621/raw/thumbnail.png,10/25/2012
+Legend,http://bl.ocks.org/3918369,Ziggy Jonsson,code viewer,bl.ocks,legend,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%209.23.30%20AM.png,
+Sankey diagram with cycles,http://bl.ocks.org/3921009,,code viewer,bl.ocks,sankey,,,
+Underscore’s Equivalents in D3,http://bl.ocks.org/3934356,Mike Bostock,code viewer,bl.ocks,,,,1/16/2013
+Stacked-to-Grouped Bars,http://bl.ocks.org/3943967,Mike Bostock,code viewer,bl.ocks,stacked bar chart; grouped bar chart,,https://gist.github.com/mbostock/3943967/raw/thumbnail.png,12/20/2012
+Gall–Peters,http://bl.ocks.org/3946824,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3946824/raw/thumbnail.png,1/7/2013
+Creating Thumbnails with GraphicsMagick,http://bl.ocks.org/3953793,Mike Bostock,code viewer,bl.ocks,,,,1/28/2013
+Sankey Interpolation,http://bl.ocks.org/3960741,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3960741/raw/thumbnail.png,10/28/2012
+Voronoi Test (N=2),http://bl.ocks.org/3962108,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3962108/raw/thumbnail.png,12/7/2012
+Gradient Encoding,http://bl.ocks.org/3969722,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3969722/raw/thumbnail.png,10/28/2012
+Threshold Encoding,http://bl.ocks.org/3970883,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/3970883/raw/thumbnail.png,10/28/2012
+Zoomable Area,http://bl.ocks.org/4015254,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4015254/raw/thumbnail.png,11/12/2012
+Custom Path and Area Generator,http://bl.ocks.org/4047002,,code viewer,bl.ocks,,,,
+Constraint relaxation 1,http://bl.ocks.org/4053096)[and,,code viewer,bl.ocks,,,,
+Pseudo-Demers Cartogram,http://bl.ocks.org/4055889,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4055889/raw/thumbnail.png,12/17/2012
+Pseudo-Dorling Cartogram,http://bl.ocks.org/4055892,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4055892/raw/thumbnail.png,11/12/2012
+Non-contiguous Cartogram,http://bl.ocks.org/4055908,,code viewer,bl.ocks,cartogram,,https://a248.e.akamai.net/camo.github.com/2e049fa2c568399a4bb5d190b6e178fbabcd323b/687474703a2f2f64336a732e6f72672f65782f636172746f6772616d2e706e67,
+Voronoi Tesselation,http://bl.ocks.org/4060366,Mike Bostock,code viewer,bl.ocks,voronoi,,https://gist.github.com/mbostock/4060366/raw/thumbnail.png,1/23/2013
+Choropleth,http://bl.ocks.org/4060606,Mike Bostock,code viewer,bl.ocks,choropleth,,https://gist.github.com/mbostock/4060606/raw/thumbnail.png,1/28/2013
+Streamgraph,http://bl.ocks.org/4060954,Mike Bostock,code viewer,bl.ocks,streamgraph,,https://gist.github.com/mbostock/4060954/raw/thumbnail.png,12/29/2012
+Box plot,http://bl.ocks.org/4061502,Mike Bostock,code viewer,bl.ocks,box plot,,https://a248.e.akamai.net/camo.github.com/24fc9f957d2d3b3a4f23b7aa49c8c1ad1a8e6b84/687474703a2f2f64336a732e6f72672f65782f626f782e706e67,
+Bullet Charts,http://bl.ocks.org/4061961,Mike Bostock,code viewer,bl.ocks,bullet chart,,https://gist.github.com/mbostock/4061961/raw/thumbnail.png,1/25/2013
+Chord Diagram: Dependencies Between Classes,http://bl.ocks.org/4062006,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4062006/raw/thumbnail.png,1/15/2013
+Force-Directed Graph,http://bl.ocks.org/4062045,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/4062045/raw/thumbnail.png,1/22/2013
+Population Pyramid,http://bl.ocks.org/4062085,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4062085/raw/thumbnail.png,11/12/2012
+Color via Clipping,http://bl.ocks.org/4062844,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4062844/raw/thumbnail.png,12/13/2012
+Lines with Rounded Turns,http://bl.ocks.org/4062919,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4062919/raw/thumbnail.png,12/14/2012
+Bubble Chart,http://bl.ocks.org/4063269,Mike Bostock,code viewer,bl.ocks,bubble chart,,https://gist.github.com/mbostock/4063269/raw/thumbnail.png,1/6/2013
+Calendar View,http://bl.ocks.org/4063318,Mike Bostock,code viewer,bl.ocks,calendar,,https://gist.github.com/mbostock/4063318/raw/thumbnail.png,1/4/2013
+Sunburst Partition,http://bl.ocks.org/4063423,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4063423/raw/thumbnail.png,11/12/2012
+Sunburst,http://bl.ocks.org/4063423,,code viewer,bl.ocks,sunburst,,https://a248.e.akamai.net/camo.github.com/1415e2af369262e466534480edbc7baa883e5b58/687474703a2f2f64336a732e6f72672f65782f73756e62757273742e706e67,
+Circle Packing,http://bl.ocks.org/4063530,Mike Bostock,code viewer,bl.ocks,floating bubble,,https://gist.github.com/mbostock/4063530/raw/thumbnail.png,1/21/2013
+Reingold–Tilford Tree,http://bl.ocks.org/4063550,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4063550/raw/thumbnail.png,12/1/2012
+Node-Link Tree,http://bl.ocks.org/4063550,,code viewer,bl.ocks,network,,https://a248.e.akamai.net/camo.github.com/e646acd936244a6db8a140fb0e1e421d95b97d8e/687474703a2f2f64336a732e6f72672f65782f747265652e706e67,
+Cluster Dendrogram,http://bl.ocks.org/4063570,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4063570/raw/thumbnail.png,12/19/2012
+Dendrogram,http://bl.ocks.org/4063570,,code viewer,bl.ocks,dendrogram,,https://a248.e.akamai.net/camo.github.com/e1a1948f0bcfa095d54793afd3ab96af97731773/687474703a2f2f64336a732e6f72672f65782f636c75737465722e706e67,
+Treemap,http://bl.ocks.org/4063582,Mike Bostock,code viewer,bl.ocks,treemap,,https://gist.github.com/mbostock/4063582/raw/thumbnail.png,1/2/2013
+Scatterplot Matrix Brushing,http://bl.ocks.org/4063663,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4063663/raw/thumbnail.png,1/2/2013
+TopoJSON Examples,http://bl.ocks.org/4090846,Mike Bostock,code viewer,bl.ocks,map,,,1/28/2013
+U.S. States TopoJSON,http://bl.ocks.org/4090848,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4090848/raw/thumbnail.png,1/16/2013
+U.S. Counties TopoJSON Mesh,http://bl.ocks.org/4090870,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4090870/raw/thumbnail.png,11/30/2012
+World Boundaries TopoJSON,http://bl.ocks.org/4091835,,code viewer,bl.ocks,map,,,
+Circular tree comparing the src directory for three versions of d3,http://bl.ocks.org/4092944,Kai Chang,code viewer,bl.ocks,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%2010.46.20%20PM.png,
+U.S. TopoJSON,http://bl.ocks.org/4108203,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4108203/raw/thumbnail.png,11/23/2012
+U.S. Counties TopoJSON,http://bl.ocks.org/4122298,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4122298/raw/thumbnail.png,11/23/2012
+d3.geo.tile,http://bl.ocks.org/4132797,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4132797/raw/thumbnail.png,1/24/2013
+Stitching States from Counties,http://bl.ocks.org/4134037,Mike Bostock,code viewer,bl.ocks,map,,,11/22/2012
+U.S. Land TopoJSON,http://bl.ocks.org/4134057,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4134057/raw/thumbnail.png,11/23/2012
+U.S. TopoJSON,http://bl.ocks.org/4136647,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4136647/raw/thumbnail.png,11/30/2012
+Custom Multi Scale Time Format Axis,http://bl.ocks.org/4149176,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4149176/raw/thumbnail.png,12/18/2012
+d3.geo.tile,http://bl.ocks.org/4150951,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4150951/raw/thumbnail.png,11/28/2012
+Gradient Along Stroke,http://bl.ocks.org/4163057,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4163057/raw/thumbnail.png,11/28/2012
+Rainbow Worm,http://bl.ocks.org/4165404,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4165404/raw/thumbnail.png,11/28/2012
+Pair Contribution and Selection,http://bl.ocks.org/4168921,Jesse Heitler,code viewer,bl.ocks,,,,
+Multiple time-series with object constancy,http://bl.ocks.org/4175202,Nikhil Sonnad,code viewer,bl.ocks,time series,,,
+World Map,http://bl.ocks.org/4180634,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4180634/raw/thumbnail.png,12/25/2012
+World Tour,http://bl.ocks.org/4183330,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4183330/raw/thumbnail.png,1/17/2013
+Capturing Mousemove,http://bl.ocks.org/4198499,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4198499/raw/thumbnail.png,12/4/2012
+Area Choropleth,http://bl.ocks.org/4206573,Mike Bostock,code viewer,bl.ocks,choropleth,,https://gist.github.com/mbostock/4206573/raw/thumbnail.png,12/4/2012
+Fuzzy Counties,http://bl.ocks.org/4206810,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4206810/raw/thumbnail.png,12/4/2012
+Blocky Counties,http://bl.ocks.org/4206857,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4206857/raw/thumbnail.png,1/1/2013
+County Circles,http://bl.ocks.org/4206975,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4206975/raw/thumbnail.png,12/29/2012
+Swiss Cantons,http://bl.ocks.org/4207744,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4207744/raw/thumbnail.png,12/4/2012
+Circle-Polygon Intersection,http://bl.ocks.org/4218871,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4218871/raw/thumbnail.png,12/8/2012
+Reusable text rotation,http://bl.ocks.org/4236639,,code viewer,bl.ocks,,,,
+Voronoi Clipping,http://bl.ocks.org/4237768,Mike Bostock,code viewer,bl.ocks,voronoi,,https://gist.github.com/mbostock/4237768/raw/thumbnail.png,12/8/2012
+Contour Plot,http://bl.ocks.org/4241134,Mike Bostock,code viewer,bl.ocks,contour plot,,https://gist.github.com/mbostock/4241134/raw/thumbnail.png,12/10/2012
+Reverse Geocoding Plug-in using an offline canvas,http://bl.ocks.org/4246925,Nick Rabinowitz,code viewer,bl.ocks,map,geocoding,,
+Hexagonal Binning,http://bl.ocks.org/4248145,Mike Bostock,code viewer,bl.ocks,hexbin,,https://gist.github.com/mbostock/4248145/raw/thumbnail.png,1/23/2013
+Hexagonal Binning (Area),http://bl.ocks.org/4248146,Mike Bostock,code viewer,bl.ocks,hexbin,,https://gist.github.com/mbostock/4248146/raw/thumbnail.png,1/23/2013
+Streams,http://bl.ocks.org/4254963,Mike Bostock,code viewer,bl.ocks,streamgraph; small multiples,,https://gist.github.com/mbostock/4254963/raw/thumbnail.png,12/25/2012
+GeoJSON Transforms,http://bl.ocks.org/4260668,Mike Bostock,code viewer,bl.ocks,map,,,12/11/2012
+Closest Point to Segment,http://bl.ocks.org/4281513,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4281513/raw/thumbnail.png,12/14/2012
+Three-Axis Rotation,http://bl.ocks.org/4282586,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4282586/raw/thumbnail.png,12/22/2012
+Unknown Pleasures,http://bl.ocks.org/4289018,Tom MacWright; Christopher Manning,code viewer,bl.ocks,line chart,simplex noise,,
+Peirce Quincuncial,http://bl.ocks.org/4310087,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4310087/raw/thumbnail.png,12/16/2012
+Simplex Noise Dots,http://bl.ocks.org/4315896,Christopher Manning,code viewer,bl.ocks,dot matrix,simplex noise,,
+Quartile plots,http://bl.ocks.org/4318672,Iain Dillingham,code viewer,bl.ocks,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-25-13%201.32.28%20PM.png,
+Sinu-Mollweide,http://bl.ocks.org/4319903,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4319903/raw/thumbnail.png,1/9/2013
+Custom Axis,http://bl.ocks.org/4323929,Mike Bostock,code viewer,bl.ocks,axis,,https://gist.github.com/mbostock/4323929/raw/thumbnail.png,12/17/2012
+Simplex Noise Code 39 Barcode,http://bl.ocks.org/4324236,Christopher Manning,code viewer,bl.ocks,bar code,simplex noise,,
+Raster Reprojection,http://bl.ocks.org/4329423,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4329423/raw/thumbnail.png,12/29/2012
+Bivariate Hexbin Map,http://bl.ocks.org/4330486,Mike Bostock,code viewer,bl.ocks,map; hexbin,,https://gist.github.com/mbostock/4330486/raw/thumbnail.png,1/23/2013
+Quartile plots with outliers,http://bl.ocks.org/4331208,,code viewer,bl.ocks,,,,
+Finite State Stream,http://bl.ocks.org/4333610,Mike Bostock,code viewer,bl.ocks,,,,12/18/2012
+Collapsible Tree,http://bl.ocks.org/4339083,Mike Bostock,code viewer,bl.ocks,tree,,https://gist.github.com/mbostock/4339083/raw/thumbnail.png,1/23/2013
+Reingold–Tilford Tree,http://bl.ocks.org/4339184,Mike Bostock,code viewer,bl.ocks,tree,,https://gist.github.com/mbostock/4339184/raw/thumbnail.png,12/21/2012
+Cluster Dendrogram,http://bl.ocks.org/4339607,Mike Bostock,code viewer,bl.ocks,tree,,https://gist.github.com/mbostock/4339607/raw/thumbnail.png,12/19/2012
+Hierarchical Edge Bundling,http://bl.ocks.org/4341134,Mike Bostock,code viewer,bl.ocks,treemap; edge bundling,,https://gist.github.com/mbostock/4341134/raw/thumbnail.png,12/19/2012
+Delaunay Triangulation,http://bl.ocks.org/4341156,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4341156/raw/thumbnail.png,12/19/2012
+Donut Transitions,http://bl.ocks.org/4341417,Mike Bostock,code viewer,bl.ocks,doughnut chart,,https://gist.github.com/mbostock/4341417/raw/thumbnail.png,12/19/2012
+The Amazing Pie,http://bl.ocks.org/4341574,Mike Bostock,code viewer,bl.ocks,doughnut chart; pie chart,,https://gist.github.com/mbostock/4341574/raw/thumbnail.png,12/19/2012
+Convex Hull,http://bl.ocks.org/4341699,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4341699/raw/thumbnail.png,12/24/2012
+Kernel Density Estimation,http://bl.ocks.org/4341954,Mike Bostock,code viewer,bl.ocks,histogram; kde,,https://gist.github.com/mbostock/4341954/raw/thumbnail.png,12/19/2012
+Symbol Map,http://bl.ocks.org/4342045,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4342045/raw/thumbnail.png,12/19/2012
+Spline Editor,http://bl.ocks.org/4342190,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4342190/raw/thumbnail.png,12/19/2012
+Graph Rollup,http://bl.ocks.org/4343153,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4343153/raw/thumbnail.png,12/20/2012
+Quadtree,http://bl.ocks.org/4343214,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4343214/raw/thumbnail.png,12/29/2012
+Icicle,http://bl.ocks.org/4347473,Mike Bostock,code viewer,bl.ocks,icicle,,https://gist.github.com/mbostock/4347473/raw/thumbnail.png,12/20/2012
+Basic Reusable Slopegraph,http://bl.ocks.org/4348024,Christophe Viau,code viewer,bl.ocks,slopegraph,,,
+Zoomable Sunburst,http://bl.ocks.org/4348373,Mike Bostock,code viewer,bl.ocks,sunburst,,https://gist.github.com/mbostock/4348373/raw/thumbnail.png,1/3/2013
+Snowflakes with D3,http://bl.ocks.org/4349166,,code viewer,bl.ocks,experiment,,,
+Q-Q Plots,http://bl.ocks.org/4349187,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4349187/raw/thumbnail.png,12/20/2012
+ggplot2-Style Axis,http://bl.ocks.org/4349486,Mike Bostock,code viewer,bl.ocks,axis,,https://gist.github.com/mbostock/4349486/raw/thumbnail.png,12/20/2012
+Ordinal Brushing,http://bl.ocks.org/4349509,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4349509/raw/thumbnail.png,1/11/2013
+Brush Handles,http://bl.ocks.org/4349545,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4349545/raw/thumbnail.png,12/20/2012
+U.S. Airports,http://bl.ocks.org/4360892,Mike Bostock,code viewer,bl.ocks,map; voronoi,,https://gist.github.com/mbostock/4360892/raw/thumbnail.png,12/22/2012
+Gringorten Equal-Area,http://bl.ocks.org/4362031,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4362031/raw/thumbnail.png,12/23/2012
+Polar Azimuthal Equal-area,http://bl.ocks.org/4364903,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4364903/raw/thumbnail.png,1/18/2013
+ForceLayoutEditor,http://bl.ocks.org/4370043,,code viewer,bl.ocks,,,https://raw.github.com/gist/4362310/thumbnail.png,
+Multi-Series Line to Stacked Area Chart Transition,http://bl.ocks.org/4390054,Tim Swast,code viewer,bl.ocks,line chart; stacked area chart,,,
+Rotated Axis Labels,http://bl.ocks.org/4403522,Mike Bostock,code viewer,bl.ocks,axis,,https://gist.github.com/mbostock/4403522/raw/thumbnail.png,1/2/2013
+TopoJSON Points,http://bl.ocks.org/4408297,Mike Bostock,code viewer,bl.ocks,map,topojson,https://gist.github.com/mbostock/4408297/raw/thumbnail.png,1/2/2013
+New Zealand Earthquakes Pattern of Life,http://bl.ocks.org/4425979,d3noob,standalone visualization,bl.ocks,scatterplot; timeline,,https://gist.github.com/mbostock/4425979/raw/thumbnail.png,
+Blocky Counties,http://bl.ocks.org/4431123,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4431123/raw/thumbnail.png,1/2/2013
+Azimuthal Equidistant,http://bl.ocks.org/4436875,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4436875/raw/thumbnail.png,1/3/2013
+Responsive TopoJSON Sizing,http://bl.ocks.org/4444770,John Czaplewski,code viewer,bl.ocks,map,topojson,,
+Interrupted Goode Homolosine,http://bl.ocks.org/4448587,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4448587/raw/thumbnail.png,1/9/2013
+Prose-only Blocks,http://bl.ocks.org/4454550,Mike Bostock,code viewer,bl.ocks,,,,1/5/2013
+Waterman Butterfly,http://bl.ocks.org/4458497,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4458497/raw/thumbnail.png,1/28/2013
+Gnomonic Butterfly,http://bl.ocks.org/4458680,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4458680/raw/thumbnail.png,1/5/2013
+Interrupted Sinusoidal,http://bl.ocks.org/4458991,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4458991/raw/thumbnail.png,1/9/2013
+Littrow,http://bl.ocks.org/4459071,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4459071/raw/thumbnail.png,1/4/2013
+Hammer Retroazimuthal,http://bl.ocks.org/4459130,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4459130/raw/thumbnail.png,1/5/2013
+Craig Retroazimuthal,http://bl.ocks.org/4459466,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4459466/raw/thumbnail.png,1/4/2013
+Craig Retroazimuthal,http://bl.ocks.org/4459716,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4459716/raw/thumbnail.png,1/4/2013
+Berghaus Star,http://bl.ocks.org/4463049,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4463049/raw/thumbnail.png,1/5/2013
+Armadillo Projection,http://bl.ocks.org/4463127,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4463127/raw/thumbnail.png,1/5/2013
+Wiechel,http://bl.ocks.org/4463155,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4463155/raw/thumbnail.png,1/5/2013
+Quartic Authalic,http://bl.ocks.org/4463175,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4463175/raw/thumbnail.png,1/9/2013
+HEALPix,http://bl.ocks.org/4463237,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4463237/raw/thumbnail.png,1/5/2013
+Wagner VII,http://bl.ocks.org/4465109,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4465109/raw/thumbnail.png,1/5/2013
+Craster Parabolic,http://bl.ocks.org/4465118,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4465118/raw/thumbnail.png,1/5/2013
+Flat-Polar Parabolic,http://bl.ocks.org/4465130,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4465130/raw/thumbnail.png,1/5/2013
+Flat-Polar Quartic,http://bl.ocks.org/4465137,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4465137/raw/thumbnail.png,1/5/2013
+Flat-Polar Sinusoidal,http://bl.ocks.org/4465140,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4465140/raw/thumbnail.png,1/5/2013
+Baker Dinomic,http://bl.ocks.org/4476279,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4476279/raw/thumbnail.png,1/7/2013
+Hobo–Dyer,http://bl.ocks.org/4476487,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4476487/raw/thumbnail.png,1/7/2013
+Tobler World-in-a-Square,http://bl.ocks.org/4476496,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4476496/raw/thumbnail.png,1/7/2013
+Natural Earth,http://bl.ocks.org/4479477,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4479477/raw/thumbnail.png,1/7/2013
+Hill Eucyclic,http://bl.ocks.org/4479513,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4479513/raw/thumbnail.png,1/8/2013
+Maurer No. 73,http://bl.ocks.org/4479547,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4479547/raw/thumbnail.png,1/7/2013
+Boggs Eumorphic,http://bl.ocks.org/4481220,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4481220/raw/thumbnail.png,1/7/2013
+Interrupted Boggs Eumorphic,http://bl.ocks.org/4481265,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4481265/raw/thumbnail.png,1/9/2013
+Interrupted Sinu-Mollweide,http://bl.ocks.org/4481520,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4481520/raw/thumbnail.png,1/9/2013
+Social trust vs ease of doing business,http://bl.ocks.org/4481531,Nikhil Sonnad,code viewer,bl.ocks,scatterplot,,,
+Interactive MDS visualisation,http://bl.ocks.org/4482115,Simon Barthelmé,code viewer,bl.ocks,scatterplot,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%2012.18.38%20AM.png,
+Using SVG and canvas on the same force-directed layout,http://bl.ocks.org/4485778,Sujay Vennam,code viewer,bl.ocks,bubble chart,canvas,,
+Wagner IV,http://bl.ocks.org/4487674,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4487674/raw/thumbnail.png,1/8/2013
+Bromley,http://bl.ocks.org/4487695,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4487695/raw/thumbnail.png,1/8/2013
+Laskowski Tri-Optimal,http://bl.ocks.org/4489342,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4489342/raw/thumbnail.png,1/8/2013
+Van der Grinten IV,http://bl.ocks.org/4489365,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4489365/raw/thumbnail.png,1/8/2013
+Eckert–Greifendorff,http://bl.ocks.org/4496212,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4496212/raw/thumbnail.png,1/9/2013
+Interrupted Mollweide,http://bl.ocks.org/4498187,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4498187/raw/thumbnail.png,1/26/2013
+Mollweide Hemispheres,http://bl.ocks.org/4498292,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4498292/raw/thumbnail.png,1/9/2013
+Concentric Circles Emanating,http://bl.ocks.org/4503672,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4503672/raw/thumbnail.png,1/26/2013
+Briesemeister,http://bl.ocks.org/4519926,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4519926/raw/thumbnail.png,1/12/2013
+Atlantis,http://bl.ocks.org/4519975,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4519975/raw/thumbnail.png,1/12/2013
+Two Point Equidistant,http://bl.ocks.org/4522565,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4522565/raw/thumbnail.png,1/20/2013
+Two Point Equidistant,http://bl.ocks.org/4525362,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4525362/raw/thumbnail.png,1/26/2013
+Draggable Network,http://bl.ocks.org/4557698,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/4557698/raw/thumbnail.png,1/19/2013
+Brushable Network,http://bl.ocks.org/4560481,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/4560481/raw/thumbnail.png,1/19/2013
+Brushable Network II,http://bl.ocks.org/4565798,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/4565798/raw/thumbnail.png,1/19/2013
+Draggable Network II,http://bl.ocks.org/4566102,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/4566102/raw/thumbnail.png,1/19/2013
+Threshold Key,http://bl.ocks.org/4573883,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4573883/raw/thumbnail.png,1/23/2013
+Polar Plot,http://bl.ocks.org/4583749,Mike Bostock,code viewer,bl.ocks,polar plot,,https://gist.github.com/mbostock/4583749/raw/thumbnail.png,1/20/2013
+Solar Terminator,http://bl.ocks.org/4597134,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4597134/raw/thumbnail.png,1/22/2013
+Curved Links,http://bl.ocks.org/4600693,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4600693/raw/thumbnail.png,1/25/2013
+Asia Lambert Conic Conformal,http://bl.ocks.org/4613663,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/4613663/raw/thumbnail.png,1/23/2013
+Multiline chart with brushing and mouseover,http://bl.ocks.org/4618602,Gerd Niemetz,code viewer,bl.ocks,line chart,,http://kwout.com/cutout/9/jz/hk/nif_w200.jpg,
+Stacked and grouped bar chart,http://bl.ocks.org/4629518,İsmail Ali Gençay,code viewer,bl.ocks,stacked bar chart; grouped bar chart,,,
+Tooltip on a stream graph,http://bl.ocks.org/4631136,Will Turman,code viewer,bl.ocks,streamgraph,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%2010.29.53%20PM.png,
+Interactive Streamgraph,http://bl.ocks.org/4631136,Will Turman,code viewer,bl.ocks,streamgraph,,,
+Rotating Voronoi,http://bl.ocks.org/4636377,Mike Bostock,code viewer,bl.ocks,voronoi,,https://gist.github.com/mbostock/4636377/raw/thumbnail.png,1/27/2013
+"Sunny side of the Earth, for any date and time",http://bl.ocks.org/4645873,Johan Sundström,code viewer,bl.ocks,map,,,
+113th U.S. Congressional Districts,http://bl.ocks.org/4657115,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/4657115/raw/thumbnail.png,1/28/2013
+Stacked-to-multiple bar charts,http://bl.ocks.org/4679202,Mike Bostock,code viewer,bl.ocks,,,http://kwout.com/cutout/a/fw/vn/ife_w200.jpg,1/30/2013
+Faux-3d Shaded Globe,http://bl.ocks.org/4686432,Derek Watkins,code viewer,bl.ocks,map,,,
+Faster pan/zoom on big TopoJSON of Iceland,http://bl.ocks.org/4686541,Ziggy Jonsson,code viewer,bl.ocks,map,topojson,,
+Non-contiguous cartogram of seats allocated in the canadian House of Commons,http://bl.ocks.org/4704168,Tom Nightingale,code viewer,bl.ocks,cartogram,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-8-13%2010.22.08%20AM.png,
+Timeline of earthquake in Christchurch 2010,http://bl.ocks.org/4718717,Tom Nightingale,code viewer,bl.ocks,scatterplot; timeline; map,leaflet,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-8-13%2010.08.43%20AM.png,
+Circular key scale,http://bl.ocks.org/4723857,Julian Burgess,code viewer,bl.ocks,axis,,,
+How to get a significant correlation value by moving just one point around,http://bl.ocks.org/4731053,Simon Barthelmé,code viewer,bl.ocks,scatterplot,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%2012.13.47%20AM.png,
+Sunlight Heatmap,http://bl.ocks.org/4946049,Vladimir Agafonkin,code viewer,bl.ocks,heatmap;,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%209.37.38%20AM.png,
+Streamgraph,http://bl.ocks.org/582915,Mike Bostock,code viewer,bl.ocks,streamgraph,,https://gist.github.com/mbostock/582915/raw/thumbnail.png,10/11/2012
+Pale Dawn,http://bl.ocks.org/583229,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/583229/raw/thumbnail.png,10/11/2012
+Cellular automata,http://bl.ocks.org/583734,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/583734/raw/thumbnail.png,10/11/2012
+CSS3 Modal Button,http://bl.ocks.org/584742,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/584742/raw/thumbnail.png,10/11/2012
+Loupe,http://bl.ocks.org/587424,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/587424/raw/thumbnail.png,12/18/2012
+CSSOM/SVG Test,http://bl.ocks.org/590163,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/590163/raw/thumbnail.png,10/11/2012
+Fancy Markers,http://bl.ocks.org/590744,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/590744/raw/thumbnail.png,10/11/2012
+Hilbert Tiles,http://bl.ocks.org/597287,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/597287/raw/thumbnail.png,10/11/2012
+Sequential Tiles,http://bl.ocks.org/597292,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/597292/raw/thumbnail.png,10/11/2012
+Van Wijk and Nuij Zooming,http://bl.ocks.org/600164,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/600164/raw/thumbnail.png,10/11/2012
+Labeled points,http://bl.ocks.org/601639,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/601639/raw/thumbnail.png,10/11/2012
+Caravaggio’s Bacco (1597),http://bl.ocks.org/603148,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/603148/raw/thumbnail.png,12/20/2012
+Resizable Markers,http://bl.ocks.org/625531,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/625531/raw/thumbnail.png,10/11/2012
+Fancy Markers (No Gradient),http://bl.ocks.org/645734,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/645734/raw/thumbnail.png,10/11/2012
+Image Markers,http://bl.ocks.org/645758,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/645758/raw/thumbnail.png,10/11/2012
+Image Processing,http://bl.ocks.org/647888,Mike Bostock,code viewer,bl.ocks,,,,10/26/2010
+Focusable Maps,http://bl.ocks.org/660054,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/660054/raw/thumbnail.png,10/11/2012
+Voronoi Tessellation (Redirect),http://bl.ocks.org/665906,Mike Bostock,code viewer,bl.ocks,voronoi,,https://gist.github.com/mbostock/665906/raw/thumbnail.png,11/18/2012
+Voronoi Tessellation (Redirect),http://bl.ocks.org/667245,Mike Bostock,code viewer,bl.ocks,voronoi,,https://gist.github.com/mbostock/667245/raw/thumbnail.png,11/18/2012
+Rainbow Colors,http://bl.ocks.org/675512,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/675512/raw/thumbnail.png,10/11/2012
+stroke-dasharray,http://bl.ocks.org/705856,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/705856/raw/thumbnail.png,10/11/2012
+Moiré Patterns,http://bl.ocks.org/714554,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/714554/raw/thumbnail.png,12/19/2012
+Non-Contiguous Cartogram,http://bl.ocks.org/843177,Mike Bostock,code viewer,bl.ocks,cartogram,,https://gist.github.com/mbostock/843177/raw/thumbnail.png,10/11/2012
+d3.nest,http://bl.ocks.org/844752,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/844752/raw/thumbnail.png,10/11/2012
+Circular Layout,http://bl.ocks.org/846688,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/846688/raw/thumbnail.png,10/11/2012
+Circular Layout (Arc),http://bl.ocks.org/846704,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/846704/raw/thumbnail.png,10/11/2012
+Circular Layout (Recursive),http://bl.ocks.org/846710,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/846710/raw/thumbnail.png,10/11/2012
+Circular Layout (Slider),http://bl.ocks.org/847677,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/847677/raw/thumbnail.png,10/11/2012
+Raindrops,http://bl.ocks.org/849853,Mike Bostock,code viewer,bl.ocks,,,https://a248.e.akamai.net/camo.github.com/aa90391f97b94023fa8fd006164ffaf84d5de5ff/687474703a2f2f64336a732e6f72672f65782f7261696e2e706e67,
+Wind,http://bl.ocks.org/865396,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/865396/raw/thumbnail.png,10/11/2012
+Fill-Rule Evenodd,http://bl.ocks.org/870118,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/870118/raw/thumbnail.png,10/11/2012
+Grouped Bar Chart,http://bl.ocks.org/882152,Mike Bostock,code viewer,bl.ocks,grouped bar chart,,https://gist.github.com/mbostock/882152/raw/thumbnail.png,1/5/2013
+Polymaps + D3,http://bl.ocks.org/899649,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/899649/raw/thumbnail.png,10/11/2012
+Polymaps + D3 Part 2,http://bl.ocks.org/899670,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/899670/raw/thumbnail.png,10/11/2012
+Google Maps + D3,http://bl.ocks.org/899711,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/899711/raw/thumbnail.png,1/4/2013
+d3.geo.tiler,http://bl.ocks.org/900050,Mike Bostock,code viewer,bl.ocks,map,,https://gist.github.com/mbostock/900050/raw/thumbnail.png,10/11/2012
+Sunburst Layout with Labels,http://bl.ocks.org/910126,Mike Bostock,code viewer,bl.ocks,sunburst,,,12/1/2012
+Reingold–Tilford Tree (Redirect),http://bl.ocks.org/912735,Mike Bostock,code viewer,bl.ocks,,,,12/20/2012
+Build Your Own Graph!,http://bl.ocks.org/929623,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/929623/raw/thumbnail.png,1/21/2013
+Force-directed layout with interactive Construction,http://bl.ocks.org/929623,,code viewer,bl.ocks,network,,,
+Arcs Around,http://bl.ocks.org/938288,Mike Bostock,code viewer,bl.ocks,,,,4/22/2011
+Force-directed layout with images and Labels,http://bl.ocks.org/950642,Mike Bostock,code viewer,bl.ocks,network,,https://gist.github.com/mbostock/950642/raw/thumbnail.png,12/20/2012
+Treemap,http://bl.ocks.org/972398,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/972398/raw/thumbnail.png,12/19/2012
+Histogram (Redirect),http://bl.ocks.org/993912,Mike Bostock,code viewer,bl.ocks,,,,7/4/2012
+Force Layout from List,http://bl.ocks.org/996370,Mike Bostock,code viewer,bl.ocks,,,https://gist.github.com/mbostock/996370/raw/thumbnail.png,12/20/2012
+Animated tree,http://bl.ocks.org/999346,Mike Bostock,code viewer,bl.ocks,tree,,https://gist.github.com/mbostock/999346/raw/thumbnail.png,1/21/2013
+Edge labels,http://bl.ocks.org/anonymous/4970328,,code viewer,bl.ocks,network,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-17-13%208.03.48%20AM.png,
+Map of all M2.5+ earthquakes of the last 24h.,http://bl.ocks.org/benelsen/4969007,Ben Elsen,code viewer,bl.ocks,map,,https://gist.github.com/benelsen/4969007/raw/72dfdae899fb04e536bf4a1ea5fc128c09f822f8/thumbnail.png,21/02/2013
+Slopegraph lines in SVG and Canvas,http://bl.ocks.org/biovisualize/5050136/1e40690f25396e3626c53c96a5933e3b90bea7e2,Erik Solen,code viewer,bl.ocks,slopegraph,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.19.15%20AM.png,
+Error bars reusable component,http://bl.ocks.org/chrisbrich/5044999,Chris B. Rich,code viewer,bl.ocks,error bars; scatterplot,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%207.49.03%20AM.png,
+christophermanning’s bl.ocks,http://bl.ocks.org/christophermanning,Christopher Manning,collection,bl.ocks,,,,
+"""Elbow"" Dendrogram",http://bl.ocks.org/d/2429963,Mike Bostock,code viewer,bl.ocks,dendrogram,,https://gist.github.com/mbostock/2429963/raw/thumbnail.png,10/11/2012
+Sankey Diagram with Overlap,http://bl.ocks.org/d/3779574/,,code viewer,bl.ocks,sankey,,,
+Sankey diagram with horizontal and vertical node movement,http://bl.ocks.org/d3noob/5028304,D3noob,code viewer,bl.ocks,sankey,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%208.30.50%20PM.png,
+gka’s blocks,http://bl.ocks.org/gka,Gregor Aisch,collection,bl.ocks,,,,
+johan’s blocks,http://bl.ocks.org/johan,Johan Sundström,collection,bl.ocks,,,,
+Bl.ocks RSS,http://bl.ocks.org/mbostock.rss,Mike Bostock,collection,,,,,
+Zoom a map to a Feature Bounding Box,http://bl.ocks.org/mbostock/4699541,Mike Bostock,code viewer,bl.ocks,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-21-13%202.57.32%20PM.png,
+Multi-series Line Chart with Long Format Data (columns instead of rows),http://bl.ocks.org/natemiller/20f9bd99d1795e3a0b1c,Nate Miller,code viewer,bl.ocks,line chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%204.13.08%20PM.png,
+Beeswarm plot,http://bl.ocks.org/njvack/1316832,Nate Vack,code viewer,bl.ocks,beeswarm plot,,,
+Basic Gantt Chart,http://bl.ocks.org/thor5551/4986745,Andrew Thornton,code viewer,bl.ocks,gantt chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-19-13%201.34.10%20PM.png,
+Tmcw’s bl.ocks,http://bl.ocks.org/tmcw,Tom MacWright,code viewer,bl.ocks,,,,
+Violin/Box plots,http://bl.ocks.org/z-m-k/5014368,Marcin Zamojski,code viewer,bl.ocks,violin chart; box plot,,,
+ZJONSSON’s bl.ocks,http://bl.ocks.org/ZJONSSON,Ziggy Jonsson,collection,bl.ocks,,,,
+Bracket Layout,http://blockses.appspot.com/2503502,,,,tree,,,
+Instant interactive visualization with d3 + ggplot2,http://blog.echen.me/2012/03/05/instant-interactive-visualization-with-d3-and-ggplot2/,Edwin Chen,blog post,,,ggplot2,,
+Exploring d3.js with data from my runs to plot my heart rate,http://blog.freshteapot.net/post/31938798971/using-d3-js-to-visualise-my-heart-rate,,,,,,,
+401k Fees Vary Widely for Similar Companies (Scatter) ,http://blog.futureadvisor.com/401k-fees-are-determined-by-hr-negotiation-skills/,Amelia Greenhall,blog post ,,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%201.09.12%20PM.png,
+Easy infographics with D3.js,http://blog.guanxin.de/2013/02/easy-infographics-with-d3js.html,Ifung Lu,blog post,,infographics,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-19-13%208.33.05%20AM.png,
+Collider - a d3.js game,http://blog.latentflip.com/post/18195267992/d3-collider,,,,game,,,
+We Love France: transition between the Hexagon and a heart,http://blog.lightjs.org/2012/09/d3-js-fun-france-2/,,,,map,,,
+Webplatform dancing logo,http://blog.lightjs.org/2012/10/welcome-to-webplatform-animation-d3js/,,,,,,,
+Olympic Medal Rivalry,http://blog.new-bamboo.co.uk/2012/06/22/olympic-medal-rivalry,Makoto Inoue,,,,,,
+Graph diagram of gene ontology,http://blog.nextgenetics.net/?e=19,Damian Kao,blog post,,,cytoscape,,
+Heatmap of gene expression with hierarchical clustering,http://blog.nextgenetics.net/?e=44,Damian Kao,,,heatmap,,,
+Data visualization with D3.js and python,http://blog.nextgenetics.net/?e=7,Damian Kao,blog post,,,python,,
+Viewing OpenLearn Mindmaps Using d3.js,http://blog.ouseful.info/2012/05/11/viewing-openlearn-mindmaps-using-d3-js/,Tony Hirst,blog post,,tree,networkx,,
+F1 Championship Points as a d3.js Powered Sankey Diagram,http://blog.ouseful.info/2012/05/24/f1-championship-points-as-a-d3-js-powered-sankey-diagram/,Tony Hirst,blog post,,sankey diagram,networkx,,
+Building a tree diagram,http://blog.pixelingene.com/2011/07/building-a-tree-diagram-in-d3-js/,,tutorial,,tree,,,
+Reveal animation on a tree with a clip path,http://blog.pixelingene.com/2011/08/progressive-reveal-animations-in-svg-using-a-svgclippath/,,tutorial,,tree,,,
+Javascript Idioms in D3.js,http://blog.sathomas.me/post/javascript-idioms,,,,,,,
+Pie Chart Updating with Text,http://blog.stephenboak.com/2011/08/07/easy-as-a-pie.html,Stephen Boak,Specific tutorials,,pie chart,,,
+Creating Animations and Transitions With D3,http://blog.visual.ly/creating-animations-and-transitions-with-d3-js/,Jerome Cukier,Introductory tutorials,,,,,
+How to Make Choropleth Maps in D3,http://blog.visual.ly/how-to-make-choropleth-maps-in-d3/,EJ Fox,Specific tutorials,,choropleth,,,
+Using Selections in D3 to Make Data-Driven Visualizations,http://blog.visual.ly/using-selections-in-d3-to-make-data-driven-visualizations/,Ian Johnson,talks,,,,,
+Visual.ly Meetup Recap: Introductory D3 Workshop,http://blog.visual.ly/visual-ly-meetup-recap-introductory-d3-workshop/,Aleksandra Todorova,talks,Visual.ly,,,,
+IPython-Notebook with D3.js,http://blogs.infoecho.net/echo/2012/02/05/ipython-notebook-d3-js-mashup/,,,,,ipython,,
+Dataflow programming with D3 and Blockly,http://bollwyvl.github.com/blockd3/,Quynh Neutron; Nicholas Bollweg,code library,github page,,blockly,,
+Mike Bostock portfolio,http://bost.ocks.org/mike/,Mike Bostock,collection,,,,,
+Towards Reusable Charts,http://bost.ocks.org/mike/chart/,Mike Bostock,Specific tutorials,,,,,
+Object Constancy,http://bost.ocks.org/mike/constancy/,Mike Bostock,Introductory tutorials,,,,,
+D3 Workshop Slides,http://bost.ocks.org/mike/d3/workshop/,Mike Bostock,talks,VIZBI,,,,
+Drought during Month,http://bost.ocks.org/mike/drought/,,,,map,,,
+Fisheye Distortion,http://bost.ocks.org/mike/fisheye/,Mike Bostock,,,fisheye,,https://a248.e.akamai.net/camo.github.com/a71235c8c8e04e4de210c11ec1b306f493352dcc/687474703a2f2f64336a732e6f72672f65782f666973686579652e706e67,
+Hive Plot,http://bost.ocks.org/mike/hive/,Mike Bostock,,,hive plot,,https://a248.e.akamai.net/camo.github.com/54aaf71401657a747cb6e7e68270d350a6bc15b1/687474703a2f2f64336a732e6f72672f65782f686976652e706e67,
+Thinking with Joins,http://bost.ocks.org/mike/join/,Mike Bostock,Introductory tutorials,,,,,
+Let’s Make a Map,http://bost.ocks.org/mike/map/,Mike Bostock,Specific tutorials,,map,,,
+Les Misérables Co-occurrence Matrix,http://bost.ocks.org/mike/miserables/,Mike Bostock,,,matrix,,https://a248.e.akamai.net/camo.github.com/5e1e7da1bf7835505a72d4f252a0d5d69fe3bc7a/687474703a2f2f64336a732e6f72672f65782f6d6973657261626c65732e706e67,
+The Wealth & Health of Nations,http://bost.ocks.org/mike/nations/,Mike Bostock,,,bubble chart,,https://a248.e.akamai.net/camo.github.com/300d16f1b84a9acf2f263271e8ec4b33ff640205/687474703a2f2f64336a732e6f72672f65782f6e6174696f6e732e706e67,
+Nested Selections,http://bost.ocks.org/mike/nest/,Mike Bostock,Introductory tutorials,,,,,
+Path and Transform Transitions,http://bost.ocks.org/mike/path/,Mike Bostock,Specific tutorials,,,,,
+Sankey Diagram,http://bost.ocks.org/mike/sankey/,Mike Bostock,,,sankey,,https://a248.e.akamai.net/camo.github.com/d9abb5b2b474c0e37728abedb9ba722f8b6e4f24/687474703a2f2f64336a732e6f72672f65782f73616e6b65792e706e67,
+Uber Rides by Neighborhood,http://bost.ocks.org/mike/uberdata/,Mike Bostock,standalone visualization,,chord diagram,,https://a248.e.akamai.net/camo.github.com/811ea1b6b8f2456bb54627a40341d1b97b287847/687474703a2f2f64336a732e6f72672f65782f756265722e706e67,
+Using the D3.js Visualization Library with AngularJS,http://briantford.com/blog/angular-d3.html,Brian Ford,,,,angularjs,,
+Mandel for Controller Bulldog Budget,http://budget.brettmandel.com/,Ben Garvey,standalone visualization,,treemap,,,
+Infro.js: Nutrient Dataset,http://cakey.github.com/infro/nutrients.html,Ben Shaw,tool,github pages,bar chart; table,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-11-13%2010.22.45%20PM.png,
+Calculating quadtree bounding boxes and displaying them in leaflet,http://calvinmetcalf.github.com/k3/,,code library,github page,map,,,
+Composite Map Projection,http://cartography.oregonstate.edu/demos/CompositeMapProjection/,,,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%203.01.51%20PM.png,
+Lobster Catch Analyst,http://catchanalyst.co.nz/,Jamie Popkin,,,map,,,
+Visualizing Data with Web Standards Video,http://cdn-smooth.ms-studiosmedia.com/events/W3C/Day2/Web_Standards.mp4,Mike Bostock,talks,W3Conf,,,,
+iTunes Music Library Artist/Genre Graph,http://cgmartin.com/itunes-library-network-graph/,Christopher Martin,,,network,,,
+Understanding the D3 Parallel Plot Example,http://charlesmartinreid.com/wordpress/2012/08/d3-and-the-parallel-plot-part-1-of-2/,Charles Martin Reid,Specific tutorials,,parallel coordinates,,,
+D3 and WordPress,http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/,Charles Martin Reid,Specific tutorials,,parallel coordinates,wordpress,,
+Chart.io: The Easiest Business Dashboard You'll Ever Use,http://chart.io/,,product,,,,,
+Graphicbaseball: 2012 Batters,http://charts.graphicbaseball.com/parallelbatting,Will Turman,standalone visualization,,parallel coordinates,,,
+Graphicbaseball: 2012 Pitchers,http://charts.graphicbaseball.com/parallelpitching,Will Turman,standalone visualization,,parallel coordinates,,,
+Talk at JS.geo 2013,http://chelm.github.com/jsgeo/,Chris Helm,talks,,map,,,
+Multiple visualization from the Société Typographique de Neuchâtel,http://chop.leeds.ac.uk/stn/interface/gallery.php,Vincent Hiribarren,,,,,,
+Try D3 Now,http://christopheviau.com/d3_tutorial/,Christophe Viau,Introductory tutorials,,,,,
+Using Inkscape with d3,http://christopheviau.com/d3_tutorial/d3_inkscape/,Christophe Viau,Specific tutorials,,,,,
+"D3, Conceptually",http://code.hazzens.com/d3tut/,Mikey Levine,Introductory tutorials,,,,,
+D3 Conceptually,http://code.hazzens.com/d3tut/lesson_0.html,Mikey Levine,tutorial,,,,,
+Choropleth with interactive parameters for NYC data visualization,http://code.leakingalpha.com/visionyc/,,,,choropleth,,,
+Exoplanets: an interactive version of XKCD 1071,http://codementum.org/exoplanets/,,,,,,,
+Bitly link Co-occurrence,http://colloquial.herokuapp.com/vis,,standalone visualization,heroku,adjacency matrix,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.32.53%20AM.png,
+Collusion FireFox Addon,http://collusion.toolness.org/,Atul Varma,,,,,,
+Color: a color matching game,http://color.method.ac/,Maria Munuera; Mark MacKay,,,game,,https://a248.e.akamai.net/camo.github.com/69db8f445151b1c87a16061dfe0e534f520ba003/687474703a2f2f64336a732e6f72672f65782f636f6c6f722e706e67,
+Your Tax-paid Tweets,http://congress.joshreyes.com/,Joshua A. Reyes,,,,,,
+Stripe Gross Volume witth D3.js,http://coovtech.com/posts/stripe-d3/,Billy Coover,blog post,,area chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-20-13%209.22.53%20AM.png,
+Render Geographic Information in 3D With Three.js and D3.js,http://css.dzone.com/articles/render-geographic-information,,,,map,three.js,,
+CSSdeck: Repulsion example,http://cssdeck.com/labs/d3-repulsive,,,,,,,
+D3 Examples on Heroku,http://d3-example.herokuapp.com/,Tore Nauta,code viewer,heroku,,,,
+Audio Spectrum Analyzer,http://d3-spectrum.herokuapp.com,Ari Russo,,,,,,
+Export to SVG/PNG/PDF server-side using Perl,http://d3export.cancan.cshl.edu/,,,,,,,
+XKCD-style plots,http://dan.iel.fm/xkcd/,,,,,,,
+Data Story,http://data-story.org,Decio Battaglia; Kevin Mahoney; Xiaoying Riley,,,,,,
+An overview of the Hong Kong budget in 2013-14,http://data.jmsc.hku.hk/hongkong/budget/2013/,Cédric Sam,standalone visualization,,bubble chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%209.49.25%20AM.png,
+D3.js Meta Tutorial,http://datacommunitydc.org/blog/2013/01/d3-js-meta-tutorial/,Sean Murphy,collection,,,,,1/30/2013
+DataMaps: Interactive maps for data visualizations.,http://datamaps.github.com/,Mark DiMarco,code library,github page,map,,,
+Vélib network visualization,http://datavelib.com/,Cyril Gantzer,standalone visualization,,voronoi,,,
+Floor Plan Map,http://dciarletta.github.com/d3-floorplan/,David Ciarletta,code library,github page,floor plan,,,
+Introduction to D3,http://dealloc.me/2011/06/24/d3-is-not-a-graphing-library.html,Justin Palmer,Introductory tutorials,,,,,
+Map with faux-3D globe,http://dev.geosprocket.com/d3/finder/,Bill Morris,standalone visualization,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-7-13%202.47.40%20PM.png,
+Seven years of SSLC in Karnataka,http://dev.klp.org.in/timeseries/choropleth.html,,,,,,,
+Dex Motion Chart Demo,http://dexvis.com/vis/MotionChartDemo3.html,Patrick Martin,standalone visualization,,scatterplot,dex,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%203.11.28%20PM.png,
+Parallel Lines and Football using Dex and D3.js,http://dexvis.wordpress.com/2013/01/28/d3js-parallel-lines-and-football/,Patrick Martin,standalone visualization,,,dex,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%203.19.57%20PM.png,
+Introduction to Network Analysis and Representation,http://dhs.stanford.edu/dh/networks/,Elijah Meeks; Maya Krishnan,standalone visualization,,network,,,
+The Diabetes Dashboard,http://diabetesvis.herokuapp.com/diabetes/dashboard,,,,,,,
+D3.js force diagram from Excel,http://dl.dropbox.com/u/14196218/Share/d3ForceIntegrations.html,,,,network,,,
+Gun ownership versus gun violence,http://do.minik.us/shorts/guns/guns.html,,,,,,,
+Backbone-D3: Simple visualisations of Backbone collections via D3.js,http://drsm79.github.com/Backbone-d3/index.html,Mike Wallace; Simon Metson,code library,github page,,backbone,,
+Smoke charts,http://dyninc.github.com/d3-smokechart/,,code library,github page,smoke chart,,,
+The electoral map: building path to victory,http://elections.nytimes.com/2012/electoral-map,,news,nytimes,news,,,
+"Converting dynamic SVG to PNG with node.js, d3 and Imagemagick",http://eng.wealthfront.com/2011/12/converting-dynamic-svg-to-png-with.html,Wealthfront,Specific tutorials,,,,,
+Simple D3.js Bar Chart Webcast,http://enja.org/2011/09/15/simple-d3-js-pie-chart-webcast/,Ian Johnson,talks,,,,,
+Tributary,http://enjalot.com/tributary/2165875/sinwaves.js,,,,,,,
+Dot Append video tutorials,http://enjalot.github.com/dot-append/,Ian Johnson,video tutorial,,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-19-13%201.50.25%20PM.png,
+Dot Enter video tutorials,http://enjalot.github.com/dot-enter/,Ian Johnson,video tutorial,,,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-19-13%201.51.53%20PM.png,
+Slides and live code from the GAFFTA d3 intro workshop,http://enjalot.github.com/intro-d3/gaffta/#/,Ian Johnson,talks,,,,,
+Election 2012 Social Dashboard (interactive Twitter visualization),http://events.current.com/social_dashboard,Current TV,,,heatmap,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-7-13%203.40.50%20PM.png,
+D3.js force diagrams with markers straight from Excel,http://excelramblings.blogspot.co.uk/2012/07/visualizing-system-integrations-using.html,Bruce McPherson,,,network,excel,,
+Explore Analytics: cloud-based data analytics and visualization,http://exploreanalytics.com/,,product,,,,,
+Canvas with d3 and Underscore,http://exposedata.com/canvas/stacked.html,Kai Chang,code example,,stacked bar chart,canvas,,
+Hypercube Edges in Orthogonal Projection,http://exposedata.com/hypercube/rotate/,Kai Chang,standalone visualization,,hypercube; parallel coordinates,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%201.23.32%20PM.png,
+Rotating hypercube in orthogonal projection and parallel coordinates,http://exposedata.com/hypercube/rotate/,,,,,,,
+Vegetable Nutrition w/ Parallel Coordinates,http://exposedata.com/parallel/,Kai Chang,,,parallel coordinates,,https://a248.e.akamai.net/camo.github.com/4e1f8cd7b395824b83d37461049c091509f4b9f8/687474703a2f2f64336a732e6f72672f65782f6e75747269656e742e706e67,
+Chord diagram: Updating data,http://exposedata.com/tutorial/chord/latest.html,,,,chord diagram,,,
+Trying out D3’s geographic features,http://eyeseast.github.com/visible-data/2012/12/14/mapping-with-d3/,Goran Halusa,code example,,map,,,
+Visual Hacker News,http://fanfarefantastique.com/vishna/,Marc-Olivier Ricard,standalone visualization,,floating bubbles,,,
+A CoffeeScript console for d3.js visualization,http://fleetinbeing.net/beans/d3,,,,,coffeescript,,
+Chord Layout Transitions,http://fleetinbeing.net/d3e/chord.html,,,,chord diagram,,,
+Hypercube with Parallel Coordinates,http://fleetinbeing.net/hypersolid/examples/parcoords.html,Kai Chang,standalone visualization,,hypercube; parallel coordinates,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%201.24.35%20PM.png,
+How to Make an Interactive Network Visualization,http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/,,,,network,,,
+How to Make an Interactive Network Visualization,http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/,Jim Vallandingham,Introductory tutorials,,,,,
+Choropleth classification systems,http://gabrielflor.it/,,,,choropleth,,,
+iD: a friendly editor for OpenStreetMap,http://geowiki.com/,Richard Fairhurst,Product,,map,openStreetMap,,
+Street Extent Visualization Using #d3js and CartoDB,http://gijs.github.com/blog/2013/02/06/street-extent-visualization-using-d3-dot-js-and-cartodb/,Javier de la Torre,standalone visualization,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%2011.45.36%20PM.png,
+Visualizing my entire website as a network,http://gkarthik.net/2012/,G. Karthik,standalone visualization,,network,,,
+Marmoset chimerism dotplot,http://goo.gl/UEaFW,David Rio Deiros,,,dot plot,,,
+Tampa Bay Rays Streamgraph,http://graphicbaseball.com/streamgraphs/2012rays.html,Will Turman,standalone visualization,,streamgraph,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-19-13%208.37.43%20AM.png,
+Force-Directed Graphs: Playing around with D3.js,http://graus.nu/blog/force-directed-graphs-playing-around-with-d3-js/,David Graus,blog post,,network,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%2012.08.22%20AM.png,
+D3.js Geo fun,http://hashbang.co.nz/blog/2013/2/25/d3_js_geo_fun,Graham Jenson,blog post,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-25-13%202.21.49%20PM.png,
+Current Article Popularity Trends on Hacker News,http://hn.metamx.com/,Vadim Ogievetsky,,,,,https://a248.e.akamai.net/camo.github.com/17fc43ea5a266a857962da53f3c7d3dd1c351f56/687474703a2f2f64336a732e6f72672f65782f686e2e706e67,
+US Elections 2012 / Twitter,http://hotspots.io/election,,,,,,,
+Colony - Visualising Javascript projects and their dependencies,http://hughsk.github.com/colony,Hugh Kennedy,code library,github page,,,,
+Icequake,http://icequake.herokuapp.com/,Ziggy Jonsson,standalone visualization,heroku,map,,http://kwout.com/cutout/6/hm/dx/5az_w200.jpg,
+Romanian parliamentarian bubble chart. In Romanian,http://improve.ro/sandbox/politicians/v1.1/,Harta Politicii,,,bubble chart,,,
+From tree to cluster and radial projection,http://javadude.wordpress.com/2012/06/13/d3-js-playing-with-selections-flat-vs-hierarchy/,Sven Hafner,tutorial,,stacked bar chart,,,
+Most simple d3.js stack bar chart from matrix,http://javadude.wordpress.com/2012/06/18/d3-js-most-simple-stack-layout-with-bars/,Sven Hafner,tutorial,,stacked bar chart,,,
+D3.js tag on The JavaDude Weblog,http://javadude.wordpress.com/category/d3-js/,Sven Hafner,collection,,,,,
+Events in the Game of Thrones,http://jeromecukier.net/projects/agot/events.html,Jérôme Cukier,,,,,,
+Visualizing a newborn's feeding and diaper activity,http://jerseyshots.com/viz/newborn.html,Jimmie Yoo,,,,,,
+SHEETSEE.JS: Fill up Websites with Stuff from Google Spreasheet,http://jllord.github.com/sheetsee.js/,Jessica Lor,code library,github page,,google spreasheet,,
+The last slice of PIE,http://joenoodles.com/2013/01/the-last-slice-of-pie/,Joseph Nudell,standalone visualization,,network; sankey diagram,,,
+Simple HTML data tables,http://jsfiddle.net/7WQjr/,,code viewer,jsfiddle,table,,,
+Simple table,http://jsfiddle.net/christopheviau/v6VMf/,Christophe Viau,code viewer,jsfiddle,table,,,
+Scatterplot and Heatmap,http://jsfiddle.net/indiemaps/gzPDU/,,code viewer,jsfiddle,scatterplot,,,
+Simple Reusable Bar Chart,http://jsfiddle.net/johnwun/8hSGP/,John Wun,code viewer,jsfiddle,bar chart,,,
+Collpase/expand nodes of a tree,http://jsfiddle.net/murray_3/5q62y/8/,,code viewer,jsfiddle,tree,,,
+SVG to Canvas to PNG using Canvg,http://jsfiddle.net/plaliberte/HAXyd/,Phil Laliberte,code viewer,jsfiddle,,canvas; png,,
+Responsive SVG resizing without re-rendering,http://jsfiddle.net/shawnbot/BJLe6/,,code viewer,jsfiddle,,,,
+Percentile line chart of gene expression microarrays,http://kbroman.wordpress.com/2013/02/08/interactive-graphics-with-d3-js/,Karl W Broman,blog post,,line chart; histogram,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%2012.01.15%20AM.png,
+UK University Statistics,http://keminglabs.com/ukuni/,Kevin Lynagh,,,,,,
+Giraffe : A Graphite Dashboard with a long neck,http://kenhub.github.com/giraffe/#dashboard=Demo&timeFrame=1d,,code library,github page,,,,
+Bharat Bhole,http://knowledgestockpile.blogspot.com/search/label/D3,Bharat Bhole,blog,,,,,
+Creating a Polar Area Diagram,http://kreese.net/blog/2012/08/26/d3-js-creating-a-polar-area-diagram-radial-bar-chart/,Kristopher Reese,Specific tutorials,,polar area diagram,,,
+Misc. Examples,http://labratrevenge.com/experiments,Justin Palmer,,,,,,
+Annual traffic entering from station to Paris,http://labs.data-publica.com/ratp/,Samuel Charron,standalone visualization,,metro map,,,
+Hacker News statistics using PhantomJS,http://labs.im/hnstat/,,,,,,,
+Angel List compensation scatterplot,http://labs.radiantmachines.com/al/,Joshua Gourneau,standalone visualization,,scatterplot,,,
+London d3.js User Group,http://lanyrd.com/series/london-d3-js/,,Meetup,,,,,
+An introduction to d3.js video with synced visualisation,http://latentflip.github.com/d3/techmeetup,Philip Roberts,talks,TechMeetup Edinburgh,,,,
+Violin: Instrumenting JavaScript,http://latentflip.github.com/violin/,Philip Roberts,code library,github page,,,,
+Public Interest Evaluation Project,http://littleearth.ca/ce/,Jamie Popkin,,,,,,
+Maps and sound,http://littleearth.ca/jsmag/,Jamie Popkin,,,map,,,
+Live coding based on Bret Victor's Inventing on Principle talk,http://livecoding.gabrielflor.it,,,,,,,
+Chord diagram: Fade on Hover,http://livecoding.io/3419309,,,,chord diagram,,,
+Polls on the 2012 U.S. Election,http://luiscarli.com/electionvis/,Luis Carli,standalone visualization,,fisheye; sankey,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-25-13%201.29.17%20PM.png,
+Steps Walked per Day ,http://luiscarli.com/fitbit/,Luis Carli,standalone visualization,,calendar; heatmap,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-25-13%201.23.38%20PM.png,
+Minute: record of all of my keystrokes,http://macwright.org/minute/,Tom MacWright,,,,,,
+Mapbox: add vector features to your map with D3,http://mapbox.com/mapbox.js/example/vectors-with-d3/,,,,map,,,
+OpenBudget,http://marcinignac.com/projects/open-budget/,,,,,,https://a248.e.akamai.net/camo.github.com/b7862a55156b1710f0a17dc268626255581f0b28/687474703a2f2f64336a732e6f72672f65782f6f70656e2d6275646765742e706e67,
+Interactive azimuthal projection simulating a 3D earth with stars,http://marcneuwirth.com/blog/2012/06/24/creating-the-earth-with-d3-js/,Marc Neuwirth,blog post,,map,,,
+Visualising New Zealand's Stolen Vehicle Database Part1,http://markhansen.co.nz/stolen-vehicles-pt1/,Mark Hansen,,,,,,
+Visualising New Zealand's Stolen Vehicle Database Part2,http://markhansen.co.nz/stolen-vehicles-pt2/,Mark Hansen,,,,,,
+Visualizing a network with Cypher and d3.js,http://maxdemarzi.com/2012/02/13/visualizing-a-network-with-cypher/,Max De Marzi,,,network,,,
+Connections in time,http://maxdemarzi.com/2012/03/08/connections-in-time/,Max De Marzi,,,,,,
+Introduction,http://mbostock.github.com/d3/,Mike Bostock,Introductory tutorials,,,,,
+Use the Force! Slides,http://mbostock.github.com/d3/talk/20110921/,Mike Bostock,talks,Trulia,network,,,
+SVG Open Keynote Slides,http://mbostock.github.com/d3/talk/20111018/,Mike Bostock,talks,Microsoft Research,,,,
+Zoomable Area Chart,http://mbostock.github.com/d3/talk/20111018/area-gradient.html,Mike Bostock,,,area chart,,https://a248.e.akamai.net/camo.github.com/8a534aaef7b5d6d9ac5ca5fdfdd1ef3b61642600/687474703a2f2f64336a732e6f72672f65782f617265612d6772616469656e742e706e67,
+Azimuthal Projections,http://mbostock.github.com/d3/talk/20111018/azimuthal.html,Mike Bostock,,,map,,https://a248.e.akamai.net/camo.github.com/d1117a9fdc468634b8560e9a67d36a31a26d99fe/687474703a2f2f64336a732e6f72672f65782f617a696d757468616c2e706e67,
+Calendar View,http://mbostock.github.com/d3/talk/20111018/calendar.html,Mike Bostock,,,calendar,,https://a248.e.akamai.net/camo.github.com/2845e402ae4712a84b85062a70a200a31147e9cc/687474703a2f2f64336a732e6f72672f65782f666c696768742d63616c656e6461722e706e67,
+Rotating Cluster Layout,http://mbostock.github.com/d3/talk/20111018/cluster.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/b57c6360033fe45d480069244c81c626470500ab/687474703a2f2f64336a732e6f72672f65782f636c75737465722d72616469616c2e706e67,
+Collision Detection,http://mbostock.github.com/d3/talk/20111018/collision.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/10cd1ae6e48bff935e2d5d365c85fa78d4ee16f4/687474703a2f2f64336a732e6f72672f65782f666f7263652d636f6c6c6973696f6e2e706e67,
+Force-Directed States,http://mbostock.github.com/d3/talk/20111018/force-states.html,Mike Bostock,,,map,,https://a248.e.akamai.net/camo.github.com/0446f2c4e783ea11d6bb866a5c75e032b49513e6/687474703a2f2f64336a732e6f72672f65782f666f7263652d7374617465732e706e67,
+Zoomable Partition Layout,http://mbostock.github.com/d3/talk/20111018/partition.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/48f41725f95dad3f65f65e5f47c1b70e932be48c/687474703a2f2f64336a732e6f72672f65782f706172746974696f6e2d7a6f6f6d2e706e67,
+Collapsible Tree Layout,http://mbostock.github.com/d3/talk/20111018/tree.html,Mike Bostock,,,tree,,https://a248.e.akamai.net/camo.github.com/edf0bcf9d8898a717b0802fb36f3b24049071db8/687474703a2f2f64336a732e6f72672f65782f747265652d7a6f6f6d2e706e67,
+Zoomable Treemap,http://mbostock.github.com/d3/talk/20111018/treemap.html,Mike Bostock,,,treemap,,https://a248.e.akamai.net/camo.github.com/4d1a221d33bd9dbcac10129dc34eff00b845d213/687474703a2f2f64336a732e6f72672f65782f747265656d61702d7a6f6f6d2e706e67,
+Visualizing Data with Web Standards Slides,http://mbostock.github.com/d3/talk/20111116/,Mike Bostock,talks,W3Conf,,,,
+Voronoi Diagram,http://mbostock.github.com/d3/talk/20111116/airports-all.html,Mike Bostock,,,voronoi,,https://a248.e.akamai.net/camo.github.com/29881703b5f7bd08214af09dbe5d5b760ef246f3/687474703a2f2f64336a732e6f72672f65782f616972706f7274732d616c6c2e706e67,
+Symbol Map,http://mbostock.github.com/d3/talk/20111116/airports.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/0965990c401367a7bcef4c7c9cecd073d7b6d544/687474703a2f2f64336a732e6f72672f65782f616972706f7274732e706e67,
+Hierarchical Bars,http://mbostock.github.com/d3/talk/20111116/bar-hierarchy.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/863148b8d2d7e8e4f33dfb62aadd5fcb0e05f5c9/687474703a2f2f64336a732e6f72672f65782f6261722d6869657261726368792e706e67,
+Hierarchical Edge Bundling,http://mbostock.github.com/d3/talk/20111116/bundle.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/75572c7b80dabb1a0984bd8ea9d3ee16c5200fe3/687474703a2f2f64336a732e6f72672f65782f62756e646c652e706e67,
+Collapsible Force Layout,http://mbostock.github.com/d3/talk/20111116/force-collapsible.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/0db09ff0930500d88e91b8da11339a13957d1ae3/687474703a2f2f64336a732e6f72672f65782f666f7263652d636f6c6c61707369626c652e706e67,
+Epicyclical Gears,http://mbostock.github.com/d3/talk/20111116/gears.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/522f9a478f783080a15bbde7a42b39c2adf601ee/687474703a2f2f64336a732e6f72672f65782f67656172732e706e67,
+Parallel Coordinates,http://mbostock.github.com/d3/talk/20111116/iris-parallel.html,Mike Bostock,,,parallel coordinates,,https://a248.e.akamai.net/camo.github.com/84c8b74251ec9b1aaa85b90bc584f307b838a470/687474703a2f2f64336a732e6f72672f65782f697269732d706172616c6c656c2e706e67,
+Scatterplot Matrix,http://mbostock.github.com/d3/talk/20111116/iris-splom.html,Mike Bostock,,,splom,,https://a248.e.akamai.net/camo.github.com/94fbe58ca94c837184b682ff0cfc2ad924fd36df/687474703a2f2f64336a732e6f72672f65782f697269732d73706c6f6d2e706e67,
+Zoomable Pack Layout,http://mbostock.github.com/d3/talk/20111116/pack-hierarchy.html,Mike Bostock,,,,,https://a248.e.akamai.net/camo.github.com/0330ad828011dab4311257a784e6dffcdbf11281/687474703a2f2f64336a732e6f72672f65782f7061636b2d6869657261726368792e706e67,
+"A Bar Chart, Part 1",http://mbostock.github.com/d3/tutorial/bar-1.html,Mike Bostock,Introductory tutorials,,bar chart,,,
+"A Bar Chart, Part 2",http://mbostock.github.com/d3/tutorial/bar-2.html,Mike Bostock,Introductory tutorials,,bar chart,,,
+Three Little Circles,http://mbostock.github.com/d3/tutorial/circle.html,Mike Bostock,Introductory tutorials,,,,,
+For Protovis Users,http://mbostock.github.com/d3/tutorial/protovis.html,Mike Bostock,Introductory tutorials,,,,,
+Realtime webserver stats,http://meloncholy.com/blog/using-d3-for-realtime-webserver-stats/,,,,,,,
+Meshu turns your places into beautiful objects.,http://meshu.io/,,product,,,,,
+Visualizing the News through Metro Maps,http://metro.ezyang.com/,Edward Z. Yang,standalone visualization,,metro map,,,
+The Story of The US Told In 141 Maps,http://michaelporath.com/projects/manifest-destiny/,Michael Porath,standalone visualization,,map; small multiples,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%202.42.34%20PM.png,
+US History in Maps,http://michaelporath.com/talks/d3.geo/,Michael Porath,talk slides,,map,,,
+A physics model of a physics model,http://michiel.wordpress.com/2012/07/13/a-physics-model-of-a-physics-model/,Michiel van der Blonk,,,,,,
+Social web use in 2009,http://n79.org/infographics/asg1/,Nikhil Bobb,standalone visualization,,bubble chart,,,
+Baby Names in England & Wales,http://names.darkgreener.com,Anna Powell-Smith,,,,,,
+Description: A little language for d3js,http://nathansuniversity.com/vanilla/discussion/111/description-a-little-language-for-d3js,,,,,,,
+Dc.js,http://nickqizhu.github.com/dc.js/,Nick Qi Zhu,code library,github page,,,,
+Dc.js NASDAQ demo,http://nickqizhu.github.com/dc.js/,Nick Zhu,blog post,,pie chart; scatterplot; line chart; bar chart; table,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.06.03%20AM.png,
+Animated Sankey (alluvial) diagram,http://nickrabinowitz.com/projects/d3/alluvial/alluvial-dynamic.html,Nick Rabinowitz,code example,,sankey diagram,,,
+Nodal is a fun way to view your GitHub network graph,http://nodal.me/login,Jesse Vogt; Matt Stockton; Kris Gösser,,,network,,,
+Visualizing U.S. Births and Deaths in Real-Time,http://nowherenearithaca.blogspot.com/2012/12/simulating-us-birthsdeaths-in-real-time.html,Brad Flyon,,,,,,
+http://nowherenearithaca.blogspot.com/2012/06/annotating-d3-example-with-docco.html,http://nowherenearithaca.github.com/empires/empires.html,Brad Flyon,Introductory tutorials,,,,,
+NVD3,http://nvd3.org/,Bob Monteverde,code library,github page,,,,
+Interactive Data Visualization for the Web,http://ofps.oreilly.com/titles/9781449339739/,Scott Murray,Publication,O'Reilly Media,,,,
+Open Knowledge Festival Hashtag Graph Visualization,http://okfestival.org/hashtag/#visualisation,,standalone visualization,,network,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%204.17.48%20PM.png,
+Bieber Fever Meter with HTML5 Web Socket d3.js and Pusher,http://ollieglass.com/2012/04/21/bieber-fever-meter-with-html5s-web-socket-d3-js-and-pusher/,Ollie Glass,,,,web socket; pusher,,
+France - Data Explorer,http://openfrance.lightjs.org/,Lightjs,standalone visualization,,cartogram,,,
+Create any map of the world in SVG,http://oscarvillarreal.com/2012/07/12/create-any-map-of-the-world-in-svg/,Oscar Villarreal,tutorial,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-7-13%2010.10.36%20AM.png,
+A map of translations of Othello into German,http://othellomap.nand.io/,Stephan Thiel,standalone visualization,,map; network,,,
+D3.js and MongoDB,http://paulcrickard.wordpress.com/2012/11/28/d3-js-and-mongodb/,Paul Crickard,blog post,wordpress,,mongodb,,
+What do countries look like? ,http://peopleviz.gforge.inria.fr/oecd_BLI_radar_chart/,Jeremy Boy,standalone visualization,,radar chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-28-13%209.47.33%20AM.png,
+D3.js playground,http://phrogz.net/JS/d3-playground/#BlankDefault,,,,,,,
+Plot.io (swallowed by Platfora),http://plot.io/,,product,,,,,
+Polychart: A browser-based platform for exploring data and creating charts,http://polychart.com/,,product,,,,http://kwout.com/cutout/f/jt/bi/feh_w200.jpg,
+Cartogram.js: Continuous Area Cartograms,http://prag.ma/code/d3-cartogram/,Shawn Allen,,,cartogram,,,
+Circular heat chart,http://prcweb.co.uk/lab/circularheat/,Peter Cook,plugin,,circular heatmap,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-7-13%2010.29.59%20AM.png,
+"D3.js,Data Visualisation in the Browser",http://prcweb.co.uk/slides/d3/,Peter Cook,talks,Async Brighton,,,,
+Life Expectancy,http://projects.flowingdata.com/life-expectancy/,,,,,,https://a248.e.akamai.net/camo.github.com/d922e5f6a3892ac444fccc7f7615e98f24e162d1/687474703a2f2f64336a732e6f72672f65782f776f726c642e706e67,
+Global Life Expectancy,http://projects.flowingdata.com/life-expectancy/,Nathan Yau,,,line chart,,,
+Dance.js: D3 with Backbone and Data.js,http://quasipartikel.at/2012/04/25/dancing-with-data/,,code library,,,backbone; data.js,,
+D3.js and Excel,http://ramblings.mcpher.com/Home/excelquirks/d3,,,,,excel,,
+D3.js force diagrams straight from Excel,http://ramblings.mcpher.com/Home/excelquirks/d3/anyforce,Bruce McPherson,,,network,excel,,
+Carotid-Kundalini Fractal Explorer,http://ramblings.mcpher.com/Home/excelquirks/d3/partition,Bruce McPherson,,,,,,
+Sankey diagrams from Excel,http://ramblings.mcpher.com/Home/excelquirks/d3/sankey,Bruce McPherson,,,,excel,,
+Visualizing Facebook Friends With D3.js,http://rfw.name/blog/2012/10/23/visualizing_facebook_friends.html,,blog post,,network,,,
+Conway's Game of life as a scrolling background (broken link),http://rhokaustin.org/,,,,cellular automaton,,,
+Visualising ConAir Data With Cubism.js Arduino TempoDB Sinatra,http://sammyd.github.com/blog/2012/09/16/visualising-conair-data-with-cubism-dot-js/,,code library,github page,,cubism.js; arduino; tempodb; sinatra,,
+eCommerce API Wheel for eBay,http://saranyan.github.com/commerce_wheel,Saranyan Vigraham,code library,github page,,,,
+Visualization of Beijing Air Pollution,http://scottcheng.github.com/bj-air-vis/,Scott Cheng,standalone visualization,,map; hetmap; radar chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%202.10.37%20PM.png,
+Real-time sentiment analysis of Obama 2012 victory speech,http://sentiment.dev.ber.to/,Berto Yáñez,standalone visualization,,,,http://kwout.com/cutout/u/wb/3h/rwd_w200.jpg,
+Design process of The Electoral Map,http://shancarter.com/talk/2012/visualized/,Shan Carter,talks,Big Data Think Tank,,,,
+Getting Started with D3,http://shop.oreilly.com/product/0636920025429.do,Mike Dewar,Publication,O'Reilly Media,,,,
+What Size Am I? Finding dresses that fit,http://sizes.darkgreener.com/,Anna Powell-Smith,,,,,,
+Baseball 2012 Predictions based on past 6 years,http://sizethreestudios.com/Projects/_moneyball,Danny Hadley,,,,,,
+Slopegraphs,http://skedasis.com/d3/slopegraph/,Hamilton Ulmer,,,slopegraph,,https://a248.e.akamai.net/camo.github.com/75c89bc5be846d0a20380ddfd1aa6227317b92e2/687474703a2f2f64336a732e6f72672f65782f736c6f70652e706e67,
+Skillpedia: an open encyclopedia for skills,http://skillpedia.herokuapp.com/skills/6,Chris Fritz,tool,heroku,tree,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-12-13%209.29.38%20AM.png,
+"Sky Open Source, Behavioral Database ",http://skydb.io/,Ben Johnson,tool,,sankey,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%201.08.37%20PM.png,
+How educated are world leaders?,http://skyrill.com/leaders/,Ali Almossawi,,,,,,
+Animated bubble charts for school data analysis,http://slodge.com/teach/,Stuart Lodge,standalone visualization,,bubble chart,,,
+SOCR Violin Chart,http://socr.ucla.edu/htmls/HTML5/charts/SOCR_JS_ViolinChart/,SOCR,standalone visualization,,violin chart,,,
+Crossfilter.js,http://square.github.com/crossfilter/,,code library,github,,,https://a248.e.akamai.net/camo.github.com/f3a18e27d646d5c9278571edf34554f6e7a71b36/687474703a2f2f64336a732e6f72672f65782f63726f737366696c7465722e706e67,
+Cube: Time Series Data Collection & Analysis,http://square.github.com/cube/,,code library,github page,,,,
+Cubism.js: Time Series Visualization,http://square.github.com/cubism/,,code library,github page,,,https://a248.e.akamai.net/camo.github.com/00558a2a383da006de3e00e6aed0a3bd861c42b6/687474703a2f2f64336a732e6f72672f65782f63756269736d2e706e67,
+Fast Multidimensional Filtering for Coordinated Views,http://square.github.com/tesseract/,,code library,github page,,,,
+Twitter Activity During Hurricane Sandy,http://stanford.edu/~c0chran/cgi-bin/WordRiver/,,,,,,,
+Bibly v2: Visualizing word distribution within the KJV bible,http://stanford.edu/~garylee/bibly/,Gary Lee; Anirudh Venkatesh,,,bible chart,,,
+Stowers Group Collaboration Network,http://stowers.org/stowersreport/maps,,,,,,,
+Enumerating vertex induced connected subgraphs,http://students.mimuw.edu.pl/~rk292662/vertex/,Robert Kozikowski,,,,,,
+Quick scatterplot tutorial for d3.js,http://swizec.com/blog/quick-scatterplot-tutorial-for-d3-js/swizec/5337,,tutorial,,,,,
+Parallel Coordinates,http://syntagmatic.github.com/parallel-coordinates/,,code library,github page,parallel coordinates,,,
+xCharts: a D3-based library for building custom charts and graphs,http://tenxer.github.com/xcharts/,,code library,github page,,,,
+Visualizing opinons around the world (zoomable world map and interactive pie chart),http://theartofasking.com/question/wjucdg6k,Siamac Fazli; Bastian Venthur,standalone visualization,,map,,,
+Browser usage plurality,http://thecelestialweb.com,Ali Almossawi,,,,,,
+Introduction to D3,http://thecodingtutorials.blogspot.com/2012/07/introduction-to-d3.html,Andrew Davis,Introductory tutorials,,,,,
+More Introduction to D3,http://thecodingtutorials.blogspot.com/search/label/D3,Andrew Davis,Introductory tutorials,,,,,
+2012 NFL Conference Champs,http://thedylanharper.wordpress.com/2013/02/04/2012-nfl-conference-champs/,Dylan Harper,blog post,,line chart; area chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-13-13%2012.25.23%20AM.png,
+"Foreign aid, corruption and internet use",http://theoldbeggar.com/aid/,Nikhil Sonnad,standalone visualization,,bar chart,,,
+US energy consumption since 1775,http://theoldbeggar.com/visuals/us-energy-use/,Nikhil Sonnad,standalone visualization,,area chart; doughnut chart,,,
+Coordinated visualizations for Consumer Packaged Goods,http://theory.info/,,,,,,,
+NCAA 2012 March Madness Power Rankings,http://thepowerrank.com/visual/NCAA_Tournament_Predictions,Angi Chau,standalone visualization,,circular tree,,https://a248.e.akamai.net/camo.github.com/cdab777c353917ce95dc10e71a7b617928df061c/687474703a2f2f64336a732e6f72672f65782f6e6361612e706e67,
+Shiny R and D3.js,http://timelyportfolio.blogspot.com/,Klr,collection,blog,,shiny; r,,
+Web reporting with D3js and R using RStudio Shiny,http://timelyportfolio.blogspot.com/2012/12/d3-shiny-and-r-reporting-performance.html,Klr,,,,r; rstudio,,
+Shiny and R adaptation of Mike Bostock's d3 Brushable Scatterplot,http://timelyportfolio.blogspot.com/search/label/d3,Klr,,,scatterplot,,,
+Gauge,http://tomerdoron.blogspot.com/2011/12/google-style-gauges-using-d3js.html,,,,gauge,,,
+TradeArc - Arc Diagram of Offseason NHL Trades,http://tradearc.laserdeathstehr.com/,Nathan Stehr,,,arc diagram,,,
+TruliaTrends,http://trends.truliablog.com/2011/09/house-hunter-by-day-not-so-much-after-midnight/,,,,calendar; heatmap; map,,https://a248.e.akamai.net/camo.github.com/c43dcd1bf4e779e4ee961a4b8d6469ed8b56a78b/687474703a2f2f64336a732e6f72672f65782f686f7573652d686561746d61702e706e67,
+TruliaTrends,http://trends.truliablog.com/2012/02/where-are-house-hunters-searching/,,,,,,https://a248.e.akamai.net/camo.github.com/b1020617dc88efaf705e30318f16e56487ccaafa/687474703a2f2f64336a732e6f72672f65782f686f7573652d6d61702e706e67,
+Visualizing San Francisco Home Price Ranges,http://trends.truliablog.com/vis/pricerange-sf/,,,,,,,
+Apple logo with gradient,http://tributary.io/inlet/4374041/,Dealga McArdle,code viewer,tributary,logo,,,
+Periodic table,http://tributary.io/inlet/4458395/,Dealga McArdle,code viewer,tributary,periodic table,,,
+Heavily annotated scatterplot,http://tributary.io/inlet/4637557,Bruce Hubbard,code viewer,tributary,scatterplot,,,
+Trisul Network Analytic,http://trisul.org/,,product,,,,,
+A Christmas Carol,http://tulpinteractive.com/achristmascarol/,Jan Willem Tulp,standalone visualization,,,,,
+Close Votes - visualizing voting similarities for the Dutch 2012 national elections,http://tulpinteractive.com/close-votes/,Jan Willem Tulp,,,,,,
+Tweitgeist: Live Top Hashtags on Twitter,http://tweitgeist.colinsurprenant.com/,Colin Surprenant,standalone visualization,,line chart; stacked bar chart; stream graph,twitter; storm; ruby; redis,,
+Multiple area charts with d3.js,http://tympanus.net/codrops/2012/08/29/multiple-area-charts-with-d3-js/,Tyler Craft,Specific tutorials,,are chart,,,
+Web-Based Visualization Part 1: The D3.js Key Concept,http://ui-cloud.com/web-based-visualization-part-1-the-d3-js-key-concept/,,tutorial,,,,,
+Jim Vallandingham portfolio,http://vallandingham.me/,Jim Vallandingham,collection,,,,,
+Creating Animated Bubble Charts in D3,http://vallandingham.me/bubble_charts_in_d3.html,Jim Vallandingham,Specific tutorials,,bubble chart,,,
+Word Frequency Bubble Clouds,http://vallandingham.me/bubble_cloud/,,,,bubble chart,,,
+Feltronifier,http://vallandingham.me/feltronifier/,,,,,,,
+Small Multiples with Details on Demand,http://vallandingham.me/small_multiples_with_details.html,Jim Vallandingham,tutorial,,small multiples,,,
+Old Visualizations Made New Again,http://vallandingham.me/vis/,Jim Vallandingham,,,,,,
+Composition of Church Membership by State: 1890,http://vallandingham.me/vis/church_by_state.html,,,,,,,
+Animated Bubble Chart of Gates Educational Donations,http://vallandingham.me/vis/gates/,,,,bubble chart,,,
+Jobs by state,http://vallandingham.me/vis/jobs_by_state.html,,,,,,,
+License Usage Dashboard,http://vallandingham.me/vis/matlab_license.html,,,,,,,
+We're In The Money: How Much Do The Movies We Love Make?,http://vallandingham.me/vis/movie,,,,,,,
+Proportion of Foreign Born in Large Cities: 1900,http://vallandingham.me/vis/nationality_by_city.html,,,,,,,
+Visualizing The Racial Divide,http://vallandingham.me/vis/racial_divide.html,,,,,,,
+Use the Force! Video,http://vimeo.com/29458354,Mike Bostock,talks,Trulia,,,,
+First steps in data visualisation using d3.js,http://vimeo.com/35005701,Mike Dewar,talks,New York Open Stat. Prog. Meetup,,,,
+Realtime Visualizations w/ D3 and Backbone,http://vimeo.com/45558674,Andrew Cholakian,video conference,vimeo,,,,
+PhD in the Bundestag,http://vis.databeast.org/vis/story/D3/mdbphd/doktortitel.html,Cosmin Cabulea,standalone visualization,,floating bubbles,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-7-13%202.42.33%20PM.png,
+U.S. Population Pyramid,http://vis.stanford.edu/jheer/d3/pyramid/shift.html,Jeff Heer,,,,,,
+D3: Data-Driven Documents,http://vis.stanford.edu/papers/d3,"Michael Bostock, Vadim Ogievetsky, Jeffrey Heer",Publication,Proc. InfoVis,,,,
+Major League Baseball Home Runs 1995-2010,http://visual-baseball.com/d3/baseball/Drillable_Bar_Charts/HR.html,Ken Cherven,,,,,,
+Visual.ly tagged D3.js,http://visual.ly/search/node?keys=d3.js,,collection,,,,,
+Inequality in America,http://visual.ly/vizbox/inequality-in-america/,EJ Fox,,,,,,
+Visualizing Swiss politicians on Twitter using D3.js,http://visurus.wordpress.com/2012/08/30/visualizing-swiss-politicians-on-twitter-using-d3-js/,Ralph,,,,,,
+Introduction to D3.js,http://vogievetsky.github.com/IntroD3/,Vadim Ogievetsky,tutorial,github page,,,,
+VVVV viewer,http://vvvvjs.quasipartikel.at/,,,,,,,
+Intro to d3,http://webholics.github.com/talk-munichjs-d3/#2.0,JavaScript User Group Munich,talks,,,,,
+d34raphael,http://webmonarch.github.com/d34raphael/usage.html,,code library,github page,,raphael,,
+Scatterize,http://webtasks.keck.waisman.wisc.edu/scatterize/d/Acdck0qHJo#h=2&m=OLS&x=1&y=6,Nate Vack,,,scatterplot,,,
+SPARQLy GUIs: Linked Data and Semantic Web technologies,http://wiki.cfcl.com/bin/view/Projects/SPARQLy/GUIs/WebHome,Rich Morin,code library,,table; bar chart,SPARQL,,
+Wind History,http://windhistory.com/,,,,,,https://a248.e.akamai.net/camo.github.com/1ba21e65688d29f2d40850ab33ab15b666aef341/687474703a2f2f64336a732e6f72672f65782f77696e64686973746f72792e706e67,
+Combining D3 and Ember to Build Interactive Maps,http://www.alexrothenberg.com/2012/05/30/interactive-maps-with-d3-and-ember.html,AlexRothenberg,blog post,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.21.16%20AM.png,
+Fuzzy Link-Bot,http://www.atomodo.com/flb/?e=13839%2025793#,Andrew Collins,,,,,,
+Visualising a real-time DataSift feed with Node and D3.js,http://www.benh.co.uk/datasift/visualising-a-datasift-feed-with-node-and-d3/,Ben Hagan,blog post,,,,,
+D3 Treemap with Title Headers,http://www.billdwhite.com/wordpress/?p=496,Bill White,,,treemap,,,
+GSA-Leased Opportunity Dashboard,http://www.capitolmarkets.com/gsa-leased-investment-opportunity/,,,,,,,
+CubicHamiltonianGraphs,http://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation/,Christopher Manning,,,network,,https://a248.e.akamai.net/camo.github.com/6c34ada46080dccfc42f3f28cd63a5f829a8da0d/687474703a2f2f64336a732e6f72672f65782f6c63662e706e67,
+Building Cubic Hamiltonian Graphs from LCF Notation,http://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation/,Christopher Manning,,,,,,
+Chicago Lobbyists,http://www.christophermanning.org/projects/chicago-lobbyists-force-directed-graph-visualization/,Christopher Manning,,,,,,
+Chicago Ward Remap Outlines,http://www.christophermanning.org/projects/chicago-ward-remap-outlines/,Christopher Manning,,,,,,
+Voronoi Diagram with Force Directed Nodes and Delaunay Links,http://www.christophermanning.org/projects/voronoi-diagram-with-force-directed-nodes-and-delaunay-links/,Christopher Manning,,,voronoi,,https://a248.e.akamai.net/camo.github.com/0484f431e23957a8c71ab3c177bbb367fb5bd853/687474703a2f2f64336a732e6f72672f65782f666f7263652d766f726f6e6f692e706e67,
+List of all the Gists from Mike Bostock,http://www.cloudshapes.co.uk/labs/mike-bostock-gists/,Roland Dunn,collection,,,,,
+D3.js crash course,http://www.codeproject.com/Articles/523444/D3-crash-course,Espen Harlinn,tutorial,codeproject,,,,
+Interactive Publication History,http://www.cs.umd.edu/~bederson/papers/index.html,Ben Bederson,,,bubble chart; timeline,,https://a248.e.akamai.net/camo.github.com/285d005e60b50a7d3ef7cc8b3f9597110bb70778/687474703a2f2f64336a732e6f72672f65782f6265646572736f6e2d707562732e706e67,
+Bar chart code generator and online editor,http://www.d3-generator.com/,,,,bar chart,,,
+Drawing Chemical Structures with Force Layout,http://www.d3coder.com/2012/07/01/drawing-chemical-structures-with-force-layout/,Evan Zamir,blog post,,force layout,,http://i47.tinypic.com/1zqarsn.png,7/1/2012
+D3.js Tips and Tricks,http://www.d3noob.org/,d3noob,Introductory tutorials,,,,,
+Using Plunker for development and hosting your D3.js creations,http://www.d3noob.org/2012/12/using-plunker-for-development-and.html,d3noob,blog post,,,plunker,,
+Learn how to make Data Visualizations with D3.js,http://www.dashingd3js.com/,Dashingd3js,Introductory tutorials,,,,,
+SVG Group Element and D3.js,http://www.dashingd3js.com/svg-group-element-and-d3js,DashingD3js,tutorial,,,,,
+What Do You Work For?,http://www.datavizchallenge.org/viz/73,Jeffrey Baumes,,,,,,
+Visualizing document similarity over time,http://www.davidmasad.com/sandbox/FirmClusters.html,,,,,,,
+Forecast of Mexican 2012 presidential election,http://www.diegovalle.net/electometer,Diego Valle-Jones,,,,,,
+D3 graphics in a Pergola SVG UI,http://www.dotuscomus.com/pergola/pergola_1.4.0/ExamplesHTML/D3/multiD3.html,Domenico Strazzullo,library,,ui,pergola,http://kwout.com/cutout/c/5y/tf/ehr_w200.jpg,
+Visualizing NetworkX graphs in the browser using D3,http://www.drewconway.com/zia/?p=2765,,,,network,networkx,,
+Scatterplot for K-Means clustering visualization,http://www.ericbullington.com/articles/2012/01/31/kmeans-visualization,,,,scatterplot,,,
+"d3 O'Clock: Building a Virtual Analog Clock with d3.js, Part I",http://www.ericbullington.com/articles/2012/10/27/d3-oclock,Eric S. Bullington,Introductory tutorials,,,,,
+A Visit From The Goon Squad - Interactive Character Map,http://www.filosophy.org/projects/goonsquad/,Filip Zembowicz,,,,,,
+NFL salaries by team and position,"http://www.guardian.co.uk/sport/interactive/2013/jan/30/nfl-salaries-team-position#baltimore-ravens,san-francisco-49ers",Julian Burgess,news,,bar chart; bubble chart,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2011.33.24%20PM.png,
+Using d3 visualization for fraud detection and trending,http://www.hiregion.com/2012/08/using-d3-visualization-for-fraud.html,,blog post,,parallel coordinates,,,
+The first thing that should be shown in any Trigonometry class,http://www.humblesoftware.com/demos/trig_d3,,,,math,,,
+Twitter Influencer Visualization,http://www.influencermoth.com/,Erik Driessen,,,,,,
+Is Barack Obama the President? (Balloon charts),http://www.isbarackobamathepresident.com/,,,,,,,
+Conway's game of life in D3.js,http://www.janwillemtulp.com/2011/03/22/tutorial-conways-game-of-life-in-d3/,Jan Willem Tulp,tutorial,,cellular automaton,,,
+Jan Willem Tulp portfolio,http://www.janwillemtulp.com/category/d3/,Jan Willem Tulp,collection,,,,,
+Number of unique rectangle-free 4-colourings for an nxm grid,http://www.jasondavies.com/17x17/,Jason Davies,,,math,,,
+9-Patch Quilt Generator,http://www.jasondavies.com/9patch/,Jason Davies,,,math,,,
+American Forces in Afghanistan and Iraq,http://www.jasondavies.com/american-forces-in-afghanistan-and-iraq/,Jason Davies,,,,,,
+Animated Bézier Curves,http://www.jasondavies.com/animated-bezier/,Jason Davies,,,,,https://a248.e.akamai.net/camo.github.com/28d86b6d6ba76eebd03fcbf90e816024d62f2bea/687474703a2f2f64336a732e6f72672f65782f62657a6965722e706e67,
+Animated Quasicrystals,http://www.jasondavies.com/animated-quasicrystals/,Jason Davies,,,math,,,
+Animated Trigonometry,http://www.jasondavies.com/animated-trig/,Jason Davies,,,math,,,
+Apollonian Gasket,http://www.jasondavies.com/apollonian-gasket/,Jason Davies,,,,,,
+Monte Carlo simulation of bifurcations in the logistic map,http://www.jasondavies.com/bifurcation/,Jason Davies,,,math,,,
+Bloom Filters,http://www.jasondavies.com/bloomfilter/,Jason Davies,,,math,,,
+Biham-Middleton-Levine Traffic Model,http://www.jasondavies.com/bml/,Jason Davies,,,math,,,
+Bubbles,http://www.jasondavies.com/bubbles/,Jason Davies,,,,,,
+Calkin-Wilf Tree,http://www.jasondavies.com/calkin-wilf-tree/,Jason Davies,,,math,,,
+Carotid-Kundalini Fractal Explorer,http://www.jasondavies.com/carotid/,Jason Davies,,,math,,,
+Coffee Flavour Wheel,http://www.jasondavies.com/coffee-wheel/,Jason Davies,,,sunburst,,https://a248.e.akamai.net/camo.github.com/3579d11cf675da2a12ffcdad356e524978b97434/687474703a2f2f64336a732e6f72672f65782f636f666665652e706e67,
+Collatz Graph: All Numbers Lead to One,http://www.jasondavies.com/collatz-graph/,Jason Davies,,,network,,https://a248.e.akamai.net/camo.github.com/7bca10845c6e0caa0abdfbcfb96f293150dfa059/687474703a2f2f64336a732e6f72672f65782f636f6c6c61747a2e706e67,
+Complete Graphs,http://www.jasondavies.com/complete-graphs/,Jason Davies,,,network,,,
+Crayola Colour Chronology,http://www.jasondavies.com/crayola/,Jason Davies,,,,,,
+Detecting Duplicates in O(1) Space and O(n) Time,http://www.jasondavies.com/duplicates/,Jason Davies,,,math,,,
+Latest Earthquakes,http://www.jasondavies.com/earthquakes/#3.00/20.00/805.00,Jason Davies,,,,,,
+Factorisation Diagrams,http://www.jasondavies.com/factorisation-diagrams/,Jason Davies,,,math,,,
+Gaussian Primes,http://www.jasondavies.com/gaussian-primes/,Jason Davies,,,math,,,
+Girko's Circular Law,http://www.jasondavies.com/girko-circle/,Jason Davies,,,math,,,
+The Music of Graphs,http://www.jasondavies.com/graph-music/,Jason Davies,,,network,,http://kwout.com/cutout/w/6e/83/6t9_w200.jpg,
+Hamming Quilt,http://www.jasondavies.com/hamming-quilt/,Jason Davies,,,math,,,
+Hilbert Curve,http://www.jasondavies.com/hilbert-curve/,Jason Davies,,,math,,,
+Hilbert Stocks,"http://www.jasondavies.com/hilbert-stocks/#GOOG,ADBE",Jason Davies,,,math,,,
+Leibniz Spiral,http://www.jasondavies.com/leibniz-spiral/,Jason Davies,,,math,,,
+Antipodes,http://www.jasondavies.com/maps/antipodes/,Jason Davies,,,math,,,
+Geographic Clipping,http://www.jasondavies.com/maps/clip/,Jason Davies,,,map,,,
+Dorling World Map,http://www.jasondavies.com/maps/dorling-world/,Jason Davies,,,cartogram,,,
+Random Points on a Sphere,http://www.jasondavies.com/maps/random-points/,Jason Davies,,,math,,,
+Topology-Preserving Geometry Simplification,http://www.jasondavies.com/maps/simplify/,Jason Davies,,,math,,,
+Quadratic Koch Island Simplification,http://www.jasondavies.com/maps/simplify/koch/,Jason Davies,,,math,,,
+Mobile Patent Lawsuits,http://www.jasondavies.com/mobile-lawsuits/,Jason Davies,,,chord diagram,,http://kwout.com/cutout/8/tm/dx/5az_w200.jpg,
+Morley's trisector theorem,http://www.jasondavies.com/morley-triangle/,Jason Davies,,,math,,,
+Combinatorial Necklaces and Bracelets,http://www.jasondavies.com/necklaces/,Jason Davies,,,math,,,
+Parallel Sets,http://www.jasondavies.com/parallel-sets/,Jason Davies,,,parallel set,,https://a248.e.akamai.net/camo.github.com/a7e365d093b0184a39bb7170251ae588e129a768/687474703a2f2f64336a732e6f72672f65782f706172736574732e706e67,
+Planarity,http://www.jasondavies.com/planarity/,Jason Davies,,,network,,http://kwout.com/cutout/h/w5/ur/wdc_w200.jpg,
+Infinite Plasma Fractal,http://www.jasondavies.com/plasma/,Jason Davies,,,math,,,
+Poincaré Disc,http://www.jasondavies.com/poincare-disc/,Jason Davies,,,math,,,
+El Patrón de los Números Primos,http://www.jasondavies.com/primos/,Jason Davies,,,math,,,
+Linear Programming,http://www.jasondavies.com/psum/lp/,Jason Davies,,,,,,
+Proof of Pythagoras's Theorem,http://www.jasondavies.com/pythagoras-proof/,Jason Davies,,,math,,,
+Random Arboretum,http://www.jasondavies.com/random-arboretum/,Jason Davies,,,math,,,
+From Random Polygon to Ellipse,http://www.jasondavies.com/random-polygon-ellipse/,Jason Davies,,,math,,,
+Rhodonea Curve,http://www.jasondavies.com/rhodonea/,Jason Davies,,,math,,,
+Set Partitions,http://www.jasondavies.com/set-partitions/,Jason Davies,,,,,,
+Sorting Visualisations,http://www.jasondavies.com/sorting/,Jason Davies,,,math,,,
+Sunflower Phyllotaxis,http://www.jasondavies.com/sunflower-phyllotaxis/,Jason Davies,,,math,,,
+Phylogenetic Tree of Life,http://www.jasondavies.com/tree-of-life/,Jason Davies,,,tree,,,
+Tübingen,http://www.jasondavies.com/tuebingen/,Jason Davies,,,,,,
+Voronoi Boids: Voroboids,http://www.jasondavies.com/voroboids/,Jason Davies,,,voronoi,,,
+Wave,http://www.jasondavies.com/wave/,Jason Davies,,,,,,
+WordCloud,http://www.jasondavies.com/wordcloud/,Jason Davies,,,word cloud,,https://a248.e.akamai.net/camo.github.com/f2c71c540f16e8cc81cde8afbff95dd8b6c23ee1/687474703a2f2f64336a732e6f72672f65782f636c6f75642e706e67,
+Tag Cloud,http://www.jasondavies.com/wordcloud/,Jason Davies,,,tag cloud,,,
+Chord diagram with Dex,http://www.javainc.com/projects/dex/examples/vis/d3/presidents/presidentPartyChord.html,Patrick Martin,standalone visualization,,chord diagram,dex,,
+Manipulating data like a boss with d3,http://www.jeromecukier.net/blog/2012/05/28/manipulating-data-like-a-boss-with-d3/,Jerome Cukier,Introductory tutorials,,,,,
+Jérôme Cukier portfolio,http://www.jeromecukier.net/blog/category/d3/,Jerome Cukier,collection,,,,,
+Places in the Game of Thrones,http://www.jeromecukier.net/projects/agot/places.html,Jérôme Cukier,,,,,,
+Gun homicides in America 2010,http://www.jeromecukier.net/projects/crime/murders.html,Jérôme Cukier,,,,,,
+Cellular automata,http://www.jeromecukier.net/projects/models/ca.html,Jérôme Cukier,,,math,,,
+Game of life,http://www.jeromecukier.net/projects/models/life.html,Jérôme Cukier,,,math,,,
+Markov processes,http://www.jeromecukier.net/projects/models/markov.html,Jérôme Cukier,,,math,,,
+La Nuit Blanche,http://www.jeromecukier.net/projects/models/nuitblanche.html,Jérôme Cukier,,,,,,
+Percolation model,http://www.jeromecukier.net/projects/models/percolate.html,Jérôme Cukier,,,math,,,
+The Polya process,http://www.jeromecukier.net/projects/models/polya.html,Jérôme Cukier,,,math,,,
+Schelling's segregation model,http://www.jeromecukier.net/projects/models/segregate.html,Jérôme Cukier,,,math,,,
+Koalas to the Max,http://www.koalastothemax.com/,,,,,,https://a248.e.akamai.net/camo.github.com/7761b9d7b6cd69a9a5e38ef19c82e00a7ed77238/687474703a2f2f64336a732e6f72672f65782f6b6f616c61732e706e67,
+Koalas to the Max!,http://www.koalastothemax.com/,Vadim Ogievetsky,,,experiment,,,
+Eurozone crisis: more than debt,http://www.larsko.org/v/euc/,Lars Kotthoff,standalone visualization,,radar chart,,,
+Various visualisations especially with d3.geo,http://www.larsko.org/VisualisationPlayground,Lars Kotthoff,,,,,,
+Last Chart! - See the Music,http://www.lastchart.com,,,,,,,
+De Maastricht au traité budgétaire : les oui et les non de 39 personnalités politiques,http://www.lemonde.fr/politique/visuel/2012/09/18/de-maastricht-au-traite-budgetaire-les-oui-et-les-non-de-39-personnalites-politiques_1760615_823448.html,,,,bubble chart,,,
+Bay Area d3 User Group,http://www.meetup.com/Bay-Area-d3-User-Group/,,Meetup,,,,,
+Boston d3.js User Group,http://www.meetup.com/Boston-d3-js-User-Group/,,Meetup,,,,,
+NYC D3.js,http://www.meetup.com/NYC-D3-JS/,,Meetup,,,,,
+Clinical trials in Multiple Sclerosis,http://www.mgrafit.com/00-projects/proj01-MSTrials/MStrials.html,Francois Mercier,standalone visualization,,floating bubbles,,,
+Comparison of MS trials baseline characteristics,http://www.mgrafit.com/00-projects/proj02-PCPbaseline/PCPbaseline.html,Francois Mercier,standalone visualization,,parallel coordinates,,http://kwout.com/cutout/m/fj/9g/yjb_w200.jpg,
+Can people localize sounds with one functional ear?,http://www.neural-code.com/Visualize/monaural.html,Marc van Wanrooij,standalone visualization,,bubble chart,,,
+Pyramid charts: demographic transition in the US,http://www.newscientist.com/embedded/us-demographics-2050,,,,pyramid chart,,,
+Selecties EK 2012,http://www.nu.nl/files/datajournalistiek/ek/ek2012.htm#.UKJ5yuOe8ww,,,,chord diagram,,,
+Four Ways to Slice Obama's 2013 Budget Proposal,http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html,Shan Carter,news,nytimes,bubble chart,,https://a248.e.akamai.net/camo.github.com/18decf4a057357729ca35a7b1cb2fc31f887b23d/687474703a2f2f64336a732e6f72672f65782f6275646765742e706e67,
+Who Voted for Rick Santorum and Mitt Romney,http://www.nytimes.com/interactive/2012/03/07/us/politics/how-candidates-fared-with-different-demographic-groups.html,,news,nytimes,,,,
+The Facebook Offering: How It Compares,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,Jeremy Ashkenas,news,nytimes,scatterplot,,https://a248.e.akamai.net/camo.github.com/3fb6699cd8462e7a82b69c04ac5cb37b968c0f09/687474703a2f2f64336a732e6f72672f65782f66616365626f6f6b2d69706f2e706e67,
+Facebook IPO,http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html,,,,,,https://a248.e.akamai.net/camo.github.com/3fb6699cd8462e7a82b69c04ac5cb37b968c0f09/687474703a2f2f64336a732e6f72672f65782f66616365626f6f6b2d69706f2e706e67,
+All the Medalists: Men's 100-Meter Freestyle,http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html,,news,nytimes,,,,
+Drought and Deluge in the Lower 48,http://www.nytimes.com/interactive/2012/08/11/sunday-review/drought-history.html,,news,nytimes,,,,
+Drought Extends Crops Wither,http://www.nytimes.com/interactive/2012/08/24/us/drought-crops.html,,news,nytimes,,,,
+At the Democratic Convention the Words Being Used,http://www.nytimes.com/interactive/2012/09/04/us/politics/democratic-convention-words.html,,news,nytimes,,,,
+At the National Conventions the Words They Used,http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html,,news,nytimes,,,,
+How the Chicago Public School District Compares,http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html,,news,nytimes,,,,
+Over the Decades How States Have Shifted,http://www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html,,news,nytimes,,,,
+512 Paths to the White House,http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html,,news,nytimes,tree,,https://lh5.googleusercontent.com/-KhI8U9vJ4i0/UPO5vUHI9BI/AAAAAAAABS4/EI6N-YANKaM/s800/white_house.png,
+How Obama Won Re-election,http://www.nytimes.com/interactive/2012/11/07/us/politics/obamas-diverse-base-of-support.html,,news,nytimes,,,,
+A Chicago Divided by Killings,http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html,Mike Bostock; Shan Carter; Kevin Quealy,news,,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-6-13%2010.59.18%20AM.png,2/1/2013
+A Migration of Unmarried Men,http://www.nytimes.com/interactive/2013/01/15/us/a-migration-of-unmarried-men.html?ref=us,Kevin Quealy,,,slopegraph; map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.08.27%20AM.png,
+Dissecting a Trailer: The Parts of the Film That Make the Cut,http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html,Mike Bostock; Shan Carter; Amanda Cox,news,nytimes,time series; timing diagram,video,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.26.31%20AM.png,
+"Among the Oscar Contenders, a Host of Connections",http://www.nytimes.com/interactive/2013/02/20/movies/among-the-oscar-contenders-a-host-of-connections.html,Mike Bostock; Shan Carter; Josh Keller,news,nytimes,network,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-21-13%203.27.38%20PM.png,
+Home energy consumption,http://www.prcweb.co.uk/lab/energy,Peter Cook,,,,,,
+D3 for Mere Mortals,http://www.recursion.org/d3-for-mere-mortals/,Luke Francl,Introductory tutorials,,,,,
+Co-Authors Chords,http://www.rjbaxley.com/p/publications.html,Bob Baxley,standalone visualization,,chord diagram,,,
+A sea of tweets: what are italians saying about the election,http://www.seaoftweets.com/,Carlo Zapponi,standalone visualization,,time series,twitter,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%209.54.01%20AM.png,
+Reports for Simple,http://www.simple.com/blog/Simple/announcing-reports,,product,,,,,
+Introduction to d3.js and data-driven visualizations,http://www.skillshare.com/Introduction-to-d3js-and-data-driven-visualizations/1912580409,Kenny Peng,Introductory tutorials,,,,,
+Students's seating habits,http://www.skyrill.com/seatinghabits/,Skyrill.com,,,,,,
+University of Washington Departments,http://www.sorens.in/posts/2012-8-11-uw-courses,Matthew Sorensen,,,,,,
+Building a UML editor in JS,http://www.tikalk.com/javascript/building-uml-editor-javascript-part-3,Udi h Bauman,blog post,,diagram,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-18-13%2010.23.02%20AM.png,
+Football passes,http://www.tips-for-excel.com/MCFC/Passes.html,,,,chord diagram,,,
+Relations of football players participating in Euro 2012,http://www.torlaune.de/euro-2012/spieler-relationen/,,,,,,,
+Remittance flows,http://www.torre.nl/remittances/,Roxana Torre,standalone visualization,,chord diagram,,,
+D3.js experiments in the console,http://www.ultrasaurus.com/sarahblog/2012/03/d3-js-experiments-in-the-console/,Sarah Allen,Introductory tutorials,,,,,
+D3.js and a little bit of ClosureScript,http://www.ustream.tv/channel/gaslighters,Carin Meier,video,,,closurescript,,
+Data Visualization Using D3.js,http://www.ustream.tv/recorded/20313703,Jim McCusker,talks,TWed talk,,,,
+Creating Basic Charts using d3.js,http://www.verisi.com/resources/d3-tutorial-basic-charts.htm,Ben Lorica,Introductory tutorials,,,,,
+AFL Brownlow Medalists,http://www.vislives.com/2011/09/brownlow-medal-winners-visualization.html),,,,,,,
+David Foster Wallace's 'Infinite Jest',http://www.vislives.com/2011/12/infinite-jest-visualization.html,Chris Pudney,,scatterplot,,,,
+When is Easter?,http://www.vislives.com/2012/04/when-is-easter-sunday.html,,,bar chart,,,,
+Formula 1 Lap Chart,http://www.vislives.com/2012/05/d3js-transitions-zoom-zoom.html,,,,,,,
+Summer Olympics Home Ground Advantage,http://www.vislives.com/2012/10/summer-olympics-home-ground-advantage.html,,,,,,,
+World Bank Global Development Sprint,http://www.visualizing.org/sprint/global-development-sprint,Mahir M. Yavuz,,,scatterplot,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-22-13%201.14.52%20PM.png,
+London Olympics Perceptions - Donuts to Chord Diagram Transition,http://www.visualizing.org/visualizations/uk-olympic-sentiment-analysis,Kyle Foreman; Peter Hamilton; Cristina Grigoruta,,,,,,
+UN Global Pulse 2010 Visualization,http://www.visualizing.org/visualizations/un-global-pulse-visualization,Eduardo Graells; Ruth Garcia,,,,,,
+Urban Water Explorer,http://www.visualizing.org/visualizations/urban-water-explorer/,Jan Willem Tulp,,,,,,
+Kind of 3D with D3,http://www.web-maps.com/gisblog/?p=1370,Randy George,blog post,,map,topojson,,
+World Wide Women's Rights,http://www.wimdows.nl/datavis/lib/D3/ciripleth-area-exp.html,Wimdows.nl,,,,,,
+Dimensional Changes in Wood,http://www.woodchanges.com/,Luis Carli; Rafael Passarelli,blog post,,box plot,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-25-13%201.24.15%20PM.png,
+Beautiful visualizations with D3.js,http://www.youtube.com/watch?v=JAlZ0uJnqkA,S Anand,video,,,,,
+D3.js Presentation,http://zzolo.github.com/d3js-example-presentation/,Alan Palazzolo,tutorial,github page,,,,
+Data Visualization at MinnPost,http://zzolo.github.com/mjc-data-visualization-presentation/,Alan Palazzolo,tutorial,github page,,,,
+Splay Tree animation with Dart D3.js and local storage,https://bitbucket.org/davidagraf/dartsplaytree/src,David Graf,code library,bitbucket,,dart; local storage,,
+Bitdeli: Custom analytics with Python and GitHub,https://bitdeli.com/,,,,,,,
+Startup Salary & Equity Compensation,https://blog.wealthfront.com/startup-employee-equity-compensation/,Jared Jacobs,,,,,,
+Render sever-side using Phantomjs,https://blogs.law.harvard.edu/jreyes/2012/12/13/render-d3-js-driven-svg-server-side/,,code viewer,jsfiddle,,phantomjs,,
+VIM keymap,https://dl.dropbox.com/u/3397495/VIM/VIMKEYMAP/manual_svg_014.html,Dealga McArdle,standalone visualization,,,,,
+"A sprintf-like function using d3,js",https://gist.github.com/stepheneb/2045912,Stephen Bannasch,plugin,gist,,,,
+Very limited in-progress attempt to hook d3.js up to three.js,https://github.com/asutherland/d3-threeD,Andrew Sutherland,source code,github code,dot plot,three.js,,
+Time Series,https://github.com/boorad/d3-tsline,,source code,github code,,,,
+Infro.js: Filtering Tabular Data,https://github.com/cakey/infro,Ben Shaw,code library,github,,,,
+Dagre: Directed graph rendering,https://github.com/cpettitt/dagre/,Chris Pettitt,code library,github code,network,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-18-13%206.17.07%20AM.png,
+Chernoff faces Fisheye Geodesic grid Hive plot Horizon chart Sankey diagram,https://github.com/d3/d3-plugins,,source code,github code,chernoff faces; fisheye; hive plot; horizon chart; sankey,,,
+Plotsk: A python/coffeescript/d3.js-based library for plotting data in a web browser,https://github.com/davidcox/plotsk,David Cox,source code,github code,,coffeescript; python,,
+Adventures in D3,https://github.com/enjalot/adventures_in_d3,,source code,github code,,,,
+Job Flow,https://github.com/fod/job_flow_vis,,source code,github code,,,,
+Reusable Interdependent Interactive Histograms,https://github.com/gajus/interdependent-interactive-histograms,,source code,github code,histogram,,,
+Reusable Pie Charts,https://github.com/gajus/pie-chart,,source code,github code,pie chart,,,
+ggplot2 + d3 = r2d3,https://github.com/hadley/r2d3,,source code,github code,,ggplot2,,
+Pushing D3.js commands to the browser from iPython,https://github.com/hhuuggoo/pushd3,,source code,github code,,ipython,,
+Word Cloud,https://github.com/jasondavies/d3-cloud/blob/master/d3.layout.cloud.js,,source code,github code,word cloud,,,
+Integrating D3 with a CouchDB database 1,https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-1,Reinhard Engel,,,,couchDB,,
+Integrating D3 with a CouchDB database 2,https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-2,Reinhard Engel,,,,couchDB,,
+Integrating D3 with a CouchDB database 3,https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-3,Reinhard Engel,,,,couchDB,,
+Integrating D3 with a CouchDB database 4,https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-4,Simon Metson,,,,couchDB,,
+d3 rendered with RaphaelJS for IE Compatibility,https://github.com/mhemesath/r2d3/,,source code,github code,,raphael,,
+Plotting library for python based on D3.js,https://github.com/mikedewar/d3py,,source code,github code,,python,,
+Miscellaneous utilities for D3.js,https://github.com/nrabinowitz/d3_utils/blob/master/d3.util.js,Nick Rabinowitz,source code,github code,,,,
+D3.js Sublime2 snippets,https://github.com/roundrobin/d3.js-Sublime-2-Snippets,Nils Schlomann,source code,github code,,sublime,,
+Rickshaw: JavaScript toolkit for creating interactive real-time graphs,https://github.com/shutterstock/rickshaw,,code library,github code,,,,
+Dynamic Visualization LEGO,https://github.com/vogievetsky/DVL,Vadim Ogievetsky,code library,github code,,,,
+Republic of Ireland - Data Explorer,https://googledrive.com/host/0B5vtcGFLVUFgSXhjMEU5RTBNaUU/#hurling/,,,,,,,
+Analog clock,https://my.infocaptor.com/dash/mt.php?pa=world_clocks_using_d3_part2_511031bc87e14,Nilesh Jethwa,standalone visualization,,clock,,,
+UMLS (Unified Medical Language System) Visualizer,https://ncc.cchmc.org/prod/umls_visualizer/index.do,,product,,network,,,
+"Plotly: create graphics, analyze with Python, annotate and share",https://plot.ly/,Alex Johnson; Jack Parmer,product,,Andrews curves; function graph; line chart; scatterplot,,,
+[prototype] d3.geo,https://vimeo.com/58834984,Ian Johnson,video tutorial,vimeo,map,,http://christopheviau.com/d3_thumbs/TinyGrab%20Screen%20Shot%202-27-13%2010.03.34%20AM.png,
+GOV.UK's web traffic,https://www.gov.uk/performance/dashboard,,,,,,,
+Linked Jazz network graph,linkedjazz.org/network/,Matt Miller,,,network,,,
