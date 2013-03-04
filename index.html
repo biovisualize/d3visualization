@@ -4,124 +4,8 @@
     <title></title>
     <meta charset=utf-8>
     <script type="text/javascript" src="./d3.v3.js"></script>
-    <style>
-        body {
-            font-size: 100%;
-            font-family: 'Monda', sans-serif;
-            padding: 0;
-            margin: 0;
-        }
-        #nav {
-            background-color: rgba(250,250,250,0.7);
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px;
-            max-height: 100%;
-            overflow-y: auto;
-            border-left: 1px solid #CCC;
-        }
-        #nav li {
-            margin-top: 4px;
-        }
-        .menu1-container {
-            height: 210px;
-            z-index: 9;
-            width: 100%;
-            padding: 4px 12px;
-            position: fixed;
-            top: 0;
-            background-color: rgba(250,250,250,0.92);
-            overflow-y: auto;
-            -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Saf3.0+, Chrome
-            -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //FF3.5+
-            box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Opera 10.5, IE 9.0
-            text-transform: capitalize;
-        }
-        .menu2-container {
-            padding: 12px;
-            margin-top: 210px;
-            text-transform:capitalize;
-        }
-        .menu2-search{
-            background: url('http://icons.iconarchive.com/icons/gakuseisean/radium-neue/128/Search-icon.png') no-repeat scroll left;
-            background-size: 15px 15px;
-            padding-left:20px;
-        }
-        #list {
-            width: 80%;
-        }
-        #list li {
-            cursor: default;
-            border-radius: 2px;
-            margin-top: 2.5%;
-            height: 250px;
-            width: 200px;
-            float: left;
-            overflow: hidden;
-            display: inline-block;
-            margin-right: 20px;
-            border-left: 6px solid #CCC;
-            padding: 2px 6px;
-            -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* Saf3.0+, Chrome */
-            -moz-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* FF3.5+ */
-            box-shadow:0 0 10px 0 rgba(0,0,0,0.1); /* Opera 10.5, IE 9.0 */
-            -webkit-transition:all .28s ease-out;
-        }
-        #list li:hover {
-            -webkit-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Saf3.0+, Chrome */
-            -moz-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* FF3.5+ */
-            box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Opera 10.5, IE 9.0 */
-        }
-        li {
-            list-style: none;
-        }
-        li a:link {
-            text-decoration: none;
-            font-weight: bold;
-            color: black;
-        }
-        li a:visited {
-            color: black;
-        }
-        .menu3-container li a:visited {
-            color: #888;
-        }
-        li a:hover {
-            text-decoration: underline;
-        }
-        .value {
-            opacity: 0.2;
-        }
-        .author{
-            font-size: 12px;
-        }
-        .thumbnail {
-            /*height: 200px;*/
-            width: 200px;
-            /*width: auto;*/
-            display: inline-block;
-            vertical-align: middle;
-            border: 1px solid white;
-            border-radius: 2px;
-        }
-        .info{
-            background: #eee;
-            padding: 5px;
-        }
-        .about-box{
-            border: 1px solid silver;
-            background: white;
-            position: absolute;
-            width: 500px;
-            font-size: 12px;
-            padding: 20px;
-            display: none;
-        }
-        .about-close{
 
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
 
@@ -141,14 +25,14 @@
 
 </head>
 <body>
-<div class="info">D3.js Gallery || <a class="about-link" href="">About</a></div>
+<div class="info">D3.js Gallery | <a class="about-link" href="">About</a></div>
 <div class="about-box">
 
-    <span class="about-close">X</span>
+    <span class="about-close" style="cursor: pointer;">x</span>
 
     <h1>Why an alternative gallery?</h1>
 
-    <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url:
+    <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url: <a href="http://biovisualize.github.com/d3visualization/#visualizationType=bar chart">http://biovisualize.github.com/d3visualization/#visualizationType=bar chart</a>
 
     <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="https://github.com/biovisualize/d3visualization">fork this gallery</a> or load the data directly from the spreadsheet.
 
@@ -187,7 +71,7 @@
         d3.event.preventDefault();
         d3.select('.about-box').style({display: 'block'});
     })
-    d3.select('.about-close').on('click', function(d, i){ d3.select('.about-box').style({display: 'none'}); });
+    d3.select('.about-close').on('click', function(d, i){                   d3.select('.about-box').style({display: 'none'}); });
 
     var vizTypeScale = d3.scale.category20c();
     var splitChar = '; ';
@@ -200,14 +84,14 @@
 
     var data2 = {
         href: function(d, i){ return '#'+ d.dimension+'='+d.key; },
-        html: function(d, i){ return d.key+'<span class="value">'+ d.value+'</span>';}
+        html: function(d, i){ return d.key+' <span class="value">'+ d.value+'</span>';}
     };
 
     var data3 = {
         href: function(d, i){return d.url;},
         html: function(d, i){
             var content = d.title;
-            if(d.author) content += ' - '+'<span class="author">'+d.author+'</span>';
+            if(d.author) content += ' '+'<span class="author">'+d.author+'</span>';
             if(d.thumbnail) content += "<br /> <img src='"+d.thumbnail+"' class='thumbnail'/><br />";
             return content;}
     };
