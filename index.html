@@ -97,7 +97,8 @@
     };
 
     var menu3Width = window.innerWidth - 300; // #nav width
-    var numInOneScreen = Math.floor(menu3Width / 220) * Math.ceil(document.height / 250); // menu3 li width
+    var docHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    var numInOneScreen = Math.floor(menu3Width / 220) * Math.ceil(docHeight / 250); // menu3 li width
     var numInView = numInOneScreen;
 
     d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
@@ -216,7 +217,7 @@
     });
 
     d3.select(window).on('scroll', function(d, i){
-        if(document.body.scrollTop == document.height -  window.innerHeight){
+        if(document.body.scrollTop == docHeight -  window.innerHeight){
             numInView += numInOneScreen;
             updateList(dataView(cachedData, numInView), '.menu3-container', data3);
         }
