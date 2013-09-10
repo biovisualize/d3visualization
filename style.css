@@ -6,54 +6,46 @@ body {
     margin: 0;
     padding-top: 2.5em;
 }
- a:link, a:hover, a:visited {
+a:link, a:hover, a:visited {
     color: #252f4d;
 }
+div{
+    /*background-color: white;*/
+}
 #nav {
-    background-color: rgba(250,250,250,0.7);
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    max-height: 100%;
+    top: 40px;
+    bottom:0;
     overflow-y: auto;
-    border-left: 1px solid #CCC;
-    z-index: 102;
+    width: 200px;
 }
-#nav li {
-    margin-top: 4px;
-}
-.menu1-container {
-    height: 210px;
-    z-index: 9;
-    width: 100%;
+.menu1-container, .menu2-container{
     padding: 4px 12px;
-    position: fixed;
-    top: 0;
     background-color: rgba(250,250,250,0.92);
-    overflow-y: auto;
-    -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Saf3.0+, Chrome
-    -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //FF3.5+
-    box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Opera 10.5, IE 9.0
     text-transform: capitalize;
+    -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
+    box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
 }
-.menu2-container {
-    padding: 12px;
-    margin-top: 210px;
-    text-transform:capitalize;
+.menu1-container{
+    border-bottom: silver 1px solid;
 }
 .menu2-search{
     background: url('http://icons.iconarchive.com/icons/gakuseisean/radium-neue/128/Search-icon.png') no-repeat scroll 4px;
     background-size: 15px 15px;
     padding: 6px;
     padding-left:20px;
-    
     border: 2px solid #CCC;
     border-radius: 6px;
     width: 80%;
 }
 #list {
-    width: 78%;
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    top: 40px;
+    right: 0;
+    overflow-y: auto;
 }
 #list li {
     cursor: default;
@@ -63,11 +55,8 @@ body {
     float: left;
     overflow: hidden;
     display: inline-block;
-
     margin: 1%;
     margin-right: 18px;
-
-
     border-left: 4px solid #CCC;
     padding: 2px 6px;
     -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* Saf3.0+, Chrome */
@@ -93,14 +82,12 @@ li a:visited {
 }
 .menu3-container li a:visited {
     color: #888;
-    opacity: 0.85;
 }
 li a:hover {
     opacity: 1;
     text-decoration: underline;
 }
 .value {
-    opacity: 0.2;
     font-weight: 400;
 }
 .author {
@@ -109,25 +96,17 @@ li a:hover {
     font-weight: 400;
     font-size: 0.75em;
     line-height: 1.2em;
-    opacity: 0.7;
     padding: 0 .2em;
 }
 .thumbnail {
-    /*height: 200px;*/
     width: 100%;
     height: auto;
-    /*width: auto;*/
     display: inline-block;
     vertical-align: middle;
     border: 1px solid white;
     border-radius: 6px;
 }
-
-.info{
-position: fixed;
-top: 0;
-width: 100%;
-    /*background-color: #f3f2f4;*/
+.info, .about-box{
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 242, 244, 1.00)), to(rgba(217, 216, 218, 0.75)));
     background-image: -webkit-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.75));
     background-image: -moz-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.75));
@@ -135,8 +114,11 @@ width: 100%;
     background-image: -ms-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.75));
     background-image: linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.75));
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f2f4', EndColorStr='#d9d8da');
-    
-    
+}   
+.info{
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 5px;
     padding-left: 1%;
     z-index: 101;
@@ -145,16 +127,6 @@ width: 100%;
     border: 1px solid silver;
     border-radius: 2px;
     word-wrap: break-word;
-    
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 242, 244, 1.00)), to(rgba(217, 216, 218, 0.95)));
-    background-image: -webkit-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.95));
-    background-image: -moz-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.95));
-    background-image: -o-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.95));
-    background-image: -ms-linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.95));
-    background-image: linear-gradient(top, rgba(243, 242, 244, 1.00), rgba(217, 216, 218, 0.95));
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f2f4', EndColorStr='#d9d8da');
-    
-    
     position: absolute;
     left: 10%;
     width: 45%;
@@ -164,12 +136,15 @@ width: 100%;
     padding: 20px;
     display: none;
     z-index: 100;
-    
     -webkit-box-shadow: 0px 5px 18px 0px rgba(5,5,5,0.7); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
             box-shadow: 0px 5px 18px 0px rgba(5,5,5,0.7); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
 }
 .about-box a:visited {
     opacity: 0.6;
+}
+.about-content{
+    padding-top: 20px;
+    background-color: none;
 }
 .about-close {
     display: block;
@@ -182,5 +157,4 @@ width: 100%;
     padding-top: 1px;
     text-align: center;
     background-color: #CCC;
-
 }

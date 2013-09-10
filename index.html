@@ -28,50 +28,32 @@
 <div class="info">D3.js Gallery | <a class="about-link" href="">About</a></div>
 <div class="about-box">
 
-    <span class="about-close" style="cursor: pointer;">x</span>
+    <div class="about-close" style="cursor: pointer;">x</div>
 
-    <h1>Why an alternative gallery?</h1>
-
-    <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url: <a href="http://biovisualize.github.com/d3visualization/#visualizationType=bar chart">http://biovisualize.github.com/d3visualization/#visualizationType=bar chart</a>
-
-    <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="https://github.com/biovisualize/d3visualization">fork this gallery</a> or load the data directly from the spreadsheet.
-
-    <h1>How to contribute?</h1>
-
-    <p>You can share your work on the official gallery and a group of maintainers will cherrypick them here. You can also add it yourself to the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">spreadsheet</a>, though it will sometimes be closed for maintenance.</p>
-
-    <p>We really need help tagging the entries, adding screenshots, crediting the correct authors, removing duplicates, etc.</p>
-
-    <p>If you want to see some new functionalities, feel free to <a href="https://github.com/biovisualize/d3visualization/pulls">contribute</a> or to send a <a href="https://github.com/biovisualize/d3visualization/issues">feature request</a>.</p>
-
-    <h1>Credits</h1>
-
-    <p>D3.js is the work of Mike Bostock and a group of dedicated geniuses.</p>
-
-    <p>Every entry in this gallery is copyrighted by its author. If you want your work to be removed, a special copyright mention to be added or credit information changed, just <a href="https://github.com/biovisualize/d3visualization/issues">file a request</a> and we will answer your request promptly, as we strongly feel open-source is about respect for the creators.</p>
-
-    <p>This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community and support from <a href="http://www.datameer.com/">Datameer</a>. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.</p>
+    <div class="about-content">
+        You can contribute to this gallery on the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> or improving it on <a href="https://github.com/biovisualize/d3visualization">GitHub</a>. <br>
+        Every entry in this gallery is copyrighted by its author. Feel free to <a href="https://github.com/biovisualize/d3visualization/issues">file a request</a> for correcting errors.<br>
+        This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community and support from <a href="http://www.datameer.com/">Datameer</a>. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.
+    </div>
 
 </div>
-<div class="gallery">
-    <div id="nav">
-        <div class="menu1-container"></div>
-        <div class="menu2-container">
-            <input type="text" class="menu2-search" />
-        </div>
-    </div>
-    <div id="list">
-        <div class="menu3-container"></div>
+<div id="nav">
+    <div class="menu1-container"></div>
+    <div class="menu2-container">
+        <input type="text" class="menu2-search" />
     </div>
 </div>
+<div id="list">
+    <div class="menu3-container"></div>
+</div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
     d3.select('.about-link').on('click', function(d, i){
         d3.event.preventDefault();
         d3.select('.about-box').style({display: 'block'});
     })
-    d3.select('.about-close').on('click', function(d, i){                   d3.select('.about-box').style({display: 'none'}); });
+    d3.select('.about-close').on('click', function(d, i){ d3.select('.about-box').style({display: 'none'}); });
 
     var vizTypeScale = d3.scale.category20c();
     var splitChar = '; ';
@@ -96,8 +78,18 @@
             return content;}
     };
 
-    var menu3Width = window.innerWidth - 300; // #nav width
-    var numInOneScreen = Math.floor(menu3Width / 220) * Math.ceil(document.height / 250); // menu3 li width
+    function getDocHeight() {
+        var doc = document;
+        return Math.max(
+            doc.body.scrollHeight, doc.documentElement.scrollHeight,
+            doc.body.offsetHeight, doc.documentElement.offsetHeight,
+            doc.body.clientHeight, doc.documentElement.clientHeight
+        );
+    }
+
+    var thumbSize = 250;
+    var menu3Width = parseInt(d3.select('#list').style('width'));
+    var numInOneScreen = Math.ceil(menu3Width / thumbSize) * Math.ceil(getDocHeight() / thumbSize);
     var numInView = numInOneScreen;
 
     d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
@@ -111,8 +103,7 @@
 
     function dataTransformMenu1(){
         //TODO: change in spreadsheet
-        var dimensionsMap = {author: 'Author', documentType: 'Format', sourceName:
-                'Source', visualizationType: 'Visualization', technology: 'Tag', title: 'Title', url: 'URL'};
+        var dimensionsMap = {author: 'Author', visualizationType: 'Chart type', title: 'Title'};
         return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
     }
 
@@ -199,7 +190,7 @@
     }
 
     function processLocationHash(){
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        d3.select('#list').node().scrollTop = 0;
         numInView = numInOneScreen;
         if(window.location.hash) {
             var hash = window.location.hash.substring(1);
@@ -215,8 +206,10 @@
         processLocationHash();
     });
 
-    d3.select(window).on('scroll', function(d, i){
-        if(document.body.scrollTop == document.height -  window.innerHeight){
+    
+
+    d3.select('#list').on('scroll', function(d, i){
+        if(this.scrollHeight - this.scrollTop <= getDocHeight()){
             numInView += numInOneScreen;
             updateList(dataView(cachedData, numInView), '.menu3-container', data3);
         }
