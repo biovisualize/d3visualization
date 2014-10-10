@@ -1,304 +1,1968 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <meta charset=utf-8>
-    <script type="text/javascript" src="./d3.v3.js"></script>
-    <style>
-        body {
-            font-size: 100%;
-            font-family: 'Monda', sans-serif;
-            padding: 0;
-            margin: 0;
-        }
-        #nav {
-            background-color: rgba(250,250,250,0.7);
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 20%;
-            max-height: 100%;
-            overflow-y: auto;
-            border-left: 1px solid #CCC;
-        }
-        #nav li {
-            margin-top: 4px;
-        }
-        .menu1-container {
-            height: 210px;
-            z-index: 9;
-            width: 100%;
-            padding: 4px 12px;
-            position: fixed;
-            top: 0;
-            background-color: rgba(250,250,250,0.92);
-            overflow-y: auto;
-            -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Saf3.0+, Chrome
-            -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //FF3.5+
-            box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);  //Opera 10.5, IE 9.0
-            text-transform: capitalize;
-        }
-        .menu2-container {
-            padding: 12px;
-            margin-top: 210px;
-            text-transform:capitalize;
-        }
-        .menu2-search{
-            background: url('http://icons.iconarchive.com/icons/gakuseisean/radium-neue/128/Search-icon.png') no-repeat scroll left;
-            background-size: 15px 15px;
-            padding-left:20px;
-        }
-        #list {
-            width: 80%;
-        }
-        #list li {
-            cursor: default;
-            border-radius: 2px;
-            margin-top: 2.5%;
-            display: inline-block;
-            margin-right: 1.6em;
-            border-left: 6px solid #CCC;
-            padding: 2px 6px;
-            -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* Saf3.0+, Chrome */
-            -moz-box-shadow:0 0 10px 0 rgba(0,0,0,0.2); /* FF3.5+ */
-            box-shadow:0 0 10px 0 rgba(0,0,0,0.1); /* Opera 10.5, IE 9.0 */
-            -webkit-transition:all .28s ease-out;
-        }
-        #list li:hover {
-            -webkit-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Saf3.0+, Chrome */
-            -moz-box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* FF3.5+ */
-            box-shadow:0 0 6px 0 rgba(0,0,0,0.45); /* Opera 10.5, IE 9.0 */
-        }
-        li {
-            list-style: none;
-        }
-        li a:link {
-            text-decoration: none;
-            font-weight: bold;
-            color: black;
-        }
-        li a:visited {
-            color: black;
-        }
-        .menu3-container li a:visited {
-            color: #888;
-        }
-        .menu3-container li {
-            width: 200px;
-            height: auto;
-        }
-        li a:hover {
-            text-decoration: underline;
-        }
-        .value {
-            opacity: 0.2;
-        }
-        .thumbnail {
-            /*height: 200px;*/
-            width: 200px;
-            /*width: auto;*/
-            display: inline-block;
-            vertical-align: middle;
-            border: 1px solid white;
-            border-radius: 2px;
-        }
-        .info{
-            background: #eee;
-            padding: 5px;
-        }
-        .about-box{
-            border: 1px solid silver;
-            background: white;
-            position: absolute;
-            width: 500px;
-            font-size: 12px;
-            padding: 20px;
-            display: none;
-        }
-        .about-close{
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma, sans-serif;
+	text-align: center;
+}
+#banner{
+	font-family: Times, sans-serif;
+	font-weight: bold;
+	width: 100%;
+	font-size: 150px;
+	background-color: white;
+	text-align: center;
+	text-shadow: 1px 2px 5px #888;
+	color: #ddd;
+	margin-bottom: 100px;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+a:hover{
+	text-decoration: underline;
 
-        }
-    </style>
+}
+#gallery-image{
+	text-align: center;
+	color: silver;
+	margin-bottom: 100px;
+}
+#gallery-image a{
+	color: silver;
+	font-size: 50px;
+}
+#container{
+	display: inline-block;
+	text-align: left;
+}
+</style>
 
-    <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div class="info">D3.js Gallery || <a class="about-link" href="">About</a></div>
-<div class="about-box">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <span class="about-close">X</span>
-
-    <h1>Why an alternative gallery?</h1>
-
-    <p>This filterable gallery of examples for <a href="http://d3js.org">D3.js</a> is an alternative to the official <a href="https://github.com/mbostock/d3/wiki/Gallery">wiki gallery</a>. Filtering makes it easier to search by author, visualization type and so on. You can also share the url to a filtered result gallery. For example, when asked about bar charts on <a href="https://groups.google.com/forum/?fromgroups=#!forum/d3-js">Google groups</a> or <a href="http://stackoverflow.com/questions/tagged/d3.js">StackOverflow</a>, just share this url:
-
-    <p>This gallery is using a <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">Google Spreadsheet</a> for storing data. It makes it easier to implement new ideas (RSS feed for new entries, visualizing some stats about it, etc.). You can <a href="">fork this gallery</a> or load the data directly from the spreadsheet.
-
-    <h1>How to contribute?</h1>
-
-    <p>You can share your work on the official gallery and a group of maintainers will cherrypick them here. You can also add it yourself to the <a href="https://docs.google.com/spreadsheet/ccc?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE#gid=0">spreadsheet</a>.</p>
-
-    <p>We really need help tagging the entries, adding screenshots, crediting the correct authors, removing duplicates, etc.</p>
-
-    <p>If you want to see some new functionalities, feel free to <a href="">contribute</a> or to send a <a href="">feature request</a>.</p>
-
-    <h1>Credits</h1>
-
-    <p>D3.js is the work of Mike Bostock and a group of dedicated geniuses.</p>
-
-    <p>Every entry in this gallery is copyrighted by its author. If you want your work to be removed, a special copyright mention to be added or credit information changed, just <a href="">file a request</a> and we will answer your request promptly, as we strongly feel open-source is about respect for the creators.</p>
-
-    <p>This gallery is developed by Christophe Viau <a href="https://twitter.com/d3visualization">@d3visualization</a> with the help of the community. Special thanks to <a href="https://twitter.com/mrejfox">@mrejfox</a> for styling.</p>
-
-</div>
-<div class="gallery">
-    <div id="nav">
-        <div class="menu1-container"></div>
-        <div class="menu2-container">
-            <input type="text" class="menu2-search" />
-        </div>
-    </div>
-    <div id="list">
-        <div class="menu3-container"></div>
-    </div>
-</div>
-
-    <script type="text/javascript">
-
-    d3.select('.about-link').on('click', function(d, i){
-        d3.event.preventDefault();
-        d3.select('.about-box').style({display: 'block'});
-    })
-    d3.select('.about-close').on('click', function(d, i){ d3.select('.about-box').style({display: 'none'}); });
-
-    var vizTypeScale = d3.scale.category20c();
-    var splitChar = '; ';
-    var json;
-
-    var data1 = {
-        href: function(d, i){return '#'+ d.dimension+'=all';},
-        html: function(d, i){ return d.displayName;}
-    };
-
-    var data2 = {
-        href: function(d, i){ return '#'+ d.dimension+'='+d.key; },
-        html: function(d, i){ return d.key+'<span class="value">'+ d.value+'</span>';}
-    };
-
-    var data3 = {
-        href: function(d, i){return d.url;},
-        html: function(d, i){
-            var content = d.title;
-            if(d.author) content += '-'+ d.author;
-            if(d.thumbnail) content += "<br /> <img src='"+d.thumbnail+"' class='thumbnail'/><br />";
-            return content;}
-    };
-
-    d3.csv('https://docs.google.com/spreadsheet/pub?key=0AqMEGBUNwXeHdHpQNlVuY29SUE5BSXVtS3JueGlNYVE&single=true&gid=0&output=csv', function(error, _json){
-        json = _json;
-        buildList(dataTransformMenu1(), '.menu1-container', data1);
-        buildList(dataTransformMenu2('visualizationType'), '.menu2-container', data2);
-        buildList(dataTransformMenu3('title', 'all'), '.menu3-container', data3);
-        processLocationHash();
-    });
-
-    function dataTransformMenu1(){
-        //TODO: change in spreadsheet
-        var dimensionsMap = {author: 'Author', documentType: 'Format', sourceName:
-                'Source', visualizationType: 'Visualization', technology: 'Tag', title: 'Title', url: 'URL'};
-        return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
-    }
-
-    function dataTransformMenu2(dimension, filter){
-        var splitted = d3.merge(json.map(function(d, i){
-            return splitter(d[dimension]);
-        }));
-        var filtered = (filter) ? splitted.filter(function(d, i){ return d.toLowerCase().indexOf(filter.toLowerCase()) != -1; }) : splitted;
-        var unemptied = filtered.map(function(d, i){return (d == '') ? 'untagged' : d;});
-        var grouped = groupCount(unemptied);
-        var prepared = d3.entries(grouped).map(function(d, i){
-                d.dimension = dimension;
-                return d;
-            });
-        var sorted = prepared.sort(function(a, b){return b.value - a.value});
-        return sorted;
-    }
-
-    function splitter(data){
-        return (data.indexOf(splitChar) !== -1) ? data.split(splitChar) : data;
-    }
-
-    function groupCount(arr) {
-        var uniques = {}, val;
-        var dups = {};
-        for (var i = 0, len = arr.length; i < len; i++) {
-            val = arr[i];
-            if (val in uniques) {
-                uniques[val]++;
-                dups[val] = uniques[val];
-            } else uniques[val] = 1;
-        }
-//        return(dups);
-        return(uniques);
-    }
-
-    function dataTransformMenu3(dimension, value){
-        var filtered = json.filter(function(d, i){
-            var splitted = splitter(d[dimension]);
-            if (value == 'all') return true;
-            else if(value == 'untagged') return (splitted == '');
-            else if(splitted.indexOf(value) >= 0) return true;
-            else return false;
-        });
-        var sorted = filtered.sort(function(a, b){
-                return (a.thumbnail == '') - (b.thumbnail == '');
-            });
-        return sorted;
-    }
-
-    function buildList(data, containerSelector, content){
-        var entries = d3.select(containerSelector)
-            .selectAll("li.entry")
-            .data(data);
-        entries.enter().append("li")
-            .attr('class', 'entry')
-            .append('a');
-        entries.each(function(d, i){
-            d3.select(this)
-                .select('a')
-                .attr('href', content.href)
-                .html(content.html)
-        });
-        entries.exit().remove();
-    }
-
-    d3.select('.menu2-search')
-        .on('change', function(d, i){ filterList(this.value); })
-        .on('keyup', function(d, i){ filterList(this.value); });
-    d3.select('body').on('mouseover', function(){
-            if (d3.event.target.nodeName == 'A') d3.select('.menu2-search').node().blur();
-        });
-
-    function filterList(value){
-        var dimension = window.location.hash.substring(1).split('=')[0] || 'visualizationType';
-        buildList(dataTransformMenu2(dimension, value), '.menu2-container', data2);
-    }
-
-    function processLocationHash(){
-        if(window.location.hash) {
-            var hash = window.location.hash.substring(1);
-            var hashSplit = hash.split('=');
-            if(hashSplit[1] == 'all') buildList(dataTransformMenu2(hashSplit[0]), '.menu2-container', data2);
-            buildList(dataTransformMenu3(hashSplit[0], hashSplit[1]), '.menu3-container', data3);
-        }
-    }
-
-    d3.select(window).on('hashchange', function () {
-        processLocationHash();
-    });
-
+  ga('create', 'UA-38721366-3', 'christopheviau.com');
+  ga('send', 'pageview');
 
 </script>
 
+</head>
+<body>
+<div id="banner">The Big List of<br />D3.js Examples</div>
+
+<div id="gallery-image"><a href="./gallery.html">
+Explore the interactive version here.<br>
+<img src="./gallery2.png" /></a></div>
+
+<div id="container">
+	<ol>
+		<li><a href="http://bl.ocks.org/mbostock/4657115">113th U.S. Congressional Districts</a></li>
+		<li><a href="http://thestoryoftheseason.com/">20 years of the english premier football league</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/5107530">20000 points in random motion</a></li>
+		<li><a href="http://thedylanharper.wordpress.com/2013/02/04/2012-nfl-conference-champs/">2012 NFL Conference Champs</a></li>
+		<li><a href="http://bdon.org/static/nbasalaries/">2012-2013 NBA Salary Breakdown</a></li>
+		<li><a href="http://tributary.io/inlet/5262684">25 great circles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1340727">2D Matrix Decomposition</a></li>
+		<li><a href="http://mikemcdearmon.com/portfolio/300-outings">300 Outings</a></li>
+		<li><a href="http://bl.ocks.org/camio/5087116">3D bar chart with D3.js and x3dom</a></li>
+		<li><a href="http://bl.ocks.org/hlvoorhees/5986172">3D scatter plot using d3 and x3dom</a></li>
+		<li><a href="http://blog.futureadvisor.com/401k-fees-are-determined-by-hr-negotiation-skills/">401k Fees Vary Widely for Similar Companies</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html">512 Paths to the White House</a></li>
+		<li><a href="http://bl.ocks.org/yonester/6472779">7th Grade Graphs with D3</a></li>
+		<li><a href="http://www.jasondavies.com/9patch/">9-Patch Quilt Generator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1389927">A Bar Chart</a></li>
+		<li><a href="http://mbostock.github.com/d3/tutorial/bar-1.html">A Bar Chart, Part 1</a></li>
+		<li><a href="http://mbostock.github.com/d3/tutorial/bar-2.html">A Bar Chart, Part 2</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/01/02/us/chicago-killings.html">A Chicago Divided by Killings</a></li>
+		<li><a href="http://tulpinteractive.com/achristmascarol/">A Christmas Carol</a></li>
+		<li><a href="http://fleetinbeing.net/beans/d3">A CoffeeScript console for d3.js visualization</a></li>
+		<li><a href="http://macwright.org/presentations/dcjq/">A fun, difficult introduction to d3</a></li>
+		<li><a href="http://jsfiddle.net/mrcactu5/LMCxT/1/">A JSNetworkX example</a></li>
+		<li><a href="http://hoonzis.blogspot.fr/2013/03/sample-application-ravendb-knockoutjs.html">A KoExtensions example: #d3js KnockoutJS, RavenDB, WebAPI, Bootstrap</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_dynamic_line_color">A line chart plotting unit sales, colored by price for d3 data visualisations</a></li>
+		<li><a href="http://othellomap.nand.io/">A map of translations of Othello into German</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_grouped_mekko">A marimekko chart showing SKUs grouped by owner and brand.</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_matrix">A matrix chart where each point is replaced with a marimekko</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/01/15/us/a-migration-of-unmarried-men.html?ref=us">A Migration of Unmarried Men</a></li>
+		<li><a href="http://michiel.wordpress.com/2012/07/13/a-physics-model-of-a-physics-model/">A physics model of a physics model</a></li>
+		<li><a href="http://3angular.roberryarts.com/">A Race to Entitlement</a></li>
+		<li><a href="http://bl.ocks.org/JohnDelacour/5673836">A Radius Follows the Mouse</a></li>
+		<li><a href="http://www.seaoftweets.com/">A sea of tweets: what are italians saying about the election</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5415941">A simpler variation of Kepler’s Tally</a></li>
+		<li><a href="http://blog.polychart.com/2013/02/so-what-do-canadians-do-anyways.html">A Slice of Canadian Life</a></li>
+		<li><a href="https://gist.github.com/stepheneb/2045912">A sprintf-like function using d3,js</a></li>
+		<li><a href="http://www.mgrafit.com/04Cosinor/Cosinor.html">A statistical model for blood pressure in patients with hypertension</a></li>
+		<li><a href="http://www.filosophy.org/projects/goonsquad/">A Visit From The Goon Squad - Interactive Character Map</a></li>
+		<li><a href="http://vallandingham.me/abusing_the_force.html">Abusing The Force Talk</a></li>
+		<li><a href="http://ramjoshi.com/web/soccer/">AC Milan vs Juventus</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html">Across U.S. Companies, Tax Rates Vary Greatly</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3795544">Adaptive Resampling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5699934">Adaptive Resampling</a></li>
+		<li><a href="https://addepar.com/">Addepar</a></li>
+		<li><a href="http://bl.ocks.org/RandomEtc/5165219">Advanced object constancy</a></li>
+		<li><a href="http://medialab-prado.es/mmedia/10523/view">Advanced visualizations with D3.js and Kartograph</a></li>
+		<li><a href="https://github.com/enjalot/adventures_in_d3">Adventures in D3</a></li>
+		<li><a href="http://www.vislives.com/2011/09/brownlow-medal-winners-visualization.html">AFL Brownlow Medalists</a></li>
+		<li><a href="http://www.atlas.cid.harvard.edu/aidxp">Aid Explorer</a></li>
+		<li><a href="http://www.jeeltcraft.com/infographics/final_maps.html">Air pollution</a></li>
+		<li><a href="http://priceonomics.com/hotels/">Airbnb vs Hotels: A Price Comparison</a></li>
+		<li><a href="https://www.jasondavies.com/maps/airocean/">Airocean World (Dymaxion) map</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5620764">Airy’s Minimum Error</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5620807">Airy’s Minimum Error</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3682698">Aitoff</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3664045">Aitoff Graticule</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5952814">Alaska Albers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734308">Albers Equal-Area Conic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2869871">Albers Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5413933">Albers Siberia</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5608230">Albers Tiles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5545680">Albers USA</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2869946">Albers USA Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5735649">Albers with Resampling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5735647">Albers without Resampling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5629120">AlbersUSA + PR</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/08/01/sports/olympics/racing-against-history.html">All the Medalists: Men's 100-Meter Freestyle</a></li>
+		<li><a href="http://bl.ocks.org/1552725">Alpha-shapes aka concave hulls</a></li>
+		<li><a href="http://www.phyzkit.net/docs/d3.d.ts.html">Alternative D3.js documentation</a></li>
+		<li><a href="http://www.jasondavies.com/american-forces-in-afghanistan-and-iraq/">American Forces in Afghanistan and Iraq</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/02/20/movies/among-the-oscar-contenders-a-host-of-connections.html">Among the Oscar Contenders, a Host of Connections</a></li>
+		<li><a href="http://tributary.io/inlet/4489362/">An inlet to Tributary</a></li>
+		<li><a href="http://latentflip.github.com/d3/techmeetup">An introduction to d3.js video with synced visualisation</a></li>
+		<li><a href="http://data.jmsc.hku.hk/hongkong/budget/2013/">An overview of the Hong Kong budget in 2013-14</a></li>
+		<li><a href="https://my.infocaptor.com/dash/mt.php?pa=world_clocks_using_d3_part2_511031bc87e14">Analog clock</a></li>
+		<li><a href="http://andrewberls.com/blog/post/visualizing-your-bash-history-with-d3js">Andrew Berls, Visualizing your bash history with d3.js</a></li>
+		<li><a href="http://labs.radiantmachines.com/al/">Angel List compensation scatterplot</a></li>
+		<li><a href="http://www.skybluetrades.net/blog/posts/2013/04/24/radian/index.html">AngularJS + D3.js = Radian</a></li>
+		<li><a href="http://www.jasondavies.com/animated-bezier/">Animated Bézier Curves</a></li>
+		<li><a href="http://vallandingham.me/vis/gates/">Animated Bubble Chart of Gates Educational Donations</a></li>
+		<li><a href="http://slodge.com/teach/">Animated bubble charts for school data analysis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3151318">Animated Clipped textPath</a></li>
+		<li><a href="http://www.jasondavies.com/animated-quasicrystals/">Animated Quasicrystals</a></li>
+		<li><a href="http://nickrabinowitz.com/projects/d3/alluvial/alluvial-dynamic.html">Animated Sankey (alluvial) diagram</a></li>
+		<li><a href="http://architects.dzone.com/articles/sexy-animated-spirographs-35">Animated Spirographs</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3151228">Animated textPath</a></li>
+		<li><a href="http://www.jasondavies.com/animated-trig/">Animated Trigonometry</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3788999">Antimeridian Cutting</a></li>
+		<li><a href="http://www.jasondavies.com/maps/antipodes/">Antipodes</a></li>
+		<li><a href="https://gist.github.com/antulik">antulik's Gists</a></li>
+		<li><a href="http://www.jasondavies.com/apollonian-gasket/">Apollonian Gasket</a></li>
+		<li><a href="http://tributary.io/inlet/4374041/">Apple logo with gradient</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6409844">Arc Deduplication</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1098617">Arc Tween (Clock)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5100636">Arc Tween Commented Example</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/938288">Arcs Around</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3883195">Area Chart</a></li>
+		<li><a href="http://jsfiddle.net/PyvZ7/7/">Area chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4206573">Area Choropleth</a></li>
+		<li><a href="http://bl.ocks.org/1059602">Area Transition</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3035090">Area with Missing Data</a></li>
+		<li><a href="http://interactivos.lanacion.com.ar/censo/">Argentina Census</a></li>
+		<li><a href="http://www.arlingtonvisualbudget.org/revenues/2013/t/9cee2fab">Arlington Visual Budget</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4463127">Armadillo Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1174302">Array Subclassing Test</a></li>
+		<li><a href="http://www.apcjones.com/talks/2013-06-11_D3_London/#slide-0">Arrows are Beautiful</a></li>
+		<li><a href="http://blogs.plos.org/mfenner/2013/03/26/using-d3-js-to-visualize-article-level-metrics-over-time/">Article-Level Metrics over time</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4613663">Asia Lambert Conic Conformal</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/09/04/us/politics/democratic-convention-words.html">At the Democratic Convention the Words Being Used</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html">At the National Conventions the Words They Used</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4519975">Atlantis</a></li>
+		<li><a href="http://vis.uell.net/by/13/atlas.html">Atlas zur Landtagswahl Bayern 2013</a></li>
+		<li><a href="http://bl.ocks.org/cloudshapes/5909708">AttrTween, Transitions and MV* in Reusable D3</a></li>
+		<li><a href="http://d3-spectrum.herokuapp.com/">Audio Spectrum Analyzer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3797581">August Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1627439">Autofocus</a></li>
+		<li><a href="http://bl.ocks.org/1691430">Automatic floating labels using d3 force-layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1846692">Automatically sizing text</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1166403">Axis Component</a></li>
+		<li><a href="http://bl.ocks.org/3605124">Axis Examples</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3371592">Axis Styling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757110">Azimuthal Equidistant</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4436875">Azimuthal Equidistant</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/azimuthal.html">Azimuthal Projections</a></li>
+		<li><a href="http://names.darkgreener.com/">Baby Names in England &amp;amp; Wales</a></li>
+		<li><a href="http://drsm79.github.com/Backbone-d3/index.html">Backbone-D3: Simple visualisations of Backbone collections via D3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4476279">Baker Dinomic</a></li>
+		<li><a href="http://bl.ocks.org/milroc/5519819">bar + sum: d3.js &amp;amp; angular.js</a></li>
+		<li><a href="http://bl.ocks.org/milroc/5522467">bar + sum: d3.js &amp;amp; backbone.js</a></li>
+		<li><a href="http://bl.ocks.org/milroc/5520449">bar + sum: d3.js &amp;amp; ember.js</a></li>
+		<li><a href="http://bl.ocks.org/milroc/5519642">bar + sum: reusable d3.js</a></li>
+		<li><a href="http://bl.ocks.org/milroc/5518052">bar + sum: vanilla d3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3885304">Bar Chart</a></li>
+		<li><a href="http://www.d3-generator.com/">Bar chart code generator and online editor</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2368837">Bar Chart with Negative Values</a></li>
+		<li><a href="http://bl.ocks.org/milroc/2991587">barStack (flex layout)</a></li>
+		<li><a href="http://tributary.io/inlet/6199445">Bart particles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/492147">Base64.js</a></li>
+		<li><a href="http://sizethreestudios.com/Projects/_moneyball">Baseball 2012 Predictions based on past 6 years</a></li>
+		<li><a href="http://bl.ocks.org/thor5551/4986745">Basic Gantt Chart</a></li>
+		<li><a href="http://bl.ocks.org/4348024">Basic Reusable Slopegraph</a></li>
+		<li><a href="http://graftdata.com/lakemichigan">Bathymetry of Lake Michigan</a></li>
+		<li><a href="http://www.meetup.com/Bay-Area-d3-User-Group/">Bay Area d3 User Group</a></li>
+		<li><a href="http://bl.ocks.org/1343714">Bay Area earthquake responses by zip code</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1494117">BBEdit Preferences</a></li>
+		<li><a href="https://github.com/wrobstory/bearcart">Bearcart</a></li>
+		<li><a href="http://tributary.io/inlet/5211034">Beautiful Spiral Things</a></li>
+		<li><a href="http://www.youtube.com/watch?v=JAlZ0uJnqkA">Beautiful visualizations with D3.js</a></li>
+		<li><a href="http://money.cnn.com/interactive/pf/beer-tax-in-your-state/">Beer taxes in your state - CNNMoney</a></li>
+		<li><a href="http://bl.ocks.org/njvack/1316832">Beeswarm plot</a></li>
+		<li><a href="http://datadrivenjournalism.net/featured_projects/Behind_the_Australian_Financial_Reviews_Budget_Explorer">Behind the Australian Financial Review’s Budget Explorer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4463049">Berghaus Star Projection</a></li>
+		<li><a href="http://bl.ocks.org/couchand/6420534">Better force layout node selection</a></li>
+		<li><a href="http://knowledgestockpile.blogspot.com/search/label/D3">Bharat Bhole</a></li>
+		<li><a href="http://stanford.edu/~garylee/bibly/">Bibly v2: Visualizing word distribution within the KJV bible</a></li>
+		<li><a href="http://ollieglass.com/2012/04/21/bieber-fever-meter-with-html5s-web-socket-d3-js-and-pusher/">Bieber Fever Meter with HTML5 Web Socket d3.js and Pusher</a></li>
+		<li><a href="http://nationalpriorities.org/interactive-data/taxbreaks/2013/visualization/">Big Money in Tax Breaks</a></li>
+		<li><a href="http://www.jasondavies.com/bml/">Biham-Middleton-Levine Traffic Model</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5944371">Bilevel Partition</a></li>
+		<li><a href="http://mechanicalscribe.com/notes/binify-d3-topojson-tutorial/">Binify + D3 = Gorgeous honeycomb maps</a></li>
+		<li><a href="http://bl.ocks.org/MattWoelk/5196687">Binned Line Chart</a></li>
+		<li><a href="https://googledrive.com/host/0B7G1I9OfZ_ylbDUxa0JqLVMyRzg/">BioVis Project: Identification of Mutations that Affect Protein Function</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5586845">BIS Derivative Data</a></li>
+		<li><a href="https://bitdeli.com/">Bitdeli: Custom analytics with Python and GitHub</a></li>
+		<li><a href="http://colloquial.herokuapp.com/vis">Bitly link Co-occurrence</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3884914">Bivariate Area Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4330486">Bivariate Hexbin Map</a></li>
+		<li><a href="http://tributary.io/inlet/3336872/">Blobular</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4206857">Blocky Counties</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4431123">Blocky Counties</a></li>
+		<li><a href="http://www.jasondavies.com/bloomfilter/">Bloom Filters</a></li>
+		<li><a href="http://tributary.io/inlet/5584636">Blur/fade effect</a></li>
+		<li><a href="http://bl.ocks.org/bdon/raw/5947583/">Boeing 777 Descent Profiles, SFO</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4481220">Boggs Eumorphic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734313">Bonne Projection</a></li>
+		<li><a href="http://tributary.io/inlet/6365156">Boomstick motion</a></li>
+		<li><a href="http://tributary.io/inlet/6379220">Boomstick motion coffee</a></li>
+		<li><a href="http://www.meetup.com/Boston-d3-js-User-Group/">Boston d3.js User Group</a></li>
+		<li><a href="http://joannecheng.me/colorado_firemap/">Boulder County Wildfires</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1129492">Bounded Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4061502">Box Plots</a></li>
+		<li><a href="http://blockses.appspot.com/2503502">Bracket Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4519926">Briesemeister</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4487695">Bromley</a></li>
+		<li><a href="http://thecelestialweb.com/">Browser usage plurality</a></li>
+		<li><a href="http://philau.willbowman.com/2012/digitalInnovation/DevelopmentReferences/LIBS/d3JS/examples/brush/brush-ordinal.html">Brush</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4349545">Brush Handles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6232537">Brush Snapping</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6232620">Brush Snapping II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6216724">Brush Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4560481">Brushable Network</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4565798">Brushable Network, II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063269">Bubble Chart</a></li>
+		<li><a href="http://www.infocaptor.com/bubble-my-page?url=http://www.news.com">Bubble My Page Visualization</a></li>
+		<li><a href="http://www.jasondavies.com/bubbles/">Bubbles</a></li>
+		<li><a href="http://2013.poster.thirteen23.com/generator/">Bubbles generator using a simplex noise</a></li>
+		<li><a href="http://www.infocaptor.com/dashboard/d3-javascript-visualization-to-build-world-analog-clocks">Build world clocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/929623">Build Your Own Graph!</a></li>
+		<li><a href="http://ufert.se/user-acquisition/mobile-game-monetization/building-a-lightweight-flexible-d3-js-dashboard-part-1-of-2/">Building a lightweight, flexible D3.js dashboard</a></li>
+		<li><a href="http://blog.pixelingene.com/2011/07/building-a-tree-diagram-in-d3-js/">Building a tree diagram</a></li>
+		<li><a href="http://www.tikalk.com/javascript/building-uml-editor-javascript-part-3">Building a UML editor in JS</a></li>
+		<li><a href="http://bl.ocks.org/CodeXmonk/6187523">BulleT (a variant of mbostock's Bullet Charts)</a></li>
+		<li><a href="http://bl.ocks.org/CodeXmonk/6112167">Bullet chart variant</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4061961">Bullet Charts</a></li>
+		<li><a href="http://ramnathv.github.io/viewer/?5649396">Bump Chart with rCharts and Rickshaw</a></li>
+		<li><a href="https://github.com/caged/d3-tip">Caged/d3-tip</a></li>
+		<li><a href="http://calvinmetcalf.github.com/k3/">Calculating quadtree bounding boxes and displaying them in leaflet</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063318">Calendar View</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/calendar.html">Calendar View</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5562380">California Population Density</a></li>
+		<li><a href="http://www.jasondavies.com/calkin-wilf-tree/">Calkin-Wilf Tree</a></li>
+		<li><a href="http://calroc.blogspot.com/">Calroc</a></li>
+		<li><a href="http://calroc.blogspot.com/2013/01/web-as-theater.html">Calroc: Web as Theater</a></li>
+		<li><a href="http://www.neural-code.com/Visualize/monaural.html">Can people localize sounds with one functional ear?</a></li>
+		<li><a href="http://bl.ocks.org/4491174">Can't we all get along?</a></li>
+		<li><a href="http://bl.ocks.org/sxv/4491174">Can't we all get along?</a></li>
+		<li><a href="http://bl.ocks.org/1074045">Candlestick charts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3680958">Canvas Geometric Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3681006">Canvas Semantic Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2647922">Canvas Swarm</a></li>
+		<li><a href="http://exposedata.com/canvas/stacked.html">Canvas with d3 and Underscore</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6140181">Capturing Listeners</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4198499">Capturing Mousemove</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/603148">Caravaggio’s Bacco (1597)</a></li>
+		<li><a href="http://ramblings.mcpher.com/Home/excelquirks/d3/partition">Carotid-Kundalini Fractal Explorer</a></li>
+		<li><a href="http://www.jasondavies.com/carotid/">Carotid-Kundalini Fractal Explorer</a></li>
+		<li><a href="http://bl.ocks.org/andrewxhill/4448162">CartoDB + D3 Bubble Map</a></li>
+		<li><a href="http://blog.cartodb.com/post/39680106243/cartodb-makes-d3-maps-a-breeze">CartoDB makes D3 maps a breeze</a></li>
+		<li><a href="http://prag.ma/code/d3-cartogram/">Cartogram.js: Continuous Area Cartograms</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1322814">Case-Sensitivity and SVG-in-HTML</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5695142">Cassini</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/583734">Cellular automata</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/ca.html">Cellular automata</a></li>
+		<li><a href="http://blog.vctr.me/posts/central-limit-theorem.html">Central Limit Theorem Visualized in D3</a></li>
+		<li><a href="http://www.cfcl.com/twiki5/bin/view/Projects/D3/DF">CFCLTWiki</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1125997">Chained Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3903818">Chained Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5625053">Chamberlin Trimetric</a></li>
+		<li><a href="http://blog.futureadvisor.com/explore-changes-in-wages-and-employment-across-industries/">Changes in Employment and Salary by Industry</a></li>
+		<li><a href="http://anilomanwar.github.com/d3jsExperiments/ChartWheel.html">Chart Wheel Visualization</a></li>
+		<li><a href="http://chart.io/">Chart.io: The Easiest Business Dashboard You'll Ever Use</a></li>
+		<li><a href="https://github.com/Quartz/Chartbuilder/">Chartbuilder</a></li>
+		<li><a href="http://bl.ocks.org/2011590">Chernoff faces</a></li>
+		<li><a href="https://github.com/d3/d3-plugins">Chernoff faces Fisheye Geodesic grid Hive plot Horizon chart Sankey diagram</a></li>
+		<li><a href="http://www.christophermanning.org/projects/chicago-lobbyists-force-directed-graph-visualization/">Chicago Lobbyists</a></li>
+		<li><a href="http://www.christophermanning.org/projects/chicago-ward-remap-outlines/">Chicago Ward Remap Outlines</a></li>
+		<li><a href="http://bioinformatics.cancerresearchuk.org/~kelly02/results/chipmod/">CHIPMOD</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1046712">Chord Diagram</a></li>
+		<li><a href="http://www.javainc.com/projects/dex/examples/vis/d3/presidents/presidentPartyChord.html">Chord diagram with Dex</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4062006">Chord Diagram: Dependencies Between Classes</a></li>
+		<li><a href="http://livecoding.io/3419309">Chord diagram: Fade on Hover</a></li>
+		<li><a href="http://exposedata.com/tutorial/chord/latest.html">Chord diagram: Updating data</a></li>
+		<li><a href="http://fleetinbeing.net/d3e/chord.html">Chord Layout Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4060606">Choropleth</a></li>
+		<li><a href="http://gabrielflor.it/">Choropleth classification systems</a></li>
+		<li><a href="http://code.leakingalpha.com/visionyc/">Choropleth with interactive parameters for NYC data visualization</a></li>
+		<li><a href="http://bl.ocks.org/tnightingale/4710662">Christchurch Earthquakes</a></li>
+		<li><a href="http://bl.ocks.org/christophermanning">christophermanning’s bl.ocks</a></li>
+		<li><a href="http://bl.ocks.org/4616231">Chroma + Phi (ϕ)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3194190">Chrome Circle Precision Bug</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3201606">Chrome Circle Precision Bug</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063530">Circle Packing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1627378">Circle Packing with Zero Values</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1628131">Circle Packing Zero Values</a></li>
+		<li><a href="http://bl.ocks.org/nsonnad/5993342">Circle-bound D3 force layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3095037">Circle-Circle Intersection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4218871">Circle-Polygon Intersection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1371412">Circles</a></li>
+		<li><a href="http://prcweb.co.uk/lab/circularheat/">Circular heat chart</a></li>
+		<li><a href="http://bl.ocks.org/4723857">Circular key scale</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/846688">Circular Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/846704">Circular Layout (Arc)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/846710">Circular Layout (Recursive)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/847677">Circular Layout (Slider)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3422480">Circular Segment</a></li>
+		<li><a href="http://bl.ocks.org/4092944">Circular tree comparing the src directory for three versions of d3</a></li>
+		<li><a href="http://dataviz-factory.com/Portfolio/08Classements/classements.html">Classements par étape - Tour de France 2012</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3682990">Clean Up for Natural Earth GeoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2206489">click-to-center</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2206529">click-to-center via transform</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2206590">click-to-zoom via transform</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3258821">Click-to-Zoom via Transform</a></li>
+		<li><a href="https://github.com/nachocab/clickme">Clickme: Render JavaScript visualizations using R objects</a></li>
+		<li><a href="http://www.mgrafit.com/00-projects/proj01-MSTrials/MStrials.html">Clinical trials in Multiple Sclerosis</a></li>
+		<li><a href="http://tulpinteractive.com/close-votes/">Close Votes - visualizing voting similarities for the Dutch 2012 national elections</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4281513">Closest Point to Segment</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063570">Cluster Dendrogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4339607">Cluster Dendrogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1747543">Clustered Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1748247">Clustered Force Layout</a></li>
+		<li><a href="http://www.rjbaxley.com/p/publications.html">Co-Authors Chords</a></li>
+		<li><a href="http://redotheweb.com/CodeFlower/">CodeFlower Source code visualization</a></li>
+		<li><a href="https://gist.github.com/KartikTalwar/5055922">CoderDojo - Intro to D3.js</a></li>
+		<li><a href="http://www.jasondavies.com/coffee-wheel/">Coffee Flavour Wheel</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1062288">Collapsible Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1093130">Collapsible Force Layout</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/force-collapsible.html">Collapsible Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1093025">Collapsible Indented Tree</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1061834">Collapsible tree</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4339083">Collapsible Tree</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/tree.html">Collapsible Tree Layout</a></li>
+		<li><a href="http://bl.ocks.org/1249394">Collapsible tree with labels</a></li>
+		<li><a href="http://www.jasondavies.com/collatz-graph/">Collatz Graph: All Numbers Lead to One</a></li>
+		<li><a href="https://pypi.python.org/pypi/collective.js.d3">Collective.js.d3 Integrates D3.js in Plone</a></li>
+		<li><a href="http://blog.latentflip.com/post/18195267992/d3-collider">Collider - a d3.js game</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734316">Collignon Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3231298">Collision Detection</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/collision.html">Collision Detection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3231307">Collision Detection (Canvas)</a></li>
+		<li><a href="http://jsfiddle.net/murray_3/5q62y/8/">Collpase/expand nodes of a tree</a></li>
+		<li><a href="http://collusion.toolness.org/">Collusion FireFox Addon</a></li>
+		<li><a href="http://hughsk.github.com/colony">Colony - Visualising Javascript projects and their dependencies</a></li>
+		<li><a href="http://adilapapaya.com/code/colors/d3colorbrewer.html">Color Brewer</a></li>
+		<li><a href="http://xliberation.com/parse/colortable/parsed3.html">Color scheme sunburst</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4062844">Color via Clipping</a></li>
+		<li><a href="http://color.method.ac/">Color: a color matching game</a></li>
+		<li><a href="http://www.jasondavies.com/necklaces/">Combinatorial Necklaces and Bracelets</a></li>
+		<li><a href="http://www.alexrothenberg.com/2012/05/30/interactive-maps-with-d3-and-ember.html">Combining D3 and Ember to Build Interactive Maps</a></li>
+		<li><a href="http://csclub.uwaterloo.ca/~n2iskand/?page_id=13">Comic Book Narrative Charts</a></li>
+		<li><a href="http://enja.org/code/tuts/d3/bar/">Commented bar chart code</a></li>
+		<li><a href="http://bit.ly/US45pL">Comparing the same surveys by different polling organizations (polish)</a></li>
+		<li><a href="http://www.mgrafit.com/00-projects/proj02-PCPbaseline/PCPbaseline.html">Comparison of MS trials baseline characteristics</a></li>
+		<li><a href="http://www.jasondavies.com/complete-graphs/">Complete Graphs</a></li>
+		<li><a href="http://cartography.oregonstate.edu/demos/CompositeMapProjection/">Composite Map Projection</a></li>
+		<li><a href="http://vallandingham.me/vis/church_by_state.html">Composition of Church Membership by State: 1890</a></li>
+		<li><a href="http://computationallyendowed.com/blog/2013/01/21/bounded-panning-in-d3.html">Computationally Endowed</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4503672">Concentric Circles Emanating</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5348789">Concurrent Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6081914">Concurrent Transitions II</a></li>
+		<li><a href="http://bit.ly/QHVOU0">Confidence interval in poll surveys</a></li>
+		<li><a href="http://christopherroach.com/pydata2013/">Congressional Network Analysis</a></li>
+		<li><a href="http://maxdemarzi.com/2012/03/08/connections-in-time/">Connections in time</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4987520">Constrained Zoom</a></li>
+		<li><a href="http://bl.ocks.org/4053096">Constraint relaxation 1</a></li>
+		<li><a href="http://bl.ocks.org/4054247">Constraint relaxation 2</a></li>
+		<li><a href="http://blog.dewmap.com/post/50ff83c23f9c1f0200000001">Contextual Pie Menu in AngularJS</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4241134">Contour Plot</a></li>
+		<li><a href="http://eng.wealthfront.com/2011/12/converting-dynamic-svg-to-png-with.html">Converting dynamic SVG to PNG with node.js, d3 and Imagemagick</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341699">Convex Hull</a></li>
+		<li><a href="http://rhokaustin.org/">Conway's Game of life as a scrolling background (broken link)</a></li>
+		<li><a href="http://www.janwillemtulp.com/2011/03/22/tutorial-conways-game-of-life-in-d3/">Conway's game of life in D3.js</a></li>
+		<li><a href="http://bl.ocks.org/2369589">Conway's game of life with JS and D3.js</a></li>
+		<li><a href="http://theory.info/">Coordinated visualizations for Consumer Packaged Goods</a></li>
+		<li><a href="http://bl.ocks.org/milroc/raw/6316349/#0">Coordinated Visualizations: An introduction to crossfilter.js</a></li>
+		<li><a href="https://github.com/danielfrg/copper">Copper: Wrapper around python packages with D3.js viz</a></li>
+		<li><a href="http://enjalot.github.com/intro-d3/costofliving/">Cost of living</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1558011">Cost of Living - Parallel Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/mjhoy/5301594">Costa Rica shaded relief</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5827353">Counting Weekdays</a></li>
+		<li><a href="http://techslides.com/countries-and-capitals-with-d3-and-natural-earth/">Countries and Capitals with D3 and Natural Earth</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4206975">County Circles</a></li>
+		<li><a href="http://www.smartjava.org/content/cpi-interactive-index-15-years-created-angularjs-bootstrap-and-d3js">CPI Interactive index, with Angular.js, bootstrap and d3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4459466">Craig Retroazimuthal</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4459716">Craig Retroazimuthal</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4465118">Craster Parabolic</a></li>
+		<li><a href="http://www.jasondavies.com/crayola/">Crayola Colour Chronology</a></li>
+		<li><a href="http://www.creativebloq.com/javascript/create-javascript-bar-chart-d3-9134563">Create a JavaScript bar chart with D3</a></li>
+		<li><a href="http://oscarvillarreal.com/2012/07/12/create-any-map-of-the-world-in-svg/">Create any map of the world in SVG</a></li>
+		<li><a href="http://kreese.net/blog/2012/08/26/d3-js-creating-a-polar-area-diagram-radial-bar-chart/">Creating a Polar Area Diagram</a></li>
+		<li><a href="http://vallandingham.me/bubble_charts_in_d3.html">Creating Animated Bubble Charts in D3</a></li>
+		<li><a href="http://blog.visual.ly/creating-animations-and-transitions-with-d3-js/">Creating Animations and Transitions With D3</a></li>
+		<li><a href="http://www.verisi.com/resources/d3-tutorial-basic-charts.htm">Creating Basic Charts using d3.js</a></li>
+		<li><a href="http://www.cloudshapes.co.uk/exp/london-d3-talk/#/">Creating Reusable D3, MVC, and Events</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3953793">Creating Thumbnails with GraphicsMagick</a></li>
+		<li><a href="http://www.diegovalle.net/maps/d3/crime-2011-aug.html">Crime in Mexico</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3087986">Cross-linked Mouseover</a></li>
+		<li><a href="http://square.github.com/crossfilter/">Crossfilter.js</a></li>
+		<li><a href="http://www.sci.utah.edu/~miriah/cs6964/">CS6964: Information Visualization</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/584742">CSS3 Modal Button</a></li>
+		<li><a href="http://cssdeck.com/labs/d3-repulsive">CSSdeck: Repulsion example</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/590163">CSSOM/SVG Test</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3344600">CSV Syntax Definition</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1557990">Cube Metrics Client (Node.js + WebSockets)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1573240">Cube Realtime Map</a></li>
+		<li><a href="http://square.github.com/cube/">Cube: Time Series Data Collection &amp;amp; Analysis</a></li>
+		<li><a href="http://www.christophermanning.org/projects/building-cubic-hamiltonian-graphs-from-lcf-notation/">CubicHamiltonianGraphs</a></li>
+		<li><a href="http://square.github.com/cubism/">Cubism.js: Time Series Visualization</a></li>
+		<li><a href="http://hn.metamx.com/">Current Article Popularity Trends on Hacker News</a></li>
+		<li><a href="http://www.vcwatershed.net/fws/gmap.html">Current rainfall, weather and buoy information for Ventura County and nearby counties</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4600693">Curved Links</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2565344">Curved textPath</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4323929">Custom Axis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6216797">Custom Cartesian Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5743979">Custom Easing</a></li>
+		<li><a href="http://bl.ocks.org/4047002">Custom Path and Area Generator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5663666">Custom Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4149176">Custom Time Format</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3712408">Cylindrical Equal-Area</a></li>
+		<li><a href="http://pasdechocolat.com/2013/04/08/using-d3-in-hawaii/">D#.js and Hawaii Open Data</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1323729">D3 and Custom Data Attributes</a></li>
+		<li><a href="http://mapbrief.com/2013/03/01/d3-and-the-power-of-projections/">D3 and the Power of Projections : MapBrief</a></li>
+		<li><a href="http://charlesmartinreid.com/wordpress/2012/08/d3-and-wordpress/">D3 and WordPress</a></li>
+		<li><a href="http://bl.ocks.org/sjengle/5431779">D3 Arc Diagram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3048168">D3 Bookmarklet</a></li>
+		<li><a href="http://charts.sohdoc.org/">D3 Chart Builder</a></li>
+		<li><a href="http://xliberation.com/googlecharts/d3concept.html">D3 concept browser</a></li>
+		<li><a href="http://code.hazzens.com/d3tut/lesson_0.html">D3 Conceptually</a></li>
+		<li><a href="http://bl.ocks.org/ilyabo/2585241">D3 Dorling cartogram with rectangular states</a></li>
+		<li><a href="http://www.biostat.wisc.edu/~kbroman/D3/">D3 examples</a></li>
+		<li><a href="http://d3-example.herokuapp.com/">D3 Examples on Heroku</a></li>
+		<li><a href="http://xliberation.com/googlecharts/d3flights.html">D3 flights</a></li>
+		<li><a href="http://www.recursion.org/d3-for-mere-mortals/">D3 for Mere Mortals</a></li>
+		<li><a href="http://techslides.com/demos/d3/d3-geo-renderer.html">D3 GeoJSON and TopoJSON Online Renderer with Drag and Drop</a></li>
+		<li><a href="https://github.com/ipython/jsplugins/tree/master/d3graph">D3 graph plugin</a></li>
+		<li><a href="http://www.dotuscomus.com/pergola/pergola_1.4.0/ExamplesHTML/D3/multiD3.html">D3 graphics in a Pergola SVG UI</a></li>
+		<li><a href="http://bl.ocks.org/2759731">D3 heatmap using Backbone.js and CoffeeScript</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1300016">D3 Hello World</a></li>
+		<li><a href="http://www.slideshare.net/YnonPerek/d3-js">D3 js slides</a></li>
+		<li><a href="http://angular-d3.github.io/line-chart/">D3 line chart for Angularjs</a></li>
+		<li><a href="http://www.ralphstraumann.ch/blog/2013/05/conceptualisation-of-a-d3-linked-view-with-hexagonal-cartogram/">D3 linked view with a hexagonal cartogram</a></li>
+		<li><a href="http://bl.ocks.org/bobbydavid/5808079">d3 meta-visualization</a></li>
+		<li><a href="http://ramblings.mcpher.com/Home/excelquirks/gassites/d3nodefocus">D3 node focus</a></li>
+		<li><a href="http://www.ericbullington.com/articles/2012/10/27/d3-oclock">d3 O'Clock: Building a Virtual Analog Clock with d3.js, Part I</a></li>
+		<li><a href="https://github.com/dansdom/plugins-d3-pie">d3 pie plugin</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1367999">D3 PJAX</a></li>
+		<li><a href="https://github.com/mhemesath/r2d3/">d3 rendered with RaphaelJS for IE Compatibility</a></li>
+		<li><a href="https://github.com/trinary/d3-transform">D3 selection transform syntax</a></li>
+		<li><a href="http://bl.ocks.org/4292338">d3 several time scales</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1256572">D3 Show Reel</a></li>
+		<li><a href="http://bl.ocks.org/2547496">D3 Slopegraph I</a></li>
+		<li><a href="http://bl.ocks.org/2573074">D3 Slopegraph II</a></li>
+		<li><a href="http://empire5.com/tag/d3-js/">D3 tag at Empire5</a></li>
+		<li><a href="http://exploringdata.github.io/tags/d3/">D3 tag at Exploring Data</a></li>
+		<li><a href="http://www.billdwhite.com/wordpress/?p=496">D3 Treemap with Title Headers</a></li>
+		<li><a href="http://alignedleft.com/tutorials/d3/">D3 Tutorials</a></li>
+		<li><a href="http://bl.ocks.org/oncletom/5822102">D3 Waveform Live demo</a></li>
+		<li><a href="http://mechanicalscribe.com/notes/html-is-data-visualization/">D3 with HTML: divs as datavis</a></li>
+		<li><a href="http://bl.ocks.org/enjalot/6641917">d3 workshop</a></li>
+		<li><a href="http://bost.ocks.org/mike/d3/workshop/">D3 Workshop Slides</a></li>
+		<li><a href="http://techslides.com/d3-world-maps-tooltips-zooming-and-queue/">D3 World Maps: Tooltips, Zooming, and Queue</a></li>
+		<li><a href="https://github.com/dansdom/D3-Builder">D3-Builder</a></li>
+		<li><a href="https://github.com/interactivethings/d3-comparator">d3-comparator: sort arrays of objects by multiple dimensions</a></li>
+		<li><a href="http://macwright.org/d3-curvy/">D3-curvy/</a></li>
+		<li><a href="https://github.com/d3/d3-plugins/tree/master/keybinding">D3-plugins</a></li>
+		<li><a href="http://bl.ocks.org/Caged/6476579">D3-tip on a bar chart</a></li>
+		<li><a href="http://prcweb.co.uk/lab/d3-tree">D3-tree</a></li>
+		<li><a href="https://github.com/lbrucher/d3-tree-heatmap">d3-tree-heatmap</a></li>
+		<li><a href="http://code.hazzens.com/d3tut/">D3, Conceptually</a></li>
+		<li><a href="http://vis.stanford.edu/papers/d3">D3: Data-Driven Documents</a></li>
+		<li><a href="http://enjalot.github.io/1024/">d3.bayarea( ) Celebrating 1024 members!</a></li>
+		<li><a href="http://bl.ocks.org/wrobstory/5683024">d3.chart Choropleths</a></li>
+		<li><a href="https://github.com/iros/d3.chart.tooltips">d3.chart.tooltips</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1365279">d3.create + selection.adopt</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3783604">d3.geo.path + Canvas</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4132797">d3.geo.tile</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4150951">d3.geo.tile</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/900050">d3.geo.tiler</a></li>
+		<li><a href="https://www.keenjar.com/course/76-d3-java-script-vienno/">D3.java script by Vienno - Keenjar</a></li>
+		<li><a href="http://www.ustream.tv/channel/gaslighters">D3.js and a little bit of ClosureScript</a></li>
+		<li><a href="http://ramblings.mcpher.com/Home/excelquirks/d3">D3.js and Excel</a></li>
+		<li><a href="https://github.com/lgrammel/d3_gwt">D3.js and GWT proof-of-concept</a></li>
+		<li><a href="http://blog.benmcmahen.com/post/41124327100/using-d3-and-meteor-to-generate-scalable-vector">D3.js and Meteor to generate SVG</a></li>
+		<li><a href="http://paulcrickard.wordpress.com/2012/11/28/d3-js-and-mongodb/">D3.js and MongoDB</a></li>
+		<li><a href="https://github.com/sympy/sympy/pull/2120">D3.js and vega.js plots in the IP notebook</a></li>
+		<li><a href="http://blog.dbrgn.ch/2013/3/8/d3js-xhr-x-requested-with-header/">D3.js and X-Requested-With Header</a></li>
+		<li><a href="http://www.codeproject.com/Articles/523444/D3-crash-course">D3.js crash course</a></li>
+		<li><a href="http://baoshan.github.io/d3/src/core/array">D3.js Docco documentation</a></li>
+		<li><a href="https://github.com/exlee/d3-dash-gen">D3.js Documentation Generator for Dash and HTML</a></li>
+		<li><a href="http://www.ultrasaurus.com/sarahblog/2012/03/d3-js-experiments-in-the-console/">D3.js experiments in the console</a></li>
+		<li><a href="http://bigsnarf.wordpress.com/2013/03/15/d3-js-for-attacker-reports/">d3.js for Attacker Reports</a></li>
+		<li><a href="http://dl.dropbox.com/u/14196218/Share/d3ForceIntegrations.html">D3.js force diagram from Excel</a></li>
+		<li><a href="http://ramblings.mcpher.com/Home/excelquirks/d3/anyforce">D3.js force diagrams straight from Excel</a></li>
+		<li><a href="http://excelramblings.blogspot.co.uk/2012/07/visualizing-system-integrations-using.html">D3.js force diagrams with markers straight from Excel</a></li>
+		<li><a href="http://hashbang.co.nz/blog/2013/2/25/d3_js_geo_fun">D3.js Geo fun</a></li>
+		<li><a href="http://planet.jboss.org/post/awesome_new_graphs_in_rhq_based_on_d3_js">D3.js graphs for RHQ</a></li>
+		<li><a href="https://bitbucket.org/hrojas/learn-d3">D3.js Lessons: Create a Basic Column Chart</a></li>
+		<li><a href="http://datacommunitydc.org/blog/2013/01/d3-js-meta-tutorial/">D3.js Meta Tutorial</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1219585">D3.js nested data</a></li>
+		<li><a href="http://www.veengle.com/s/d3.js.html">d3.js on Veengle</a></li>
+		<li><a href="http://phrogz.net/JS/d3-playground/#BlankDefault">D3.js playground</a></li>
+		<li><a href="http://phrogz.net/js/d3-playground/#StockPrice_HTML">D3.js Playground</a></li>
+		<li><a href="http://michaeljgleeson.com/2013/07/d3-js-premiership-season/">D3.js Premiership Season</a></li>
+		<li><a href="http://zzolo.github.com/d3js-example-presentation/">D3.js Presentation</a></li>
+		<li><a href="http://thematicmapping.org/playground/d3/d3.slider/">D3.js Slider Examples</a></li>
+		<li><a href="https://github.com/roundrobin/d3.js-Sublime-2-Snippets">D3.js Sublime2 snippets</a></li>
+		<li><a href="http://frakturmedia.net/tag/d3-js/">D3.js tag at Frakturmedia</a></li>
+		<li><a href="http://christinabergey.com/blog/tag/d3-js/">d3.js tag at Monkeyologist</a></li>
+		<li><a href="http://javadude.wordpress.com/category/d3-js/">D3.js tag on The JavaDude Weblog</a></li>
+		<li><a href="https://github.com/enjalot/d34github">D3.js talk at Github</a></li>
+		<li><a href="http://www.youtube.com/watch?v=M9AEHW8-DKw">D3.js talk from Iowa City Feb 2013 Iowa JS Meetup</a></li>
+		<li><a href="http://www.d3noob.org/">D3.js Tips and Tricks</a></li>
+		<li><a href="http://bl.ocks.org/explunit/5603250">D3.js tree with drag nea logic</a></li>
+		<li><a href="http://www.codecademy.com/courses/web-beginner-en-kcP9b/0/1">D3.js tutorial on CodeAcademy</a></li>
+		<li><a href="http://www.youtube.com/watch?v=-AXohuYf_Dc">d3.js video tutorial</a></li>
+		<li><a href="http://www.mathieu-elie.net/portfolio/prez-datavisualization-with-d3-js-elasticsearch-bordeaux-open-data/">D3.js, elasticsearch, bordeaux open data</a></li>
+		<li><a href="http://prcweb.co.uk/slides/d3/">D3.js,Data Visualisation in the Browser</a></li>
+		<li><a href="http://anna.ps/talks/fel/#/">D3.js: Data-Driven Delight</a></li>
+		<li><a href="http://bl.ocks.org/jazzido/raw/5962277/">d3.micromaps</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/844752">d3.nest</a></li>
+		<li><a href="http://bl.ocks.org/biovisualize/5437184/">d3.phylogram</a></li>
+		<li><a href="http://bl.ocks.org/enjalot/5754673">d3.sticker plugin</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3306234">d3.time.format localization</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3306147">d3.time.scale nice</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3305937">d3.tsv</a></li>
+		<li><a href="http://webmonarch.github.com/d34raphael/usage.html">d34raphael</a></li>
+		<li><a href="https://github.com/mikedewar/d3py">D3py</a></li>
+		<li><a href="http://bl.ocks.org/bobbydavid/raw/5841683/">DAG as force graph</a></li>
+		<li><a href="https://github.com/cpettitt/dagre/">Dagre: Directed graph rendering</a></li>
+		<li><a href="http://anf.ucsd.edu/tools/data_return_rates/">Daily data return rates for seismic networks in the EarthScope USArray</a></li>
+		<li><a href="http://quasipartikel.at/2012/04/25/dancing-with-data/">Dance.js: D3 with Backbone and Data.js</a></li>
+		<li><a href="https://github.com/fullscale/dangle">Dangle</a></li>
+		<li><a href="http://glimmer.rstudio.com/ramnathv/dashifyr/">Dashifyr</a></li>
+		<li><a href="http://sulab.org/2013/02/data-chart-plugin-beta/">Dat achart plugin</a></li>
+		<li><a href="http://drewconway.com/zia/2013/3/27/the-ds-vd-as-d3js">Data Science Venn Diagram</a></li>
+		<li><a href="http://datastori.es/data-stories-22-nyt-graphics-and-d3-with-mike-bostock-and-shan-carter/">Data Stories #22: NYT Graphics and D3</a></li>
+		<li><a href="http://data-story.org/">Data Story</a></li>
+		<li><a href="http://zzolo.github.com/mjc-data-visualization-presentation/">Data Visualization at MinnPost</a></li>
+		<li><a href="http://mikemcdearmon.com/portfolio/techposts/data-visualization-base-on-d3-js">Data Visualization Libraries Based on D3.JS</a></li>
+		<li><a href="http://www.ustream.tv/recorded/20313703">Data Visualization Using D3.js</a></li>
+		<li><a href="http://blog.nextgenetics.net/?e=7">Data visualization with D3.js and python</a></li>
+		<li><a href="http://benclinkinbeard.com/talks/2012/NCDevCon/#/">Data Visualization with D3.js, slides and video</a></li>
+		<li><a href="http://datadrivenjournalism.net/resources/data_driven_documents_defined">Data-Driven Documents, Defined, Resources, Data Driven Journalism</a></li>
+		<li><a href="http://www.datadoghq.com/">Datadog</a></li>
+		<li><a href="http://datafart.com/">DataFart</a></li>
+		<li><a href="http://bollwyvl.github.com/blockd3/">Dataflow programming with D3 and Blockly</a></li>
+		<li><a href="http://datamaps.github.com/">DataMaps: Interactive maps for data visualizations.</a></li>
+		<li><a href="http://www.datameer.com/product/smart-analytics.html">Datameer Smart Analytics</a></li>
+		<li><a href="http://blog.datawrapper.de/2013/datawrapper-crosses-mark-of-10-million-visits/">Datawrapper: An open source tool to create embeddable charts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1071269">Date Ticks</a></li>
+		<li><a href="http://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/">DavaViz for Everyone: Responsive Maps With D3</a></li>
+		<li><a href="http://www.vislives.com/2011/12/infinite-jest-visualization.html">David Foster Wallace's 'Infinite Jest'</a></li>
+		<li><a href="http://dccode.org/browser/">DC Code Browser</a></li>
+		<li><a href="http://macwright.org/dc-government/">DC government</a></li>
+		<li><a href="http://nickqizhu.github.com/dc.js/">Dc.js NASDAQ demo</a></li>
+		<li><a href="http://www.lemonde.fr/politique/visuel/2012/09/18/de-maastricht-au-traite-budgetaire-les-oui-et-les-non-de-39-personnalites-politiques_1760615_823448.html">De Maastricht au traité budgétaire : les oui et les non de 39 personnalités politiques</a></li>
+		<li><a href="http://benheb.github.io/tornadoes/april-27-2011">Deadly Tornado Outbreak - April 25-28, 2011</a></li>
+		<li><a href="http://shimz.me/blog/d3-js/2406">Decomposing an image from canvas to SVG</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341156">Delaunay Triangulation</a></li>
+		<li><a href="http://dkandalov.github.com/delta-flora-for-intellij/">Delta-flora for IntelliJ analyze project source code history</a></li>
+		<li><a href="http://bl.ocks.org/4063570">Dendrogram</a></li>
+		<li><a href="http://bl.ocks.org/diegovalle/5166482">Density map of homicides in Monterrey</a></li>
+		<li><a href="https://github.com/auchenberg/dependo">Dependo: force directed graph of JavaScript dependencies</a></li>
+		<li><a href="http://nathansuniversity.com/vanilla/discussion/111/description-a-little-language-for-d3js">Description: A little language for d3js</a></li>
+		<li><a href="http://shancarter.com/talk/2012/visualized/">Design process of The Electoral Map</a></li>
+		<li><a href="http://dexvis.wordpress.com/2013/03/18/designing-a-reusable-line-chart-in-d3js/">Designing a Reusable Line Chart in D3JS</a></li>
+		<li><a href="http://www.jasondavies.com/duplicates/">Detecting Duplicates in O(1) Space and O(n) Time</a></li>
+		<li><a href="http://dexvis.com/vis/MotionChartDemo3.html">Dex Motion Chart Demo</a></li>
+		<li><a href="https://github.com/PatMartin/DexCharts">DexCharts: A new reusable charting library for D3.js</a></li>
+		<li><a href="http://jsfiddle.net/mrcactu5/VGpRJ/17/">Diagram of Patients and Symptoms</a></li>
+		<li><a href="http://bl.ocks.org/1144047">Dial examples</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3894205">Difference Chart</a></li>
+		<li><a href="http://www.woodchanges.com/">Dimensional Changes in Wood</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_pong">Dimple Pong</a></li>
+		<li><a href="http://dimplejs.org/">Dimple.js: An oo API for business analytics powered by d3.</a></li>
+		<li><a href="http://bl.ocks.org/rkirsling/5001347">Directed Graph Editor</a></li>
+		<li><a href="https://gist.github.com/Caged/6407459">Directly render and serve d3 visualizations from a nodejs server.</a></li>
+		<li><a href="http://hughsk.github.io/disc/">Disc</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5872848">Dispatching Events</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html">Dissecting a Trailer: The Parts of the Film That Make the Cut</a></li>
+		<li><a href="http://www.jasondavies.com/maps/north-korea-distance/">Distances from North Korea</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1276463">DOM-to-Canvas using D3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3887193">Donut Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3888852">Donut Multiples</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341417">Donut Transitions</a></li>
+		<li><a href="http://www.jasondavies.com/maps/dorling-world/">Dorling World Map</a></li>
+		<li><a href="http://enjalot.github.com/dot-append/">Dot Append video tutorials</a></li>
+		<li><a href="http://enjalot.github.com/dot-enter/">Dot Enter video tutorials</a></li>
+		<li><a href="http://www.rvl.io/annaps/d3-journey-to-the-source/">Dot enter( ) stage left</a></li>
+		<li><a href="http://bl.ocks.org/jkschneider/4734864">Dot plot with jittering</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1169680">Dots</a></li>
+		<li><a href="http://downtonipsum.com/">Downton Ipsum ~ A Downton Abbey-inspired lorem ipsum text generator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6123708">Drag + Zoom</a></li>
+		<li><a href="http://tributary.io/inlet/4477544/">Drag and Drop Container Divs</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5091037">Drag and resize a D3.js chart with JqueryUI</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1557377">Drag Multiples</a></li>
+		<li><a href="http://bl.ocks.org/1629464">Drag rectangle</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4557698">Draggable Network</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4566102">Draggable Network, II</a></li>
+		<li><a href="http://jsfiddle.net/djatha/JmGC3/">Draw tangent on a line on mouseover</a></li>
+		<li><a href="http://www.d3coder.com/2012/07/01/drawing-chemical-structures-with-force-layout/">Drawing Chemical Structures with Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5249328">Drawing Hexagon Mesh with contour using TopoJSON</a></li>
+		<li><a href="http://joostkiens.com/project/driving-from-thailand-to-the-netherlands-datavis-with-d3-js/">Driving from Thailand to the Netherlands</a></li>
+		<li><a href="http://bl.ocks.org/cpbotha/5200394">Drop shadow example</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/08/11/sunday-review/drought-history.html">Drought and Deluge in the Lower 48</a></li>
+		<li><a href="http://bost.ocks.org/mike/drought/">Drought during Month</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/08/24/us/drought-crops.html">Drought Extends Crops Wither</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5977197">DRY Bar Chart</a></li>
+		<li><a href="http://benjchristensen.com/2012/05/02/line-graphs-using-d3-js/">Dual scale line chart</a></li>
+		<li><a href="http://akngs.tumblr.com/post/30393301015/declarative-data-visualization">DViz: a declarative data visualization library</a></li>
+		<li><a href="https://github.com/migurski/Dymo#sample-output">Dymo</a></li>
+		<li><a href="http://bl.ocks.org/2465185">Dynamic Distance Cartogram for ORBIS</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6245977">Dynamic Simplification</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6252418">Dynamic Simplification II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6287633">Dynamic Simplification III</a></li>
+		<li><a href="https://github.com/vogievetsky/DVL">Dynamic Visualization LEGO</a></li>
+		<li><a href="https://github.com/mlarocca/Dynamic-Charts">Dynamic-Graphs: charting lib for real-time data</a></li>
+		<li><a href="http://pejl.svt.se/visualisering/politik/partisympatier-over-tid/#party=c&amp;indicator=_man">Dynamics of Swedish politics</a></li>
+		<li><a href="http://blog.guanxin.de/2013/02/easy-infographics-with-d3js.html">Easy infographics with D3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734322">Eckert I Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734324">Eckert II Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734325">Eckert III Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734327">Eckert IV Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734328">Eckert V Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734329">Eckert VI Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4496212">Eckert–Greifendorff</a></li>
+		<li><a href="http://saranyan.github.com/commerce_wheel">eCommerce API Wheel for eBay</a></li>
+		<li><a href="http://www.iconomical.com/customers/Amsterdam-EZ/release/">Economic performance of the Amsterdam Metro Area by sector and year</a></li>
+		<li><a href="http://bl.ocks.org/anonymous/4970328">Edge labels</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3797585">Eisenlohr Projection</a></li>
+		<li><a href="http://www.jasondavies.com/primos/">El Patrón de los Números Primos</a></li>
+		<li><a href="http://bl.ocks.org/1706523">Elastic collisions</a></li>
+		<li><a href="http://bl.ocks.org/d/2429963">Elbow Dendrogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2429963">Elbow Dendrogram</a></li>
+		<li><a href="http://events.current.com/social_dashboard">Election 2012 Social Dashboard (interactive Twitter visualization)</a></li>
+		<li><a href="http://zjonsson.github.io/electro/">Electro 2013: The magnetic force between political candidates and objectives</a></li>
+		<li><a href="http://www.dataninja.it/projects/nelson/treemap/">Elezioni 2013 - I risultati del voto per la Camera dei deputati</a></li>
+		<li><a href="https://github.com/ramnathv/slidifyExamples/wiki/Embed-D3.js-Animations-in-Slidify">Embed D3.js Animations in Slidify</a></li>
+		<li><a href="http://blog.embed.ly/post/57097477000/visualizing-discussions-on-reddit-with-a-d3-network-and">Embedly Blog, Visualizing discussions on Reddit with a D3 network and Embedly</a></li>
+		<li><a href="http://addepar.github.com/ember-table/">Ember Table</a></li>
+		<li><a href="http://crowdstrike.github.io/ember-timetree/">Ember Timetree</a></li>
+		<li><a href="http://thinkdatavis.com/portfolio/english-football-tickets-value-for-money.html">English Football Tickets: Value For Money</a></li>
+		<li><a href="http://students.mimuw.edu.pl/~rk292662/vertex/">Enumerating vertex induced connected subgraphs</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1353700">Epicyclic Gearing</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/gears.html">Epicyclical Gears</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5050837">EPSG:2163 Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734317">Equidistant Conic Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757119">Equirectangular (Plate Carrée)</a></li>
+		<li><a href="http://bl.ocks.org/chrisbrich/5044999">Error bars reusable component</a></li>
+		<li><a href="http://www.larsko.org/v/euc/">Eurozone crisis: more than debt</a></li>
+		<li><a href="http://jeromecukier.net/projects/agot/events.html">Events in the Game of Thrones</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5577023">Every ColorBrewer Scale</a></li>
+		<li><a href="http://drones.pitchinteractive.com/">Every known drone strike and victim in Pakistan</a></li>
+		<li><a href="http://bl.ocks.org/dahtah/4482115">Example of interactive MDS visualisation</a></li>
+		<li><a href="http://shimz.me/blog/d3-js/2575">Example of map with routes in Gunma</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5779682">Exit, Update, Enter</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5779690">Exit, Update, Enter II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3007180">Exoplanets</a></li>
+		<li><a href="http://codementum.org/exoplanets/">Exoplanets: an interactive version of XKCD 1071</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1541816">Expandable Menu</a></li>
+		<li><a href="http://bit.ly/17Yc2zn">Exploration of the Google PageRank Algorithm</a></li>
+		<li><a href="http://exploreanalytics.com/">Explore Analytics: cloud-based data analytics and visualization</a></li>
+		<li><a href="http://blog.freshteapot.net/post/31938798971/using-d3-js-to-visualise-my-heart-rate">Exploring d3.js with data from my runs to plot my heart rate</a></li>
+		<li><a href="http://www.streamlinedataworks.com/example5.html">Exploring Health Care Cost and Quality</a></li>
+		<li><a href="http://weblog.bocoup.com/reusability-with-d3/">Exploring Reusability with D3.js</a></li>
+		<li><a href="http://ggruiz.me/explosions/">Explosions</a></li>
+		<li><a href="http://d3export.cancan.cshl.edu/">Export to SVG/PNG/PDF server-side using Perl</a></li>
+		<li><a href="http://blog.luzid.com/2013/extending-the-d3-zoomable-sunburst-with-labels/">Extending the D3 Zoomable Sunburst with Labels</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2996785">Extent Ticks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1014829">External SVG</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5912673">Extradition Treaties</a></li>
+		<li><a href="https://www.jasondavies.com/eyedropper/">Eyedropper</a></li>
+		<li><a href="http://blog.ouseful.info/2012/05/24/f1-championship-points-as-a-d3-js-powered-sankey-diagram/">F1 Championship Points as a d3.js Powered Sankey Diagram</a></li>
+		<li><a href="http://notacog.com/d3/mutualFriends.html">Facebook Mutual Friends</a></li>
+		<li><a href="http://blog.dewmap.com/post/50f61b8a9f9b0d0200000001">Facebook Open Graph with Angular</a></li>
+		<li><a href="http://tributary.io/inlet/5193321">Faces</a></li>
+		<li><a href="http://www.jasondavies.com/factorisation-diagrams/">Factorisation Diagrams</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4731228">Fahey</a></li>
+		<li><a href="http://milafrerichs.github.com/fahrradunfaelle/">Fahrradunfälle in Deutschland</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/590744">Fancy Markers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/645734">Fancy Markers (No Gradient)</a></li>
+		<li><a href="http://faridrener.com/CV/">Farid Rener CV</a></li>
+		<li><a href="http://square.github.com/tesseract/">Fast Multidimensional Filtering for Coordinated Views</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/672899">Fast Pointing</a></li>
+		<li><a href="http://bl.ocks.org/4686541">Faster pan/zoom on big TopoJSON of Iceland</a></li>
+		<li><a href="http://bl.ocks.org/dwtkns/4973620">Faux-3D Arcs</a></li>
+		<li><a href="http://bl.ocks.org/4686432">Faux-3d Shaded Globe</a></li>
+		<li><a href="http://vallandingham.me/feltronifier/">Feltronifier</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/870118">Fill-Rule Evenodd</a></li>
+		<li><a href="http://www.jasondavies.com/psum/filling/">Filling Geometric Objects</a></li>
+		<li><a href="http://www.lutzroeder.com/html5/grapher/">Financial visualization of top tech companies</a></li>
+		<li><a href="http://www.densitydesign.org/research/fineo/">Fineo: an app based on Sankey diagrams</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4333610">Finite State Stream</a></li>
+		<li><a href="http://vimeo.com/35005701">First steps in data visualisation using d3.js</a></li>
+		<li><a href="http://bost.ocks.org/mike/fisheye/">Fisheye Distortion</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2962761">Fisheye Grid</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3048166">Fixed-width Histogram of Durations log-normal distribution</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4465130">Flat-Polar Parabolic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4465137">Flat-Polar Quartic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4465140">Flat-Polar Sinusoidal</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6738360">Floating Landmasses</a></li>
+		<li><a href="http://dciarletta.github.com/d3-floorplan/">Floor Plan Map</a></li>
+		<li><a href="http://bl.ocks.org/sboak/2942506">Flow - Straight, Arrows</a></li>
+		<li><a href="http://bl.ocks.org/2209220">Flows of refugees between the world countries in 2008</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1667367">Focus+Context via Brushing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/660054">Focusable Maps</a></li>
+		<li><a href="http://www.tips-for-excel.com/MCFC/Passes.html">Football passes</a></li>
+		<li><a href="http://bost.ocks.org/mike/example/">For Example</a></li>
+		<li><a href="http://mbostock.github.com/d3/tutorial/protovis.html">For Protovis Users</a></li>
+		<li><a href="http://bl.ocks.org/benzguo/4370043">Force Editor + Pan/Zoom</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2846454">Force Layout &amp;amp; Matrix Market Format</a></li>
+		<li><a href="http://tributary.io/inlet/5530551">Force layout big</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1199811">Force Layout from Adjacency List</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2949937">Force Layout from CSV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/996370">Force Layout from List</a></li>
+		<li><a href="http://bl.ocks.org/samuelleach/5497403">Force layout graph with colour-coded node neighbours</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1804889">Force Layout Multiples (Independent)</a></li>
+		<li><a href="http://bl.ocks.org/ducksmanager/5580103">Force layout on composite objects</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3180395">Force Layout with Canvas</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1212215">Force Layout with Mouseover Labels</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1212197">Force Layout with Tooltips</a></li>
+		<li><a href="http://bl.ocks.org/1377729">Force-Based Label Placement</a></li>
+		<li><a href="http://bl.ocks.org/MoritzStefaner/1377729">Force-based label placement</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3311124">Force-Directed Graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4062045">Force-Directed Graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2706022">Force-Directed Graph with Mouseover</a></li>
+		<li><a href="http://graus.nu/blog/force-directed-graphs-playing-around-with-d3-js/">Force-Directed Graphs: Playing around with D3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1080941">Force-Directed Layout from XML</a></li>
+		<li><a href="http://bl.ocks.org/2883411">Force-directed layout with drag and drop</a></li>
+		<li><a href="http://bl.ocks.org/929623">Force-directed layout with interactive Construction</a></li>
+		<li><a href="http://bl.ocks.org/2920551">Force-directed layout with multi Foci and Convex Hulls</a></li>
+		<li><a href="http://bl.ocks.org/1021953">Force-directed layout with multiple Foci</a></li>
+		<li><a href="http://jsfiddle.net/voiddesign/M2zRV/1/">Force-directed lollipop chart</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/2556042">Force-Directed Parallel Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/6419716">Force-directed Splitting</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/force-states.html">Force-Directed States</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1073373">Force-Directed States of America</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/4963194">Force-Directed SVG Icons</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1062383">Force-Directed Symbols</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1138500">Force-Directed Tree</a></li>
+		<li><a href="http://bl.ocks.org/upphiminn/6515478">ForceEdgeBundling on US airline routes</a></li>
+		<li><a href="http://bl.ocks.org/4370043">ForceLayoutEditor</a></li>
+		<li><a href="http://www.diegovalle.net/electometer">Forecast of Mexican 2012 presidential election</a></li>
+		<li><a href="http://theoldbeggar.com/aid/">Foreign aid, corruption and internet use</a></li>
+		<li><a href="http://www.vislives.com/2012/05/d3js-transitions-zoom-zoom.html">Formula 1 Lap Chart</a></li>
+		<li><a href="http://forrst.com/posts/Visualizing_US_Foreign_Aid_with_D3_js-JVc">Forrst, Visualizing US Foreign Aid with D3.js</a></li>
+		<li><a href="http://www.jasondavies.com/maps/foucaut/">Foucaut’s Stereographic Equivalent</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">Four Ways to Slice Obama's 2013 Budget Proposal</a></li>
+		<li><a href="http://openfrance.lightjs.org/">France - Data Explorer</a></li>
+		<li><a href="http://www.jasondavies.com/random-polygon-ellipse/">From Random Polygon to Ellipse</a></li>
+		<li><a href="http://javadude.wordpress.com/2012/06/13/d3-js-playing-with-selections-flat-vs-hierarchy/">From tree to cluster and radial projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4206810">Fuzzy Counties</a></li>
+		<li><a href="http://www.atomodo.com/flb/?e=13839%2025793#">Fuzzy Link-Bot</a></li>
+		<li><a href="https://github.com/alexbbrown/g3plot-1">G3plot-1</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5234763">Gall Stereographic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3946824">Gall–Peters</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/life.html">Game of life</a></li>
+		<li><a href="https://github.com/gameprez/gpdk">GAMEPREZ Developer Kit</a></li>
+		<li><a href="http://dk8996.github.io/Gantt-Chart/">Gantt Chart plugin</a></li>
+		<li><a href="http://bl.ocks.org/dk8996/5538271/">Gantt Chart, example 3</a></li>
+		<li><a href="http://tomerdoron.blogspot.com/2011/12/google-style-gauges-using-d3js.html">Gauge</a></li>
+		<li><a href="http://www.jasondavies.com/gaussian-primes/">Gaussian Primes</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3808218">General Update Pattern, I</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3808221">General Update Pattern, II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3808234">General Update Pattern, III</a></li>
+		<li><a href="http://esrgc.github.io/geodash/demo/">GeoDash</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3058685">Geodesic Grid</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3057239">Geodesic Rainbow</a></li>
+		<li><a href="https://www.jasondavies.com/maps/bounds/">Geographic Bounding Boxes</a></li>
+		<li><a href="http://www.jasondavies.com/maps/clip/">Geographic Clipping</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5323061">GeoJOIN</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4260668">GeoJSON Transforms</a></li>
+		<li><a href="http://tributary.io/inlet/4942307">Geometry daily #129</a></li>
+		<li><a href="http://ge.ch/geoportail/GeoMobilite/">GeoMobilité - Application cartographique de la mobilité</a></li>
+		<li><a href="http://2011.12devsofxmas.co.uk/2012/01/data-visualisation/">Get dirty with data using d3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1160929">getBBox</a></li>
+		<li><a href="http://shop.oreilly.com/product/0636920025429.do">Getting Started with D3</a></li>
+		<li><a href="https://github.com/hadley/r2d3">ggplot2 + d3 = r2d3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4349486">ggplot2-Style Axis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5288565">Ginzburg IV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5288590">Ginzburg IX</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5288571">Ginzburg V</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5288577">Ginzburg VI</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5288583">Ginzburg VIII</a></li>
+		<li><a href="http://kenhub.github.com/giraffe/#dashboard=Demo&amp;timeFrame=1d">Giraffe : A Graphite Dashboard with a long neck</a></li>
+		<li><a href="http://www.jasondavies.com/girko-circle/">Girko's Circular Law</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/02/04/science/girls-lead-in-science-exam-but-not-in-the-united-states.html?smid=tw-share">Girls Lead in Science Exam, but Not in the United States</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5503544">Gist API Latency</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3371488">Git-backed Node Blob Server</a></li>
+		<li><a href="http://artzub.com/ghv/#repo=d3&amp;climit=100&amp;user=mbostock&amp;run">GitHub visualization</a></li>
+		<li><a href="http://artzub.com/ghv/#repo=GitHubCodeSwarm&amp;climit=100&amp;user=artzub">Github Visualizer</a></li>
+		<li><a href="http://bl.ocks.org/gka">gka’s blocks</a></li>
+		<li><a href="http://racker.github.io/glimpse.js-website/">Glimpse.js: a new chart library on top of D3.js</a></li>
+		<li><a href="http://labs.wnstnsmth.net/worldoil/">Global Oil Production &amp;amp;amp; Consumption since 1965</a></li>
+		<li><a href="http://bl.ocks.org/1184766">Global Surface Temperature: 500 ... 2009</a></li>
+		<li><a href="http://bl.ocks.org/bewest/5075497">Glucose heatmap over hours of day</a></li>
+		<li><a href="http://bl.ocks.org/4265100">Glucose with panning</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757349">Gnomonic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4458680">Gnomonic Butterfly</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734330">Goode Homolosine</a></li>
+		<li><a href="http://bl.ocks.org/chaitanyagurrapu/6007521">Google calendar like display</a></li>
+		<li><a href="http://www.flashbit.com:3000/ror">Google Flu Trends</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3288044">Google Hurdles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/899711">Google Maps + D3</a></li>
+		<li><a href="https://www.gov.uk/performance/dashboard">GOV.UK's web traffic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4163057">Gradient Along Stroke</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6059532">Gradient Bump</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3969722">Gradient Encoding</a></li>
+		<li><a href="http://blog.nextgenetics.net/?e=19">Graph diagram of gene ontology</a></li>
+		<li><a href="http://scriptogr.am/ameliagreenhall/post/identity-mapping">Graph of my current interests and aspirations</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4343153">Graph Rollup</a></li>
+		<li><a href="http://charts.graphicbaseball.com/parallelbatting">Graphicbaseball: 2012 Batters</a></li>
+		<li><a href="http://charts.graphicbaseball.com/parallelpitching">Graphicbaseball: 2012 Pitchers</a></li>
+		<li><a href="http://www.jasondavies.com/psum/graphs/full/">Graphs</a></li>
+		<li><a href="http://www.joeondata.com/2013/03/06/playing-with-d3-js/">Gravity balls</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5044313">Gray Earth</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5928813">Great Arc</a></li>
+		<li><a href="http://www.jasondavies.com/maps/intersect/">Great Circle Arc Intersections</a></li>
+		<li><a href="http://www.jasondavies.com/maps/distance/">Great-Circle Distance</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki/5684816">Grid layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4362031">Gringorten Equal-Area</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3887051">Grouped Bar Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/882152">Grouped Bar Chart</a></li>
+		<li><a href="http://www.capitolmarkets.com/gsa-leased-investment-opportunity/">GSA-Leased Opportunity Dashboard</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/crime/murders.html">Gun homicides in America 2010</a></li>
+		<li><a href="http://do.minik.us/shorts/guns/guns.html">Gun ownership versus gun violence</a></li>
+		<li><a href="http://bim-source.com/2013/07/guts-of-energyplus-source-code-visualized-with-d3-js/">Guts of EnergyPlus Source Code Visualized with d3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3763867">Guyou Projection</a></li>
+		<li><a href="http://labs.im/hnstat/">Hacker News statistics using PhantomJS</a></li>
+		<li><a href="http://www.thehackernotes.com/mbostock/d3/blogs">Hacker Notes, d3 tag</a></li>
+		<li><a href="http://bl.ocks.org/mattsacks/raw/4970051/">Hamiltonian Graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3712397">Hammer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4459130">Hammer Retroazimuthal</a></li>
+		<li><a href="http://www.jasondavies.com/hamming-quilt/">Hamming Quilt</a></li>
+		<li><a href="https://github.com/Swizec/d3.js-book-examples">Haphazard collection of examples for a book</a></li>
+		<li><a href="http://nesterko.com/blog/2013/08/22/data-from-harvardx-research-worldwide-student-enrollment/">HarvardX Research: worldwide student enrollment</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5423680">Hashing Points</a></li>
+		<li><a href="http://jsfiddle.net/mrcactu5/eRamD/">Hata's tree-like set (with slider)</a></li>
+		<li><a href="http://listen.hatnote.com/">Hatnote Listen to Wikipedia</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4463237">HEALPix</a></li>
+		<li><a href="http://cesium.agi.com/demos/d3.html">Health and Wealth of Nations</a></li>
+		<li><a href="http://simplystatistics.org/2013/04/02/introducing-the-healthvis-r-package-one-line-d3-graphics-with-r/">Healthvis R package – one line D3 graphics with R</a></li>
+		<li><a href="http://tributary.io/inlet/4743731">Heatmap</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3202354">Heatmap and 2D Histogram</a></li>
+		<li><a href="http://blog.nextgenetics.net/?e=44">Heatmap of gene expression with hierarchical clustering</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3074470">Heatmap with Canvas</a></li>
+		<li><a href="http://tributary.io/inlet/4637557">Heavily annotated scatterplot</a></li>
+		<li><a href="http://hedonometer.org/index.html">Hedonometer: Daily Happiness Averages for Twitter</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3289530">Heightmap</a></li>
+		<li><a href="http://scott.j38.net/interactive/hellisotherpeople/">Hell is Other People: Scott Made This</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki">herrstucki on bl.ocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4248145">Hexagonal Binning</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4248146">Hexagonal Binning (Area)</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html?_r=0">Hexagonal cartogram of Asian economies and potential shifts in manufacturing</a></li>
+		<li><a href="http://www.redblobgames.com/grids/hexagons/">Hexagonal Grids</a></li>
+		<li><a href="http://osmlab.github.io/osm-fresh-hex/">Hexbin Edits on OpenStreetMap</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1283663">Hierarchical Bar Chart</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/bar-hierarchy.html">Hierarchical Bars</a></li>
+		<li><a href="http://www.bitjuice.com.au/research/#hierarchicalclassificationexample">Hierarchical classification</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1044242">Hierarchical Edge Bundling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341134">Hierarchical Edge Bundling</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5672200">Hierarchical Edge Bundling</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/bundle.html">Hierarchical Edge Bundling</a></li>
+		<li><a href="http://www.jasondavies.com/hilbert-curve/">Hilbert Curve</a></li>
+		<li><a href="http://www.jasondavies.com/hilbert-stocks/#GOOG,ADBE">Hilbert Stocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/597287">Hilbert Tiles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4479513">Hill Eucyclic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3048450">Histogram</a></li>
+		<li><a href="http://tributary.io/inlet/5998335">Histogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/993912">Histogram (Redirect)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1933560">Histogram Chart</a></li>
+		<li><a href="http://www.tips-for-excel.com/2013/02/wwe-title-holders-data-visual-using-d3-js/">History of the WWE Title</a></li>
+		<li><a href="http://bost.ocks.org/mike/hive/">Hive Plot</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2066421">Hive Plot (Areas)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2066415">Hive Plot (Links)</a></li>
+		<li><a href="http://bl.ocks.org/saraquigley/raw/2346962/">Hive Plot for Student Systems</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4476487">Hobo–Dyer</a></li>
+		<li><a href="http://www.prcweb.co.uk/lab/energy">Home energy consumption</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1483226">Horizon Chart</a></li>
+		<li><a href="http://blog.ouseful.info/2013/02/18/reshaping-horse-importexport-data-to-fit-a-sankey-diagram/">Horse Exports/Imports in the EU</a></li>
+		<li><a href="http://www.mapsnapps.com/storage/bt_hotspots/Index.html">Hotspots</a></li>
+		<li><a href="http://trends.truliablog.com/vis/tru247/">House Hunting All Day, Every Day - Trulia Insights</a></li>
+		<li><a href="http://www.niemanlab.org/2013/05/how-does-quartz-create-visualizations-so-quickly-on-breaking-news/">How does Quartz create visualizations so quickly on breaking news?</a></li>
+		<li><a href="http://skyrill.com/leaders/">How educated are world leaders?</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/11/07/us/politics/obamas-diverse-base-of-support.html">How Obama Won Re-election</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5369146">How selectAll Works</a></li>
+		<li><a href="http://bost.ocks.org/mike/selection/">How Selections Work</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/09/14/us/how-the-chicago-public-school-district-compares.html">How the Chicago Public School District Compares</a></li>
+		<li><a href="http://flowingdata.com/2013/01/17/how-to-animate-transitions-between-multiple-charts/">How to Animate Transitions Between Multiple Charts</a></li>
+		<li><a href="http://stackoverflow.com/questions/11088303/how-to-convert-to-d3s-json-format/11089330#11089330">How to convert to D3js JSON format</a></li>
+		<li><a href="http://www.tips-for-excel.com/2012/10/how-to-design-a-dashboard-using-d3-js/">How to design a dashboard using d3.js</a></li>
+		<li><a href="http://www.pbs.org/idealab/2013/03/how-to-embed-open-spending-visualizations-in-your-own-website078">How to Embed Open Spending Visualizations</a></li>
+		<li><a href="http://bl.ocks.org/4731053">How to get a significant correlation value by moving just one point around</a></li>
+		<li><a href="http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">How to Make an Interactive Network Visualization</a></li>
+		<li><a href="http://blog.visual.ly/how-to-make-choropleth-maps-in-d3/">How to Make Choropleth Maps in D3</a></li>
+		<li><a href="http://www.tips-for-excel.com/2013/09/improving-google-analytics-funnel-visualisations/">How to visualise funnel data from Google Analytics</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1087001">HTML Overlay with pageX / pageY</a></li>
+		<li><a href="http://bl.ocks.org/GerHobbelt/1887532">HTML5 input type nodes</a></li>
+		<li><a href="http://nowherenearithaca.github.com/empires/empires.html">http://nowherenearithaca.blogspot.com/2012/06/annotating-d3-example-with-docco.html</a></li>
+		<li><a href="http://exposedata.com/hypercube/rotate/">Hypercube Edges in Orthogonal Projection</a></li>
+		<li><a href="http://fleetinbeing.net/hypersolid/examples/parcoords.html">Hypercube with Parallel Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4687713">Iceland Topography</a></li>
+		<li><a href="http://bl.ocks.org/ZJONSSON/5479755">Icelandic population pyramid</a></li>
+		<li><a href="http://icequake.herokuapp.com/">Icequake</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4347473">Icicle</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3055104">Icosahedron</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3061181">Icosahedron</a></li>
+		<li><a href="http://mapbox.com/osmdev/2013/02/28/id-architecture-part-3/">iD Architecture: Map Rendering and Other UI</a></li>
+		<li><a href="http://geowiki.com/">iD: a friendly editor for OpenStreetMap</a></li>
+		<li><a href="http://ssz.fr/idh-npdc/">IDH des communes du Nord-Pas de Calais.</a></li>
+		<li><a href="https://itunes.apple.com/app/ilearning-d3.js-basic/id649355489?mt=8">iLearning - D3.js Basic for iPad</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/645758">Image Markers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/647888">Image Processing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1479319">Image tiles with float: left</a></li>
+		<li><a href="https://immersion.media.mit.edu/">Immersion: a people-centric view of your email life</a></li>
+		<li><a href="http://pejl.svt.se/visualisering/inkomster/yrken/">Income diff. between male and female dominated occupations 1</a></li>
+		<li><a href="http://pejl.svt.se/visualisering/inkomster/spridning/">Income diff. between male and female dominated occupations 2</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/03/01/world/americas/border-graphic.html">Increased Border Enforcement, With Varying Results</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/03/01/world/americas/border-graphic.html?_r=0">Increased Border Enforcement, With Varying Results - Interactive Graphic - NYTimes.com</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki/5467720">Indented tree layout</a></li>
+		<li><a href="http://hanhtrinhkientruc.org/d3/examples/tree/IndianVillageComponents.html">Indian Village Components</a></li>
+		<li><a href="http://hanhtrinhkientruc.org/d3/examples/tree/Indo-European.html">Indo-Europeans</a></li>
+		<li><a href="http://www.newyorker.com/sandbox/business/subway.html">Inequality and NY Subway</a></li>
+		<li><a href="http://visual.ly/vizbox/inequality-in-america/">Inequality in America</a></li>
+		<li><a href="http://www.jasondavies.com/plasma/">Infinite Plasma Fractal</a></li>
+		<li><a href="http://cakey.github.com/infro/">Infro</a></li>
+		<li><a href="https://github.com/cakey/infro">Infro.js: Filtering Tabular Data</a></li>
+		<li><a href="http://cakey.github.com/infro/nutrients.html">Infro.js: Nutrient Dataset</a></li>
+		<li><a href="https://github.com/dustinlarimer/inkscape-s3-server">Inkscape-s3-server</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1771630">Input Value Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/d/4689139/">Inspired by geometry daily</a></li>
+		<li><a href="http://blog.echen.me/2012/03/05/instant-interactive-visualization-with-d3-and-ggplot2/">Instant interactive visualization with d3 + ggplot2</a></li>
+		<li><a href="https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-1">Integrating D3 with a CouchDB database 1</a></li>
+		<li><a href="https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-2">Integrating D3 with a CouchDB database 2</a></li>
+		<li><a href="https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-3">Integrating D3 with a CouchDB database 3</a></li>
+		<li><a href="https://github.com/mbostock/d3/wiki/Integrating-D3-with-a-CouchDB-database-4">Integrating D3 with a CouchDB database 4</a></li>
+		<li><a href="http://marcneuwirth.com/blog/2012/06/24/creating-the-earth-with-d3-js/">Interactive azimuthal projection simulating a 3D earth with stars</a></li>
+		<li><a href="http://ofps.oreilly.com/titles/9781449339739/">Interactive Data Visualization for the Web</a></li>
+		<li><a href="http://chimera.labs.oreilly.com/books/1230000000345/">Interactive Data Visualization for the Web: read online</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3795048">Interactive Gnomonic</a></li>
+		<li><a href="http://benjchristensen.com/2012/05/15/interactive-line-graph-using-d3-js/">Interactive Line Graph</a></li>
+		<li><a href="http://bl.ocks.org/benjchristensen/2657838">Interactive Line Graph</a></li>
+		<li><a href="http://bl.ocks.org/4482115">Interactive MDS visualisation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3795040">Interactive Orthographic</a></li>
+		<li><a href="http://www.cs.umd.edu/~bederson/papers/index.html">Interactive Publication History</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3763057">Interactive Stereographic</a></li>
+		<li><a href="http://bioviz.rocq.inria.fr/plotter/">Interactive visual breakpoint detection on SegAnnDB</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3305854">Interpolating with d3.tween</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4481265">Interrupted Boggs Eumorphic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4448587">Interrupted Goode Homolosine</a></li>
+		<li><a href="http://www.jasondavies.com/maps/raster/goode/">Interrupted Goode Raster</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4498187">Interrupted Mollweide</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4481520">Interrupted Sinu-Mollweide</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4458991">Interrupted Sinusoidal</a></li>
+		<li><a href="http://webholics.github.com/talk-munichjs-d3/#2.0">Intro to d3</a></li>
+		<li><a href="http://enjalot.github.com/intro-d3/gaffta/#/">Intro to d3 at gaffta</a></li>
+		<li><a href="https://github.com/blog/1360-introducing-contributions">Introducing Contributions on GitHub</a></li>
+		<li><a href="http://mbostock.github.com/d3/">Introduction</a></li>
+		<li><a href="http://dealloc.me/2011/06/24/d3-is-not-a-graphing-library.html">Introduction to D3</a></li>
+		<li><a href="http://thecodingtutorials.blogspot.com/2012/07/introduction-to-d3.html">Introduction to D3</a></li>
+		<li><a href="http://vogievetsky.github.com/IntroD3/">Introduction to D3.js</a></li>
+		<li><a href="http://www.skillshare.com/Introduction-to-d3js-and-data-driven-visualizations/1912580409">Introduction to d3.js and data-driven visualizations</a></li>
+		<li><a href="http://dhs.stanford.edu/dh/networks/">Introduction to Network Analysis and Representation</a></li>
+		<li><a href="http://blogs.infoecho.net/echo/2012/02/05/ipython-notebook-d3-js-mashup/">IPython-Notebook with D3.js</a></li>
+		<li><a href="http://horses.phoebebright.com/foals.html">Irish Horse Breeding Data</a></li>
+		<li><a href="http://www.thudfactor.com/trains/">IRL Trnspttr</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1624656">Irregular Histogram (Lollipop)</a></li>
+		<li><a href="http://www.isbarackobamathepresident.com/">Is Barack Obama the President? (Balloon charts)</a></li>
+		<li><a href="http://cgmartin.com/itunes-library-network-graph/">iTunes Music Library Artist/Genre Graph</a></li>
+		<li><a href="http://www.janwillemtulp.com/category/d3/">Jan Willem Tulp portfolio</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5398614">Japanese Government Bonds Rates</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5405240">Japanese Government Bonds Yield Curve</a></li>
+		<li><a href="http://jcla1.com/blog/2013/05/11/javascript-mapreduce/">Javascript and MapReduce</a></li>
+		<li><a href="http://blog.sathomas.me/post/javascript-idioms">Javascript Idioms in D3.js</a></li>
+		<li><a href="http://www.jeromecukier.net/blog/2013/03/05/d3-tutorial-at-strata-redux/">Jerome Cukier » Selections in d3 – the long story</a></li>
+		<li><a href="http://www.jeromecukier.net/blog/category/d3/">Jérôme Cukier portfolio</a></li>
+		<li><a href="http://bl.ocks.org/ericcitaire/5408146">JezzBall</a></li>
+		<li><a href="http://vallandingham.me/">Jim Vallandingham portfolio</a></li>
+		<li><a href="https://github.com/fod/job_flow_vis">Job Flow</a></li>
+		<li><a href="http://vallandingham.me/vis/jobs_by_state.html">Jobs by state</a></li>
+		<li><a href="http://bl.ocks.org/johan">johan’s blocks</a></li>
+		<li><a href="http://felix-kling.de/JSNetworkX/">JSNetworkX: A port of the NetworkX graph lib to JS</a></li>
+		<li><a href="https://github.com/rameshvs/jsplotlib">Jsplotlib</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6408918">Junction Finding</a></li>
+		<li><a href="http://macwright.org/2013/06/25/just-enough-svg.html">Just Enough SVG</a></li>
+		<li><a href="http://thinkdatavis.com/portfolio/k-means.html">K-means</a></li>
+		<li><a href="http://www.rnstahl.net/kaleidoscope/kaleidoscope.html">Kaleidoscope</a></li>
+		<li><a href="http://bl.ocks.org/christophermanning/6468148">Kaprekar Routine</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3710082">Kavrayskiy VII Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5144735">Kentucky Population Density</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5737662">Kentucky Population Density</a></li>
+		<li><a href="http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html?smid=tw-share&amp;_r=0">Kepler’s Tally of Planets</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341954">Kernel Density Estimation</a></li>
+		<li><a href="http://www.web-maps.com/gisblog/?p=1370">Kind of 3D with D3</a></li>
+		<li><a href="http://kindred.stanford.edu/#/path/third/third/third/I26992/I26969/">Kindred Britain</a></li>
+		<li><a href="http://knowhuddle.com/index.php/correlation">Know Huddle - Correlation</a></li>
+		<li><a href="http://www.koalastothemax.com/">Koalas to the Max!</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3014589">L*a*b* and HCL color spaces</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/nuitblanche.html">La Nuit Blanche</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1377729">Labeled Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/950642">Labeled Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/601639">Labeled points</a></li>
+		<li><a href="http://mapbox.com/osmdev/2013/02/12/labeling-id/">Labeling in OpenStreetMap's iD Editor</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3797591">Lagrange Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757101">Lambert Azimuthal Equal-Area</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734321">Lambert Conformal Conic Projection</a></li>
+		<li><a href="http://www.cotrino.com/2012/11/language-network/">Language Network</a></li>
+		<li><a href="http://lantern-ui.jit.su/app/">Lantern</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3719042">Larrivée Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4489342">Laskowski Tri-Optimal</a></li>
+		<li><a href="http://www.lastchart.com/">Last Chart! - See the Music</a></li>
+		<li><a href="http://www.jasondavies.com/earthquakes/#3.00/20.00/805.00">Latest Earthquakes</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3517374">Lazy Scale Domain</a></li>
+		<li><a href="http://www.ghostweather.com/essays/talks/openvisconf/topic_arc_diagram/TopicArc.html">LDA Topic Arcs: The DaVinci Code</a></li>
+		<li><a href="http://glimmer.rstudio.com/cpsievert/LDAviz/">LDAviz</a></li>
+		<li><a href="http://bl.ocks.org/tnightingale/4668062">Leaflet + D3js: Hexbin</a></li>
+		<li><a href="http://calvinmetcalf.github.com/psychic-octo-nemesis/#12/42.3684/-71.1176">Leaflet Template</a></li>
+		<li><a href="http://calvinmetcalf.github.io/leaflet.d3/">leaflet.d3</a></li>
+		<li><a href="https://github.com/schnipz/leap-motion-demos/">Leap Motion D3.js Demo</a></li>
+		<li><a href="http://www.youtube.com/watch?v=9PZs7VHhypk">Leap motion map tests</a></li>
+		<li><a href="http://www.dashingd3js.com/">Learn how to make Data Visualizations with D3.js</a></li>
+		<li><a href="https://speakerdeck.com/alignedleft/learning-d3">Learning D3, Speaker Deck</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1399097">Left-Aligned Ticks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6186172">Left-Aligned Ticks</a></li>
+		<li><a href="http://bl.ocks.org/3918369">Legend</a></li>
+		<li><a href="http://www.jasondavies.com/leibniz-spiral/">Leibniz Spiral</a></li>
+		<li><a href="http://sepans.com/misc/lepracursor/">Lepracursor</a></li>
+		<li><a href="http://bost.ocks.org/mike/miserables/">Les Misérables Co-occurrence Matrix</a></li>
+		<li><a href="http://bost.ocks.org/mike/map/">Let’s Make a Map</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3310560">Letter Frequency</a></li>
+		<li><a href="http://nlpviz.bpodgursky.com/home">Liberal Revolution of 1820 in Lisbon</a></li>
+		<li><a href="https://github.com/MonsieurCactus/hanejs">Library for visualizing Go games</a></li>
+		<li><a href="http://vallandingham.me/vis/matlab_license.html">License Usage Dashboard</a></li>
+		<li><a href="http://projects.flowingdata.com/life-expectancy/">Life Expectancy</a></li>
+		<li><a href="http://data.karmi.cz/d3/life-expectancy-map/">Life expectancy 1960-2009 choropleth</a></li>
+		<li><a href="http://data.karmi.cz/d3/life-expectancy-panel-chart/">Life expectancy 1960-2009 panel chart</a></li>
+		<li><a href="http://data.karmi.cz/d3/life-expectancy-slopegraph-normalized/">Life expectancy 1960-2009 slopegraph</a></li>
+		<li><a href="http://jsfiddle.net/mrcactu5/fRgtF/4/">Limaçon as envolve of circles around a circle</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3883245">Line Chart</a></li>
+		<li><a href="http://bl.ocks.org/1629644">Line Chart with tooltips</a></li>
+		<li><a href="http://bl.ocks.org/1182434">Line chart with zoom, pan, and axis rescale</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3310323">Line Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/5441022">Line Intersection Brushing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5732029">Line Simplification</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1016220">Line Tension</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1642874">Line Transition</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1643051">Line Transition (Broken)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1086421">Linear Gradient</a></li>
+		<li><a href="http://www.jasondavies.com/psum/lp/">Linear Programming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4062919">Lines with Rounded Turns</a></li>
+		<li><a href="http://linkedjazz.org/network/">Linked Jazz network graph</a></li>
+		<li><a href="http://www.cloudshapes.co.uk/labs/mike-bostock-gists/">List of all the Gists from Mike Bostock</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4459071">Littrow</a></li>
+		<li><a href="http://livecoding.gabrielflor.it/">Live coding based on Bret Victor's Inventing on Principle talk</a></li>
+		<li><a href="http://www.d3noob.org/2012/12/loading-thumbnail-into-gist-for.html">Loading a thumbnail into Gist for bl.ocks.org d3 graphs</a></li>
+		<li><a href="http://bl.ocks.org/3173233">Loading Adobe Photoshop ASE color palette</a></li>
+		<li><a href="http://catchanalyst.co.nz/">Lobster Catch Analyst</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5537697">Log Axis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5537671">Log Axis with Zero</a></li>
+		<li><a href="http://blog.new-bamboo.co.uk/2013/01/31/london-d3-js-meetup-2">London D3.js Meetup #2</a></li>
+		<li><a href="http://blog.new-bamboo.co.uk/2013/06/12/london-d3-js-meetup-5">London d3.js Meetup #5</a></li>
+		<li><a href="http://lanyrd.com/series/london-d3-js/">London d3.js User Group</a></li>
+		<li><a href="http://www.visualizing.org/visualizations/uk-olympic-sentiment-analysis">London Olympics Perceptions - Donuts to Chord Diagram Transition</a></li>
+		<li><a href="http://bl.ocks.org/3689677">Long Scroll</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5385402">Lorenz System</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5397710">Lorenz Toy</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/587424">Loupe</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3867220">Loximuthal</a></li>
+		<li><a href="http://visualizing.org/galleries/made-d3js">Made with D3.js</a></li>
+		<li><a href="http://visual-baseball.com/d3/baseball/Drillable_Bar_Charts/HR.html">Major League Baseball Home Runs 1995-2010</a></li>
+		<li><a href="http://www.tips-for-excel.com/2012/06/d3-js-bubble-chart-tutorial-and-example/">Make a bubble chart using d3.js demo</a></li>
+		<li><a href="https://docs.google.com/presentation/d/18K2h8LQNzplVU1sVkYS5iEawhDsBrsFwJpRwb-whFtg">Making maps with d3.js</a></li>
+		<li><a href="http://budget.brettmandel.com/">Mandel for Controller Bulldog Budget</a></li>
+		<li><a href="http://www.jeromecukier.net/blog/2012/05/28/manipulating-data-like-a-boss-with-d3/">Manipulating data like a boss with d3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2983699">Manual Axis Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/2322933">Map from GeoJSON data with zoom/pan</a></li>
+		<li><a href="http://bl.ocks.org/benelsen/4969007">Map of all M2.5+ earthquakes of the last 24h.</a></li>
+		<li><a href="http://www.diegovalle.net/maps/comipems">Map of COMIPEMS Scores</a></li>
+		<li><a href="http://milkator.wordpress.com/2013/04/25/playing-with-d3-simplify-js/">Map of Germany using D3.js and Simplify.js</a></li>
+		<li><a href="http://cedricsam.no-ip.org/italiens/">Map of Italiens</a></li>
+		<li><a href="http://noahveltman.com/teams/">Map of pro sports teams by territory</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3709000">Map Projection Distortions</a></li>
+		<li><a href="http://dev.geosprocket.com/d3/finder/">Map with faux-3D globe</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6242308">Map Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6301817">Map Zooming II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6301872">Map Zooming III</a></li>
+		<li><a href="http://mapbox.com/mapbox.js/example/vectors-with-d3/">Mapbox: add vector features to your map with D3</a></li>
+		<li><a href="https://jeromegagnonvoyer.wordpress.com/2013/04/17/creating-a-data-visualization-tool-using-d3-js-crossfilter-and-leaflet-js/">Mapping Hate Crimes in Iran</a></li>
+		<li><a href="http://grublog.grubhub.com/wp-content/uploads/2013/07/meltingpot.html">Mapping the Melting Pot</a></li>
+		<li><a href="http://www.matthewisabel.com/projects/seatgeek/samplemap.html">Mapping Tours with D3 and SeatGeek</a></li>
+		<li><a href="http://littleearth.ca/jsmag/">Maps and sound</a></li>
+		<li><a href="https://www.youtube.com/watch?v=t4LI7moi5-Q">Maps Garage: Exploring Map Data with Crossfilter</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5544008">Marey’s Trains</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5544621">Marey’s Trains II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3019563">Margin Convention</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1005090">Marimekko Chart</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/markov.html">Markov processes</a></li>
+		<li><a href="http://goo.gl/UEaFW">Marmoset chimerism dotplot</a></li>
+		<li><a href="http://bl.ocks.org/1503463">Masking with external svg elements</a></li>
+		<li><a href="https://gist.github.com/unconed/4262856">MathBox animation vs d3.js enter/exit</a></li>
+		<li><a href="http://bl.ocks.org/3391642">MathJax label</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1009139">Matrix Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4479547">Maurer No. 73</a></li>
+		<li><a href="http://www.deepakg.com/prog/2012/07/visualising-the-mens-100m-olympic-champions-with-d3-js/">Men’s 100m Olympic champions</a></li>
+		<li><a href="http://bl.ocks.org/1653763">Mercator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2869760">Mercator Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1243323">Merge Sort</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5416405">Merging States</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5416440">Merging States II</a></li>
+		<li><a href="http://meshu.io/">Meshu turns your places into beautiful objects.</a></li>
+		<li><a href="http://www.michelepasin.org/blog/2013/06/21/messing-around-wih-d3-js-and-hierarchical-data/">Messing around wih D3.js and hierarchical data</a></li>
+		<li><a href="http://tributary.io/inlet/5751081">Metaevil</a></li>
+		<li><a href="https://github.com/k9ert/meteor-deployments">meteor-deployments</a></li>
+		<li><a href="https://getmetrica.com/">Metrica</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4736806">Metropolitan Unemployment</a></li>
+		<li><a href="http://blog.diegovalle.net/2013/02/mexican-presidential-election-by.html">Mexican Presidential Election 2012</a></li>
+		<li><a href="http://mgrafit.tumblr.com/post/53693775593/interactive-maps-of-paris-several-projects-have">mgrafeeds</a></li>
+		<li><a href="http://bost.ocks.org/mike/">Mike Bostock portfolio</a></li>
+		<li><a href="http://bl.ocks.org/mbostock.rss">Mike Bostock RSS</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734333">Miller Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/587387">Minecraft Overviewer</a></li>
+		<li><a href="http://bl.ocks.org/cpbotha/5073718">Minimalist example of reusable D3.js plugin</a></li>
+		<li><a href="https://github.com/benbjohnson/miniviz">Miniviz</a></li>
+		<li><a href="http://macwright.org/minute/">Minute: record of all of my keystrokes</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3145795">Mirrored Easing</a></li>
+		<li><a href="http://labratrevenge.com/experiments">Misc. Examples</a></li>
+		<li><a href="https://github.com/nrabinowitz/d3_utils/blob/master/d3.util.js">Miscellaneous utilities for D3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1893974">Mitchell's Best-Candidate</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6224050">Mitchell’s Best-Candidate 1</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6224396">Mitchell’s Best-Candidate 2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6225662">Mitchell’s Best-Candidate 3</a></li>
+		<li><a href="http://cscheid.net/static/mlb-hall-of-fame-voting">MLB Hall of Fame Voting Trajectories</a></li>
+		<li><a href="http://marc.razoo.com/GiveMN2012/RazooMapVis2.html">MN Giving Day 2012</a></li>
+		<li><a href="http://www.jasondavies.com/mobile-lawsuits/">Mobile Patent Lawsuits</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1153292">Mobile Patent Suits</a></li>
+		<li><a href="http://rkirsling.github.io/modallogic/">Modal Logic Playground</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1095795">Modifying a Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/714554">Moiré Patterns</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3037015">Molecule</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734336">Mollweide</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4498292">Mollweide Hemispheres</a></li>
+		<li><a href="http://www.jasondavies.com/maps/raster/mollweide/">Mollweide Watercolour</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1648635">Monday-based Calendar</a></li>
+		<li><a href="http://letsfreecongress.org/">Money Wins Elections</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3310187">Monotone Interpolation Bug</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3310233">Monotone Line Interpolation</a></li>
+		<li><a href="http://www.jasondavies.com/bifurcation/">Monte Carlo simulation of bifurcations in the logistic map</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1849162">Month Axis</a></li>
+		<li><a href="http://mikemcdearmon.com/portfolio/techposts/charting-libraries-using-d3">More Data Visualization Libraries Based on D3.JS</a></li>
+		<li><a href="http://thecodingtutorials.blogspot.com/search/label/D3">More Introduction to D3</a></li>
+		<li><a href="http://www.jasondavies.com/morley-triangle/">Morley's trisector theorem</a></li>
+		<li><a href="http://bl.ocks.org/MattWoelk/5687467">Morphogenesis Simulation</a></li>
+		<li><a href="http://javadude.wordpress.com/2012/06/18/d3-js-most-simple-stack-layout-with-bars/">Most simple d3.js stack bar chart from matrix</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5247027">Mouseenter</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2206340">mousewheel-zoom + click-to-center</a></li>
+		<li><a href="http://www.smartjava.org/content/movie-color-analysis-xbmc-boblight-java-and-d3js">Movie color analysis with XBMC, Boblight, Java and D3.js</a></li>
+		<li><a href="http://bl.ocks.org/jmgimeno/1699744">Moving Histogram</a></li>
+		<li><a href="http://andra.nl/squares/">Moving Squares</a></li>
+		<li><a href="http://bertranddechoux.github.io/d3js-sandbox/mower-demo/index.html">Mower game</a></li>
+		<li><a href="http://muertematernaenargentina.org/">Muerte Materna en Argentina</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1021841">Multi-Foci Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1021953">Multi-Foci Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1249681">Multi-Foci Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1804919">Multi-Foci Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3884955">Multi-Series Line Chart</a></li>
+		<li><a href="http://bl.ocks.org/natemiller/20f9bd99d1795e3a0b1c">Multi-series Line Chart with Long Format Data (columns instead of rows)</a></li>
+		<li><a href="http://bl.ocks.org/4390054">Multi-Series Line to Stacked Area Chart Transition</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3305515">Multi-Value Maps</a></li>
+		<li><a href="http://bl.ocks.org/4618602">Multiline chart with brushing and mouseover</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5152233">Multiline with zoomooz</a></li>
+		<li><a href="http://bl.ocks.org/3630001">Multiple Area charts and a brush tool</a></li>
+		<li><a href="http://tympanus.net/codrops/2012/08/29/multiple-area-charts-with-d3-js/">Multiple area charts with d3.js</a></li>
+		<li><a href="http://www.youtube.com/watch?v=Vd9O3YZ3d3c">Multiple Leap Motions over WebSockets - YouTube</a></li>
+		<li><a href="http://timelyportfolio.github.io/gridSVG_d3_multline/d3mult_line.html">Multiple Lines grid</a></li>
+		<li><a href="http://bl.ocks.org/4175202">Multiple time-series with object constancy</a></li>
+		<li><a href="http://chop.leeds.ac.uk/stn/interface/gallery.php">Multiple visualization from the Société Typographique de Neuchâtel</a></li>
+		<li><a href="http://bl.ocks.org/Guerino1/raw/2879486/">My Force Directed Graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4479477">Natural Earth</a></li>
+		<li><a href="http://thepowerrank.com/visual/NCAA_Tournament_Predictions">NCAA 2012 March Madness Power Rankings</a></li>
+		<li><a href="http://tributary.io/inlet/6116099">Negative stacked bar chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734342">Nell–Hammer Projection</a></li>
+		<li><a href="http://bost.ocks.org/mike/nest/">Nested Selections</a></li>
+		<li><a href="http://www.visualizing.org/visualizations/network-world-merchandise-trade">Network of World Merchandise Trade</a></li>
+		<li><a href="http://neuralengr.com/asifr/journals">Neuroscience and brain stimulation publication counts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4968288">New Jersey Blocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5126418">New Jersey State Plane</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5996232">New York Block Groups</a></li>
+		<li><a href="http://bl.ocks.org/4425979">New Zealand Earthquakes Pattern of Life</a></li>
+		<li><a href="http://bl.ocks.org/zjonsson/1706849">Newton's balls</a></li>
+		<li><a href="http://bl.ocks.org/ZJONSSON/1706523">Newton's cradle</a></li>
+		<li><a href="http://www.guardian.co.uk/sport/interactive/2013/jan/30/nfl-salaries-team-position#baltimore-ravens,san-francisco-49ers">NFL salaries by team and position</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/603062">Nick Jaffe's Polymap</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5735770">No Antimeridian Cutting</a></li>
+		<li><a href="http://nodal.me/login">Nodal is a fun way to view your GitHub network graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1468492">Node + MySQL + JSON</a></li>
+		<li><a href="http://bl.ocks.org/4063550">Node-Link Tree</a></li>
+		<li><a href="http://bl.ocks.org/4055908">Non-contiguous Cartogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4055908">Non-Contiguous Cartogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/843177">Non-Contiguous Cartogram</a></li>
+		<li><a href="http://bl.ocks.org/4704168">Non-contiguous cartogram of seats allocated in the canadian House of Commons</a></li>
+		<li><a href="https://speakerdeck.com/blgreenaway/noob-on-json-data-for-d3-dot-js-documents">Noob on JSON : Data for d3.js documents</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3886394">Normalized Stacked Bar Chart</a></li>
+		<li><a href="http://shimz.me/blog/d3-js/2451">Number of heat stroke</a></li>
+		<li><a href="http://www.jasondavies.com/17x17/">Number of unique rectangle-free 4-colourings for an nxm grid</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/raw/5023284/">Nutrient Database Explorer</a></li>
+		<li><a href="http://nvd3.org/">NVD3</a></li>
+		<li><a href="http://www.rockstarstatistics.com/2013/05/18/nvd3-for-bi-freecodeforyou/">NVD3 for BI</a></li>
+		<li><a href="https://github.com/goulu/Goulib">nvd3.py</a></li>
+		<li><a href="http://glimmer.rstudio.com/ramnathv/strikeouts/">NY Times Strikeouts Graphic, recreated using rCharts and PolychartJS</a></li>
+		<li><a href="http://glimmer.rstudio.com/ramnathv/NYCBikeShare/">NYC Bike Share</a></li>
+		<li><a href="http://www.meetup.com/NYC-D3-JS/">NYC D3.js</a></li>
+		<li><a href="http://tributary.io/inlet/5651806">Obesity map</a></li>
+		<li><a href="http://bost.ocks.org/mike/constancy/">Object Constancy</a></li>
+		<li><a href="http://bl.ocks.org/nsonnad/4175202">Object constancy with multiple sets of time-series</a></li>
+		<li><a href="http://ameliamango.com/fatness.html">OECD Health Government Spending and Obesity Rates (nvd3)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1854471">offsetX / offsetY</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1865422">offsetX / offsetY</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5349951">Ohio State Plane (N)</a></li>
+		<li><a href="http://vallandingham.me/vis/">Old Visualizations Made New Again</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1341679">Oliver Rolle / Logarithmic Line Chart</a></li>
+		<li><a href="http://blog.new-bamboo.co.uk/2012/06/22/olympic-medal-rivalry">Olympic Medal Rivalry</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1062544">OMG Particles!</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1579132">One Path for All Links</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5417216">One System, Every Kepler Planet</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4965670">One-Way Markers</a></li>
+		<li><a href="http://okfestival.org/hashtag/#visualisation">Open Knowledge Festival Hashtag Graph Visualization</a></li>
+		<li><a href="http://marcinignac.com/projects/open-budget/">OpenBudget</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6262722">OPHZ Zooming</a></li>
+		<li><a href="http://orbis.stanford.edu/v2/">ORBIS v2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1696372">Order</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3259783">Ordinal Axis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4349509">Ordinal Brushing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3212294">Ordinal Tick Filtering</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5628329">Ordinal Tick Filtering</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757125">Orthographic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3021474">Orthographic Clipping</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2974930">Orthographic Grid</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2870030">Orthographic Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3031319">Orthographic Shading</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5731632">Orthographic to Equirectangular</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html">Over the Decades How States Have Shifted</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3315291">Pack Test</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3315318">Pack Test</a></li>
+		<li><a href="http://bl.ocks.org/4168921">Pair Contribution and Selection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/583229">Pale Dawn</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3892919">Pan+Zoom</a></li>
+		<li><a href="http://enjalot.github.io/ilessthan3/papa/">Papa</a></li>
+		<li><a href="http://bl.ocks.org/1341281">Parallel Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1341021">Parallel Coordinates</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/iris-parallel.html">Parallel Coordinates</a></li>
+		<li><a href="http://syntagmatic.github.com/parallel-coordinates/">Parallel Coordinates</a></li>
+		<li><a href="http://bl.ocks.org/3290263">Parallel coordinates with fisheye distortion</a></li>
+		<li><a href="http://dexvis.wordpress.com/2013/01/28/d3js-parallel-lines-and-football/">Parallel Lines and Football using Dex and D3.js</a></li>
+		<li><a href="http://www.jasondavies.com/parallel-sets/">Parallel Sets</a></li>
+		<li><a href="http://www.mapsnapps.com/storage/paris_transilien/Paris_Transilien.html">Paris Transilien</a></li>
+		<li><a href="http://bost.ocks.org/mike/path/">Path and Transform Transitions</a></li>
+		<li><a href="http://tributary.io/inlet/4439895/">Path from function 2</a></li>
+		<li><a href="http://tributary.io/inlet/4424270/">Path from function 3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3916621">Path Tween</a></li>
+		<li><a href="http://tributary.io/inlet/4428230/">path_from_function_2</a></li>
+		<li><a href="http://tributary.io/inlet/4439937/">Path_from_function_2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2966094">Pedigree Tree</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4310087">Peirce Quincuncial</a></li>
+		<li><a href="http://ssz.fr/parite">Percent women in city councils</a></li>
+		<li><a href="http://kbroman.wordpress.com/2013/02/08/interactive-graphics-with-d3-js/">Percentile line chart of gene expression microarrays</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/percolate.html">Percolation model</a></li>
+		<li><a href="http://tributary.io/inlet/4458395/">Periodic table</a></li>
+		<li><a href="http://tributary.io/inlet/4470504/">Periodic table</a></li>
+		<li><a href="http://tributary.io/inlet/5110744">Perlin circles</a></li>
+		<li><a href="http://tributary.io/inlet/5080123">Perlin Ink</a></li>
+		<li><a href="http://tributary.io/inlet/5087634">Perlin Landscape</a></li>
+		<li><a href="http://tributary.io/inlet/5062100">Perlin Worms</a></li>
+		<li><a href="http://prcweb.co.uk/">Peter Cook Web Developer</a></li>
+		<li><a href="http://www.netlab.tkk.fi/~varun/dissertation.html">Ph.D. Thesis Progress</a></li>
+		<li><a href="http://vis.databeast.org/vis/story/D3/mdbphd/doktortitel.html">PhD in the Bundestag</a></li>
+		<li><a href="http://www.jasondavies.com/tree-of-life/">Phylogenetic Tree of Life</a></li>
+		<li><a href="http://bl.ocks.org/2280295">Pictograms</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3887235">Pie Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1346395">Pie Chart Update I</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1346410">Pie Chart Update II</a></li>
+		<li><a href="http://bl.ocks.org/j0hnsmith/5591116">Pie chart update III</a></li>
+		<li><a href="http://bl.ocks.org/j0hnsmith/5591130">Pie chart update IV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5681842">Pie Chart Update, III</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5681974">Pie Chart Update, IV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5682158">Pie Chart Update, V</a></li>
+		<li><a href="http://blog.stephenboak.com/2011/08/07/easy-as-a-pie.html">Pie Chart Updating with Text</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1305111">Pie Multiples</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1305337">Pie Multiples with Nesting</a></li>
+		<li><a href="http://tributary.io/inlet/4623370">Pimp my Tribe</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1177827">Pixymaps (Dragging)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1177880">Pixymaps (Scrolling)</a></li>
+		<li><a href="http://ssz.fr/places?fr#ac%24">Placename patterns</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/agot/places.html">Places in the Game of Thrones</a></li>
+		<li><a href="http://jeromecukier.net/projects/metro/map.html#183">Plan du métro interactif</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/metro/map.html">Plan interactif du métro</a></li>
+		<li><a href="http://www.jasondavies.com/planarity/">Planarity</a></li>
+		<li><a href="http://zonca.github.io/planck-cl/">Planck-cl</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6264239">Plant Hardiness Zones</a></li>
+		<li><a href="http://plot.io/">Plot.io (swallowed by Platfora)</a></li>
+		<li><a href="https://plot.ly/">Plotly: create graphics, analyze with Python, annotate and share</a></li>
+		<li><a href="https://github.com/davidcox/plotsk">Plotsk: A python/coffeescript/d3.js-based library for plotting data in a web browser</a></li>
+		<li><a href="http://arena.palamago.com.ar/poblacion/">Población de Argentina, Experimento D3.js</a></li>
+		<li><a href="http://www.jasondavies.com/poincare-disc/">Poincaré Disc</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1313857">Point-Along-Path Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1705868">Point-Along-Path Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4364903">Polar Azimuthal Equal-area</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4583749">Polar Plot</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1096355">PolarClock</a></li>
+		<li><a href="http://luiscarli.com/electionvis/">Polls on the 2012 U.S. Election</a></li>
+		<li><a href="https://gist.github.com/christophermanning/5020993#file-polybrush-js-L45-L48">Polybrush.js</a></li>
+		<li><a href="http://polychart.com/">Polychart: A browser-based platform for exploring data and creating charts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734343">Polyconic Projection</a></li>
+		<li><a href="http://bl.ocks.org/3732612">Polygonal Lasso Selection</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki/5403383">Polylinear Time Scale</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/592743">Polymaps / Andrew Mager</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/592882">Polymaps / Andrew Mager</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/592896">Polymaps / Andrew Mager</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/593875">Polymaps / Andrew Mager</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/609059">Polymaps / Heatmap</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/539589">Polymaps / Procedural Perlin</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/899649">Polymaps + D3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/899670">Polymaps + D3, Part 2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1335475">Polymaps bad projection example</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/550849">polymaps.appspot.com</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1322907">Poor Anti-Aliasing in SVG #1</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1322948">Poor Anti-Aliasing in SVG #2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6320825">Population Choropleth</a></li>
+		<li><a href="http://ralphstraumann.ch/cartogram_cantons_fr/">Population of the cantons and of the 10 largest cities of Switzerland</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4062085">Population Pyramid</a></li>
+		<li><a href="http://jeromecukier.net/projects/portfolio/portfolio.html">Portfolio</a></li>
+		<li><a href="http://tributary.io/inlet/5655325">Portrait in Chinese ascii: Chris Viau</a></li>
+		<li><a href="http://tributary.io/inlet/5653820">Portrait in Chinese ascii: EJFox</a></li>
+		<li><a href="http://budzet.aws.af.cm/">Predsjednik Republike Srpske</a></li>
+		<li><a href="http://affinitybridge.com/blog/presentation-visualizing-data-d3js-and-mapping-tools-nettuesday">Presentation on Visualizing Data in D3.js and mapping tools at NetTuesday</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_price_range_lollipop">Price Changes: animated dimple.js chart</a></li>
+		<li><a href="http://dataviz-factory.com/Portfolio/07TdFprofils/Scatterplot.html">Profils des cyclistes</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3892928">Programmatic Pan+Zoom</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3750941">Progress Events</a></li>
+		<li><a href="https://wiki.smu.edu.sg/1213t1is428/Project_Groups">Project Groups - IS428: Visual Analytics for Business Intelligence</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4707858">Project to Bounding Box</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5925375">Projected Choropleth</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5557726">Projected TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3804779">Projection Contexts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3711652">Projection Transitions</a></li>
+		<li><a href="http://www.jasondavies.com/pythagoras-proof/">Proof of Pythagoras's Theorem</a></li>
+		<li><a href="http://vallandingham.me/vis/nationality_by_city.html">Proportion of Foreign Born in Large Cities: 1900</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4454550">Prose-only Blocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1364304">Prototype Chart Template (WIP)</a></li>
+		<li><a href="https://vimeo.com/58834984">Prototype: d3.geo</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/601985">Protovis / David Karr</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/618908">Protovis / Nelson Minar</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/611840">Protovis / Quomo Pete</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4055889">Pseudo-Demers Cartogram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4055892">Pseudo-Dorling Cartogram</a></li>
+		<li><a href="http://tributary.io/inlet/5942244">Psi man</a></li>
+		<li><a href="http://littleearth.ca/ce/">Public Interest Evaluation Project</a></li>
+		<li><a href="https://github.com/hhuuggoo/pushd3">Pushing D3.js commands to the browser from iPython</a></li>
+		<li><a href="http://www.newscientist.com/embedded/us-demographics-2050">Pyramid charts: demographic transition in the US</a></li>
+		<li><a href="https://github.com/areski/python-nvd3">Python-NVD3</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4349187">Q-Q Plots</a></li>
+		<li><a href="http://www.jasondavies.com/maps/simplify/koch/">Quadratic Koch Island Simplification</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4343214">Quadtree</a></li>
+		<li><a href="http://bl.ocks.org/calvinmetcalf/4963273">Quadtree Madness Round 2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4463175">Quartic Authalic</a></li>
+		<li><a href="http://bl.ocks.org/4318672">Quartile plots</a></li>
+		<li><a href="http://bl.ocks.org/4331208">Quartile plots with outliers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1696080">Queue.js Demo</a></li>
+		<li><a href="http://vida.io/#view">Quick Charting with D3js</a></li>
+		<li><a href="http://swizec.com/blog/quick-scatterplot-tutorial-for-d3-js/swizec/5337">Quick scatterplot tutorial for d3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1582075">Quicksort</a></li>
+		<li><a href="http://graves.cl/radar-chart-d3/">Radar chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/939927">Radial Arc Diagram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/675512">Rainbow Colors</a></li>
+		<li><a href="http://tributary.io/inlet/5824505">Rainbow showing how to use mask and clipPath</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4165404">Rainbow Worm</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3290752">Rainbows are Harmful</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/849853">Raindrops</a></li>
+		<li><a href="http://entsphere.com/d3/rainflow/">Rainflow</a></li>
+		<li><a href="http://www.jasondavies.com/random-arboretum/">Random Arboretum</a></li>
+		<li><a href="http://www.jasondavies.com/maps/random-points/">Random Points on a Sphere</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/999346">Random Tree</a></li>
+		<li><a href="http://jsfiddle.net/mrcactu5/8nDbu/8/">Random Walk in Configuration Space</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5914438">Raster &amp;amp; Vector Zoom</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4329423">Raster Reprojection</a></li>
+		<li><a href="http://rbspd3.herokuapp.com/">Rbspd3</a></li>
+		<li><a href="http://timelyportfolio.github.io/rCharts_errorbar/ucla_melogit.html">rCharts Custom, Cancer, Fantasy Football, and Three Level Mixed Effects Logistic Regression</a></li>
+		<li><a href="http://ramnathv.github.io/rCharts/r2js/">rCharts: R interface for NVD3, Polycharts, MorrisJs and soon Rickshaw, DexCharts, Dc.js</a></li>
+		<li><a href="http://eng.wealthfront.com/2013/04/reactive-charts-with-d3-and-reactivejs.html">Reactive Charts with D3.js and Reactive.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3092303">Read File or HTTP</a></li>
+		<li><a href="https://live.zoomdata.com/zoomdata/visualization?__target=embedded&amp;key=52265abb6abdbcaa8c217789#51db7ad4e4b04caf9ab346db-51db7ad4e4b04caf9ab346d5">Real time sales</a></li>
+		<li><a href="http://sentiment.dev.ber.to/">Real-time sentiment analysis of Obama 2012 victory speech</a></li>
+		<li><a href="http://wordpressyeah.com/blog/wp-d3/">Really cool wordpress theme</a></li>
+		<li><a href="http://vimeo.com/45558674">Realtime Visualizations w/ D3 and Backbone</a></li>
+		<li><a href="http://meloncholy.com/blog/using-d3-for-realtime-webserver-stats/">Realtime webserver stats</a></li>
+		<li><a href="http://johan.github.com/d3/ex/recettear.html#Charme">Recettear Item Data</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5230202">Rectangular Polyconic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2962888">Rectilinear Grid</a></li>
+		<li><a href="http://www.redditinsight.com/">Reddit Insight</a></li>
+		<li><a href="https://github.com/nandayadav/rega">Rega: Experimental Ruby Vega generator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063550">Reingold–Tilford Tree</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4339184">Reingold–Tilford Tree</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/912735">Reingold–Tilford Tree (Redirect)</a></li>
+		<li><a href="http://www.torlaune.de/euro-2012/spieler-relationen/">Relations of football players participating in Euro 2012</a></li>
+		<li><a href="http://www.torre.nl/remittances/">Remittance flows</a></li>
+		<li><a href="http://remittances.herokuapp.com/?en">Remittances</a></li>
+		<li><a href="http://css.dzone.com/articles/render-geographic-information">Render Geographic Information in 3D With Three.js and D3.js</a></li>
+		<li><a href="https://blogs.law.harvard.edu/jreyes/2012/12/13/render-d3-js-driven-svg-server-side/">Render sever-side using Phantomjs</a></li>
+		<li><a href="http://geowiki.com/iD/test/rendering.html">Rendering Tests</a></li>
+		<li><a href="http://bl.ocks.org/1327441">Reorderable Stacked Bar Chart</a></li>
+		<li><a href="http://vizcandy.blogspot.fr/2013/07/replicating-new-york-times-d3js-chart.html">Replicating a New York Times d3.js Chart with Tableau</a></li>
+		<li><a href="http://www.simple.com/blog/Simple/announcing-reports">Reports for Simple</a></li>
+		<li><a href="http://www.jasondavies.com/maps/raster/">Reprojected Raster Tiles</a></li>
+		<li><a href="https://googledrive.com/host/0B5vtcGFLVUFgSXhjMEU5RTBNaUU/#hurling/">Republic of Ireland - Data Explorer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5735623">Resampling Comparison</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5735626">Resampling Comparison</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3355967">Resizable Force Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/625531">Resizable Markers</a></li>
+		<li><a href="http://blog.vctr.me/posts/responsive-d3.html">Responsive D3</a></li>
+		<li><a href="http://jsfiddle.net/shawnbot/BJLe6/">Responsive SVG resizing without re-rendering</a></li>
+		<li><a href="http://bl.ocks.org/4444770">Responsive TopoJSON Sizing</a></li>
+		<li><a href="http://www.retrofitanalysis.org/charts.html">Retrofit Analysis Report</a></li>
+		<li><a href="http://www.cloudshapes.co.uk/labs/reusable-d3-with-queen-corgi-pie-charts/">Reusable D3 With The Queen, Prince Charles, a Corgi and Pie Charts</a></li>
+		<li><a href="http://blog.safaribooksonline.com/2013/07/11/reusable-d3-js-using-attrtween-transitions-and-mv/">Reusable D3.js, Part 1: Using AttrTween, Transitions and MV*</a></li>
+		<li><a href="http://blog.safaribooksonline.com/2013/07/12/d3-part-2/">Reusable D3.js, Part 2: Using AttrTween, Transitions and MV*</a></li>
+		<li><a href="https://github.com/gajus/interdependent-interactive-histograms">Reusable Interdependent Interactive Histograms</a></li>
+		<li><a href="https://github.com/gajus/pie-chart">Reusable Pie Charts</a></li>
+		<li><a href="http://bl.ocks.org/4236639">Reusable text rotation</a></li>
+		<li><a href="http://blog.pixelingene.com/2011/08/progressive-reveal-animations-in-svg-using-a-svgclippath/">Reveal animation on a tree with a clip path</a></li>
+		<li><a href="http://bl.ocks.org/4246925">Reverse Geocoding Plug-in using an offline canvas</a></li>
+		<li><a href="http://www.jasondavies.com/rhodonea/">Rhodonea Curve</a></li>
+		<li><a href="https://docs.jboss.org/author/display/RHQ/Home">RHQ - Project Documentation Editor</a></li>
+		<li><a href="https://github.com/shutterstock/rickshaw">Rickshaw: JavaScript toolkit for creating interactive real-time graphs</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6409668">Ring Cutting</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6408735">Ring Extraction</a></li>
+		<li><a href="http://www.jasondavies.com/maps/us-rivers/">Rivers of the U.S.A.</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3710566">Robinson Projection</a></li>
+		<li><a href="http://improve.ro/sandbox/politicians/v1.1/">Romanian parliamentarian bubble chart. In Romanian</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4403522">Rotated Axis Labels</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/cluster.html">Rotating Cluster Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734273">Rotating Equirectangular</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3734168">Rotating Orthographic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5731578">Rotating Orthographic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5731808">Rotating Transverse</a></li>
+		<li><a href="http://bl.ocks.org/turban/5866872">Rotating Transverse Mercator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4636377">Rotating Voronoi</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3790085">Rotating Winkel Tripel</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3468167">Rounded Rectangle</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1123639">Rounded Rectangles</a></li>
+		<li><a href="http://bl.ocks.org/d/4414107/">Route Probability Exploration with Parallel Coordinates</a></li>
+		<li><a href="http://astekfoto.blogspot.be/2012/11/running-away-ballons.html">Running Away Balloons - simple game</a></li>
+		<li><a href="https://github.com/sammyt/see">sammyt/see</a></li>
+		<li><a href="http://bl.ocks.org/karmadude/5820393">San Francisco Contours</a></li>
+		<li><a href="http://bl.ocks.org/sudeepdas/5167276">San Francisco Movies (Beta Version)</a></li>
+		<li><a href="http://bost.ocks.org/mike/sankey/">Sankey Diagram</a></li>
+		<li><a href="http://bl.ocks.org/3921009">Sankey diagram with cycles</a></li>
+		<li><a href="http://bl.ocks.org/d3noob/5028304">Sankey diagram with horizontal and vertical node movement</a></li>
+		<li><a href="http://bl.ocks.org/d/3779574/">Sankey Diagram with Overlap</a></li>
+		<li><a href="http://ramblings.mcpher.com/Home/excelquirks/d3/sankey">Sankey diagrams from Excel</a></li>
+		<li><a href="http://beautifuldata.eu/sankey/circuits.html">Sankey Diagrams of Local Economic Flows</a></li>
+		<li><a href="http://excelramblings.blogspot.co.uk/search?q=d3.js">Sankey from Excel, inherited cell colors for links</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3960741">Sankey Interpolation</a></li>
+		<li><a href="http://mashe.hawksey.info/2013/03/sankey-your-google-spreadsheet-data-d3js/">Sankey your Google Spreadsheet Data</a></li>
+		<li><a href="http://bl.ocks.org/saraquigley">saraquigley bl.ocks</a></li>
+		<li><a href="http://www.sasanalysis.com/">SAS ANALYSIS</a></li>
+		<li><a href="http://www.sasanalysis.com/2013/01/sas-and-d3js-1-macro-to-draw-scatter.html">SAS and D3.js: a macro to draw scatter plot</a></li>
+		<li><a href="http://www.sasanalysis.com/2013/01/sas-and-d3js-3-draw-map-to-display-us.html">SAS and D3.js: map to display US cities murder rates</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3790444">Satellite Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3791255">Satellite Projection Test</a></li>
+		<li><a href="http://www.jasondavies.com/maps/raster/satellite/">Satellite Raster</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5731979">Scale-Dependent Sampling</a></li>
+		<li><a href="http://webtasks.keck.waisman.wisc.edu/scatterize/d/Acdck0qHJo#h=2&amp;m=OLS&amp;x=1&amp;y=6">Scatterize</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3887118">Scatterplot</a></li>
+		<li><a href="http://jsfiddle.net/indiemaps/gzPDU/">Scatterplot and Heatmap</a></li>
+		<li><a href="http://www.ericbullington.com/articles/2012/01/31/kmeans-visualization">Scatterplot for K-Means clustering visualization</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3213173">Scatterplot Matrix</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/iris-splom.html">Scatterplot Matrix</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063663">Scatterplot Matrix Brushing</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3183403">Scatterplot with Multiple Series</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3244058">Scatterplot with Shapes</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/segregate.html">Schelling's segregation model</a></li>
+		<li><a href="http://healthviz.appspot.com/display/hs_22001">School Absenteism</a></li>
+		<li><a href="http://bit.ly/PvWgUH">SCION simulation environment</a></li>
+		<li><a href="http://ja.d3js.info/alignedleft/tutorial/d3/about/">Scott Murray tutorials in Japanese</a></li>
+		<li><a href="http://bl.ocks.org/1117287">Segmented Lines and Slope Coloring</a></li>
+		<li><a href="http://bl.ocks.org/jo/4068610">Selectable elements</a></li>
+		<li><a href="http://www.nu.nl/files/datajournalistiek/ek/ek2012.htm#.UKJ5yuOe8ww">Selecties EK 2012</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1440766">selection.order</a></li>
+		<li><a href="http://halftone.co/projects/self-immolations/">Self-Immolation In Tibet</a></li>
+		<li><a href="http://healthviz.appspot.com/display/hs_29001">Sensitivity/Specificity Plot</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/597292">Sequential Tiles</a></li>
+		<li><a href="http://www.youtube.com/user/d3Vienno">Series of D3.js video tutorials</a></li>
+		<li><a href="http://www.jasondavies.com/set-partitions/">Set Partitions</a></li>
+		<li><a href="http://dev.klp.org.in/timeseries/choropleth.html">Seven years of SSLC in Karnataka</a></li>
+		<li><a href="http://shapeofmylibrary.com/genre_comics.html">Shape of My Library — Comics</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3081153">Shape Tweening</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3750900">Shared Data</a></li>
+		<li><a href="http://jllord.github.com/sheetsee.js/">SHEETSEE.JS: Fill up Websites with Stuff from Google Spreasheet</a></li>
+		<li><a href="http://timelyportfolio.blogspot.com/search/label/d3">Shiny and R adaptation of Mike Bostock's d3 Brushable Scatterplot</a></li>
+		<li><a href="http://timelyportfolio.blogspot.com/">Shiny R and D3.js</a></li>
+		<li><a href="http://www.phloxblog.in/simple-bar-graph-angular-directive-d3-js-prototype-js-javascript-class-based-approach/">Simple Bar Graph in Angular Directive with d3.js and Prototype.js</a></li>
+		<li><a href="http://enja.org/2011/09/15/simple-d3-js-pie-chart-webcast/">Simple D3.js Bar Chart Webcast</a></li>
+		<li><a href="http://bl.ocks.org/3287802">Simple Dashboard Example</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5342818">Simple example using Vega, D3, and Jstat</a></li>
+		<li><a href="http://jsfiddle.net/7WQjr/">Simple HTML data tables</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6409154">Simple Junctions</a></li>
+		<li><a href="http://bl.ocks.org/1630683">Simple Radar Chart</a></li>
+		<li><a href="http://jsfiddle.net/johnwun/8hSGP/">Simple Reusable Bar Chart</a></li>
+		<li><a href="http://bl.ocks.org/2595950">Simple scatterplot</a></li>
+		<li><a href="http://jsfiddle.net/christopheviau/v6VMf/">Simple table</a></li>
+		<li><a href="https://github.com/MinnPost/simple-map-d3">Simple-map-d3</a></li>
+		<li><a href="http://bl.ocks.org/4324236">Simplex Noise Code 39 Barcode</a></li>
+		<li><a href="http://bl.ocks.org/4315896">Simplex Noise Dots</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2846726">Simplifying and cleaning Shapefiles.</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4319903">Sinu-Mollweide</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3712399">Sinusoidal</a></li>
+		<li><a href="http://skillpedia.herokuapp.com/skills/6">Skillpedia: an open encyclopedia for skills</a></li>
+		<li><a href="http://skydb.io/">Sky Open Source, Behavioral Database </a></li>
+		<li><a href="http://jeanabbiateci.fr/meteorites/">SKYFALL. Meteorite falls map.</a></li>
+		<li><a href="http://bl.ocks.org/4710879">Slippy map + extent indicator</a></li>
+		<li><a href="http://bl.ocks.org/2554910">SlopeGraph</a></li>
+		<li><a href="http://bl.ocks.org/biovisualize/5050136/1e40690f25396e3626c53c96a5933e3b90bea7e2">Slopegraph lines in SVG and Canvas</a></li>
+		<li><a href="http://skedasis.com/d3/slopegraph/">Slopegraphs</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1157787">Small Multiples</a></li>
+		<li><a href="http://vallandingham.me/small_multiples_with_details.html">Small Multiples with Details on Demand</a></li>
+		<li><a href="http://dyninc.github.com/d3-smokechart/">Smoke charts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1649463">Smooth Scrolling</a></li>
+		<li><a href="http://jiffyclub.github.io/snakeviz/">SnakeViz: An In-Browser Python Profile Viewer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5851933">Snowden’s Route</a></li>
+		<li><a href="http://tributary.io/inlet/4408287/">Snowflakes</a></li>
+		<li><a href="http://bl.ocks.org/4349166">Snowflakes with D3</a></li>
+		<li><a href="http://bl.ocks.org/4481531">Social trust vs ease of doing business</a></li>
+		<li><a href="http://n79.org/infographics/asg1/">Social web use in 2009</a></li>
+		<li><a href="http://socr.ucla.edu/htmls/HTML5/charts/SOCR_JS_ViolinChart/">SOCR Violin Chart</a></li>
+		<li><a href="http://bl.ocks.org/4597134">Solar Terminator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4597134">Solar Terminator</a></li>
+		<li><a href="http://bl.ocks.org/e-/5244131">SOM Animation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1584697">Sortable Bar Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3885705">Sortable Bar Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3719724">Sortable Table with Bars</a></li>
+		<li><a href="http://www.jasondavies.com/sorting/">Sorting Visualisations</a></li>
+		<li><a href="http://bl.ocks.org/enjalot/6457608">Sparkline Directive for Angular with d3.js</a></li>
+		<li><a href="http://benjchristensen.com/2011/08/08/simple-sparkline-using-svg-path-and-d3-js/">Sparklines</a></li>
+		<li><a href="http://wiki.cfcl.com/bin/view/Projects/SPARQLy/GUIs/WebHome">SPARQLy GUIs: Linked Data and Semantic Web technologies</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1136236">Spermatozoa</a></li>
+		<li><a href="http://www.jasondavies.com/maps/sphere-spirals/">Sphere Spirals</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757132">Spherical Mercator</a></li>
+		<li><a href="http://www.jasondavies.com/maps/spilhaus/">Spilhaus Maps</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1246403">Spinny Globe</a></li>
+		<li><a href="http://bl.ocks.org/d/4670487/">Spiral experiment</a></li>
+		<li><a href="http://bl.ocks.org/3543186">Spiral for John Hunter</a></li>
+		<li><a href="https://bitbucket.org/davidagraf/dartsplaytree/src">Splay Tree animation with Dart D3.js and local storage</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4342190">Spline Editor</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1642989">Spline Transition</a></li>
+		<li><a href="http://games.netherrealm.net/splitline.html">Split line game</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1386444">Square Circle Spiral Illusion</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2932721">Squares ↔ Hexagons</a></li>
+		<li><a href="http://dwtkns.com/srtm/">SRTM Tile Grabber: downloading elevation data</a></li>
+		<li><a href="http://bl.ocks.org/4629518">Stacked and grouped bar chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3885211">Stacked Area Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3020685">Stacked Area via Nest</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1134768">Stacked Bar Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3886208">Stacked Bar Chart</a></li>
+		<li><a href="http://glimmer.rstudio.com/alexbbrown/USArrestsWide/">Stacked bar chart from a structure description of an R table</a></li>
+		<li><a href="http://bl.ocks.org/1314483">Stacked layout with time axis</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3048740">Stacked Radial Area</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3943967">Stacked-to-Grouped Bars</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4679202">Stacked-to-Multiples</a></li>
+		<li><a href="http://khawai.com/Portfolio/10Classements2013/classements13-en.html">Stage rankings - Tour de France 2013</a></li>
+		<li><a href="http://www.nzz.ch/aktuell/data/">Startseite - NZZ.ch</a></li>
+		<li><a href="https://blog.wealthfront.com/startup-employee-equity-compensation/">Startup Salary &amp;amp; Equity Compensation</a></li>
+		<li><a href="http://theory.info/harvardstat221">Stat 221</a></li>
+		<li><a href="http://theory.info/harvardstat221#?v=expectation-maximization-algorithm-and-the-q-function">Stat 221</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1667139">Static Force Layout</a></li>
+		<li><a href="http://dexvis.wordpress.com/2013/03/15/steamgraphs-and-dex/">SteamGraphs and Dex</a></li>
+		<li><a href="http://sivaanalytics.wordpress.com/2013/07/22/first-d3-js-visualization-step-by-step-road-accidents-in-cities-by-years-2010-2/">Step by Step-Road Accidents in cities by years 2010</a></li>
+		<li><a href="http://luiscarli.com/fitbit/">Steps Walked per Day</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3757137">Stereographic</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3750558">Sticky Force-Directed Graph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4134037">Stitching States from Counties</a></li>
+		<li><a href="http://stowers.org/stowersreport/maps">Stowers Group Collaboration Network</a></li>
+		<li><a href="http://artech.herokuapp.com/">Strange attractor</a></li>
+		<li><a href="https://speakerdeck.com/alignedleft/strata-2013-d3-tutorial">Strata 2013 D3 Tutorial, Speaker Deck</a></li>
+		<li><a href="http://bl.ocks.org/1935509">Streamgraph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4060954">Streamgraph</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/582915">Streamgraph</a></li>
+		<li><a href="http://bl.ocks.org/byrongibson/5232838">Streamgraph realtime streaming mouse coordinates</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4254963">Streams</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4751960">Streams</a></li>
+		<li><a href="http://gijs.github.com/blog/2013/02/06/street-extent-visualization-using-d3-dot-js-and-cartodb/">Street Extent Visualization Using #d3js and CartoDB</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html">Strikeouts Are Still Soaring</a></li>
+		<li><a href="http://coovtech.com/posts/stripe-d3/">Stripe Gross Volume witth D3.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5649592">Stroke Dash Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/705856">stroke-dasharray</a></li>
+		<li><a href="http://www.skyrill.com/seatinghabits/">Students's seating habits</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1177588">style.setProperty</a></li>
+		<li><a href="http://www.sugarforge.org/projects/solcrm/">SugarForge: SolCRM by AlineaSol: Project Info</a></li>
+		<li><a href="http://www.vislives.com/2012/10/summer-olympics-home-ground-advantage.html">Summer Olympics Home Ground Advantage</a></li>
+		<li><a href="http://bl.ocks.org/4063423">Sunburst</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/910126">Sunburst Layout with Labels</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063423">Sunburst Partition</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1306365">Sunburst with Distortion</a></li>
+		<li><a href="http://www.jasondavies.com/sunflower-phyllotaxis/">Sunflower Phyllotaxis</a></li>
+		<li><a href="http://bl.ocks.org/4946049">Sunlight Heatmap</a></li>
+		<li><a href="http://bl.ocks.org/4645873">Sunny side of the Earth, for any date and time</a></li>
+		<li><a href="http://bl.ocks.org/1021103">Superformula Explorer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1021103">Superformula Explorer</a></li>
+		<li><a href="http://bl.ocks.org/1020902">Superformula Tweening</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1020902">Superformula Tweening</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1342359">SVG feGaussianBlur</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1424037">SVG foreignObject Example</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3680999">SVG Geometric Zooming</a></li>
+		<li><a href="http://www.dashingd3js.com/svg-group-element-and-d3js">SVG Group Element and D3.js</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/">SVG Open Keynote Slides</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2839676">SVG Path Cleaning</a></li>
+		<li><a href="http://bl.ocks.org/1178682">SVG Patterns</a></li>
+		<li><a href="http://tributary.io/inlet/4268238/">SVG resize to container</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3680957">SVG Semantic Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2647924">SVG Swarm</a></li>
+		<li><a href="http://bl.ocks.org/2294676">SVG to Canvas</a></li>
+		<li><a href="http://jsfiddle.net/plaliberte/HAXyd/">SVG to Canvas to PNG using Canvg</a></li>
+		<li><a href="http://bl.ocks.org/1962173">Swimlane</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4207744">Swiss Cantons</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki/6312708">Swiss Topography</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4342045">Symbol Map</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/airports.html">Symbol Map</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1468715">Table of Progress</a></li>
+		<li><a href="http://bl.ocks.org/1226718">Table Sorting</a></li>
+		<li><a href="http://bl.ocks.org/mmparker/3670696">Table-driven plot</a></li>
+		<li><a href="http://mashe.hawksey.info/2011/10/tagsexplorer-intro/">TAGSExplorer: Visualising Twitter graphs from a Google Spreadsheet</a></li>
+		<li><a href="http://chelm.github.com/jsgeo/">Talk at JS.geo 2013</a></li>
+		<li><a href="http://graphicbaseball.com/streamgraphs/2012rays.html">Tampa Bay Rays Streamgraph</a></li>
+		<li><a href="http://telostats.com/">Telostats: Public bike stations in Tel Aviv</a></li>
+		<li><a href="http://bl.ocks.org/2295155">Templating ala Mustache with Chernoff faces example</a></li>
+		<li><a href="http://bl.ocks.org/jfarid27/raw/6541165/">Test Env</a></li>
+		<li><a href="http://d3tetris.herokuapp.com/">Tetris</a></li>
+		<li><a href="http://d3tetris.herokuapp.com/#">Tetris</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/agot/littleTextPaths.html">Text on arc path</a></li>
+		<li><a href="http://www.mgrafit.com/00-projects/proj04-TGImodels/TGImodels.html">TGI Models</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4341574">The Amazing Pie</a></li>
+		<li><a href="http://the-beautiful-table.com/premier-league">The Beautiful Table: fancy bar chart of football statistics</a></li>
+		<li><a href="http://007.lucklaboratories.com/">The business of Bond</a></li>
+		<li><a href="http://www.findtheconversation.com/concept-map">The Concept Map</a></li>
+		<li><a href="http://g33ktalk.com/d3-js-bay-area-d3-community/">The d3 Community: How to Get Involved</a></li>
+		<li><a href="http://diabetesvis.herokuapp.com/diabetes/dashboard">The Diabetes Dashboard</a></li>
+		<li><a href="http://elections.nytimes.com/2012/electoral-map">The electoral map: building path to victory</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1308257">The Euro Debt Crisis</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html">The Facebook Offering: How It Compares</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1548215">The first commented line is your dabblet’s title</a></li>
+		<li><a href="http://www.humblesoftware.com/demos/trig_d3">The first thing that should be shown in any Trigonometry class</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3883098">The Gist to Clone All Gists</a></li>
+		<li><a href="http://bibviz.com/">The Holy Bible Visualizaiton</a></li>
+		<li><a href="http://joenoodles.com/2013/01/the-last-slice-of-pie/">The last slice of PIE</a></li>
+		<li><a href="http://www.jasondavies.com/graph-music/">The Music of Graphs</a></li>
+		<li><a href="http://osrc.dfm.io/mbostock">The open source card report</a></li>
+		<li><a href="http://www.jeromecukier.net/projects/models/polya.html">The Polya process</a></li>
+		<li><a href="http://umbrellaco.github.io/polyglots/">The Polyglots Project</a></li>
+		<li><a href="https://www.adobe.com/inspire/2013/02/graphical-web-experiment.html">The Quest for the Graphical Web</a></li>
+		<li><a href="http://news.yahoo.com/senate-social-network-diagram-mcconnell-mean-girls-000513361.html">The Senate Social Network</a></li>
+		<li><a href="http://threatwiki.thesentinelproject.org/iranvisualization">The Sentinal project</a></li>
+		<li><a href="http://michaelporath.com/projects/manifest-destiny/">The Story of The US Told In 141 Maps</a></li>
+		<li><a href="http://bl.ocks.org/4712128">The Sun’s View of the Earth</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4712128">The Sun’s View of the Earth</a></li>
+		<li><a href="http://bost.ocks.org/mike/nations/">The Wealth &amp;amp; Health of Nations</a></li>
+		<li><a href="http://bost.ocks.org/mike/join/">Thinking with Joins</a></li>
+		<li><a href="http://researchcenter.paloaltonetworks.com/app-usage-risk-report-visualization/#sthash.knhlbcz7.okvVtrFO.dpbs">Threat Report</a></li>
+		<li><a href="http://mbostock.github.com/d3/tutorial/circle.html">Three Little Circles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4282586">Three-Axis Rotation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3306362">Threshold Choropleth</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3970883">Threshold Encoding</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4573883">Threshold Key</a></li>
+		<li><a href="http://dimplejs.org/advanced_examples_viewer.html?id=advanced_time_axis">Time Bubble Lines</a></li>
+		<li><a href="https://github.com/boorad/d3-tsline">Time Series</a></li>
+		<li><a href="http://bl.ocks.org/2338034">Timeline</a></li>
+		<li><a href="http://bl.ocks.org/rengel-de/5603464">Timeline</a></li>
+		<li><a href="http://bl.ocks.org/4718717">Timeline of earthquake in Christchurch 2010</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5230564">Times</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5628479">Tissot’s Indicatrix</a></li>
+		<li><a href="http://bl.ocks.org/tmcw">Tmcw’s bl.ocks</a></li>
+		<li><a href="http://bl.ocks.org/tnightingale">tnightingale bl.ocks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4476496">Tobler World-in-a-Square</a></li>
+		<li><a href="http://bl.ocks.org/4631136">Tooltip on a stream graph</a></li>
+		<li><a href="http://labratrevenge.com/d3-tip/">Tooltips for D3.js visualizations</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4090846">TopoJSON Examples</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5707818">TopoJSON Layers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5707610">TopoJSON Parallax</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4408297">TopoJSON Points</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5342063">TopoJSON vectors on raster image tiles, with zoom and pan</a></li>
+		<li><a href="http://www.jasondavies.com/maps/simplify/">Topology-Preserving Geometry Simplification</a></li>
+		<li><a href="http://bost.ocks.org/mike/chart/">Towards Reusable Charts</a></li>
+		<li><a href="http://tradearc.laserdeathstehr.com/">TradeArc - Arc Diagram of Offseason NHL Trades</a></li>
+		<li><a href="http://labs.data-publica.com/ratp/">Traffic entering stations in Paris</a></li>
+		<li><a href="http://traffix.jitsu.com/">Traffix jitsu</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3173784">Transform Interpolation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1345853">Transform Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1171371">Transition End</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1175688">Transition Example</a></li>
+		<li><a href="http://bl.ocks.org/herrstucki/4699389">Transition from a streamgraph to multiple area charts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1616423">Transition Speed Test</a></li>
+		<li><a href="http://transportview.herokuapp.com/">TransportView</a></li>
+		<li><a href="http://bl.ocks.org/4695821">Transverse Mercator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4695821">Transverse Mercator</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5731693">Transversing Equirectangular</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2949981">Tree Layout from CSV</a></li>
+		<li><a href="http://bl.ocks.org/t3o-it/5117844">Tree layout mods</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3184089">Tree Layout Orientations</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4063582">Treemap</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/972398">Treemap</a></li>
+		<li><a href="http://enjalot.com/tributary/2165875/sinwaves.js">Tributary</a></li>
+		<li><a href="http://tributary.io/inlet/5968492">Tributary, optical_illusion_001_motion2</a></li>
+		<li><a href="http://tributary.io/inlet/4670598">Tributary, simple globe canvas</a></li>
+		<li><a href="http://trisul.org/">Trisul Network Analytic</a></li>
+		<li><a href="http://trends.truliablog.com/2011/09/house-hunter-by-day-not-so-much-after-midnight/">TruliaTrends</a></li>
+		<li><a href="http://trends.truliablog.com/2012/02/where-are-house-hunters-searching/">TruliaTrends</a></li>
+		<li><a href="http://christopheviau.com/d3_tutorial/">Try D3 Now</a></li>
+		<li><a href="http://eyeseast.github.com/visible-data/2012/12/14/mapping-with-d3/">Trying out D3’s geographic features</a></li>
+		<li><a href="http://www.jasondavies.com/tuebingen/">Tübingen</a></li>
+		<li><a href="http://markmarkoh.com/tuftes-slope-graphs-in-svg-using-d3js/">Tufte's slope graphs</a></li>
+		<li><a href="http://lemur.ecs.soton.ac.uk/~cjg/d3/campus/oook.php?site=1">Tweening Polygons</a></li>
+		<li><a href="http://tweitgeist.colinsurprenant.com/">Tweitgeist: Live Top Hashtags on Twitter</a></li>
+		<li><a href="http://stanford.edu/~c0chran/cgi-bin/WordRiver/">Twitter Activity During Hurricane Sandy</a></li>
+		<li><a href="http://www.influencermoth.com/">Twitter Influencer Visualization</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3094619">Twitter SVG Logo</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4522565">Two Point Equidistant</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4525362">Two Point Equidistant</a></li>
+		<li><a href="http://prcweb.co.uk/lab/selection/">Two Tables, Understanding D3 Selections</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4360892">U.S. Airports</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4122298">U.S. Counties TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4090870">U.S. Counties TopoJSON Mesh</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4134057">U.S. Land TopoJSON</a></li>
+		<li><a href="http://vis.stanford.edu/jheer/d3/pyramid/shift.html">U.S. Population Pyramid</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5606078">U.S. Rivers</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6406992">U.S. State Mesh</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4090848">U.S. States TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4108203">U.S. TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4136647">U.S. TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6116436">U.S. Urban Areas</a></li>
+		<li><a href="http://bost.ocks.org/mike/uberdata/">Uber Rides by Neighborhood</a></li>
+		<li><a href="http://keminglabs.com/ukuni/">UK University Statistics</a></li>
+		<li><a href="http://prcweb.co.uk/lab/ukwind">UK Wind</a></li>
+		<li><a href="https://ncc.cchmc.org/prod/umls_visualizer/index.do">UMLS (Unified Medical Language System) Visualizer</a></li>
+		<li><a href="http://www.visualizing.org/visualizations/un-global-pulse-visualization">UN Global Pulse 2010 Visualization</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3934356">Underscore’s Equivalents in D3</a></li>
+		<li><a href="http://charlesmartinreid.com/wordpress/2012/08/d3-and-the-parallel-plot-part-1-of-2/">Understanding the D3 Parallel Plot Example</a></li>
+		<li><a href="http://bl.ocks.org/leondutoit/6436923">Unemployment ranked with horizontal bars</a></li>
+		<li><a href="http://tributary.io/inlet/5210686">Unit circle animation</a></li>
+		<li><a href="http://www.visionofhumanity.org/ukpeaceindex/#/UKPI/">United Kingdom Peace Index</a></li>
+		<li><a href="http://www.sorens.in/posts/2012-8-11-uw-courses">University of Washington Departments</a></li>
+		<li><a href="http://bl.ocks.org/4289018">Unknown Pleasures</a></li>
+		<li><a href="https://dl.dropbox.com/u/37366474/MeatyStat/combined.html">Untitled-2</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3900925">Update-Only Transition</a></li>
+		<li><a href="http://busrac.es/">Urban bus races</a></li>
+		<li><a href="http://www.visualizing.org/visualizations/urban-water-explorer/">Urban Water Explorer</a></li>
+		<li><a href="http://solomonkahn.com/us_budget/">US Budget</a></li>
+		<li><a href="http://ccarpenterg.github.com/blog/us-census-visualization-with-d3js/">US Census Visualization</a></li>
+		<li><a href="http://hotspots.io/election">US Elections 2012 / Twitter</a></li>
+		<li><a href="http://theoldbeggar.com/visuals/us-energy-use/">US energy consumption since 1775</a></li>
+		<li><a href="http://michaelporath.com/talks/d3.geo/">US History in Maps</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5617379">US, CA, MX and PR</a></li>
+		<li><a href="http://bl.ocks.org/explunit/5988971">Use Inkscape shapes in D3.js tree diagram</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20110921/">Use the Force! Slides</a></li>
+		<li><a href="http://vimeo.com/29458354">Use the Force! Video</a></li>
+		<li><a href="http://vallandingham.me/force_talk/#0">Using and Abusing the force</a></li>
+		<li><a href="http://www.hiregion.com/2012/08/using-d3-visualization-for-fraud.html">Using d3 visualization for fraud detection and trending</a></li>
+		<li><a href="http://danielfrg.github.io/blog/2013/02/05/d3-backbone-tornado-histogram-csv/">Using D3, backbone and tornado to visualize histograms of a csv file</a></li>
+		<li><a href="http://azundo.github.io/blog/using-d3-dot-js-to-brute-force-the-pirate-puzzle/">Using D3.js to Brute Force the Pirate Puzzle - Azundo Design</a></li>
+		<li><a href="http://christopheviau.com/d3_tutorial/d3_inkscape/">Using Inkscape with d3</a></li>
+		<li><a href="http://www.d3noob.org/2012/12/using-plunker-for-development-and.html">Using Plunker for development and hosting your D3.js creations</a></li>
+		<li><a href="http://blog.visual.ly/using-selections-in-d3-to-make-data-driven-visualizations/">Using Selections in D3 to Make Data-Driven Visualizations</a></li>
+		<li><a href="https://github.com/mbostock/smash/wiki">Using SMASH for custom D3.js builds</a></li>
+		<li><a href="http://bl.ocks.org/4485778">Using SVG and canvas on the same force-directed layout</a></li>
+		<li><a href="http://4waisenkinder.de/blog/2013/09/28/using-gradient-and-shadows-with-d3-dot-js/">Using SVG Gradients and Filters With d3.js</a></li>
+		<li><a href="http://briantford.com/blog/angular-d3.html">Using the D3.js Visualization Library with AngularJS</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3025699">UT1 - UTC</a></li>
+		<li><a href="http://imaginea.github.io/uvCharts/">uvCharts</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5230571">Van der Grinten II</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5230580">Van der Grinten III</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4489365">Van der Grinten IV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3796831">Van der Grinten Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/600164">Van Wijk and Nuij Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3828981">van Wijk Smooth Zooming</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1624660">Variable-width Histogram</a></li>
+		<li><a href="http://www.larsko.org/VisualisationPlayground">Various visualisations especially with d3.geo</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5593150">Vector Tiles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5616813">Vector Tiles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5798874">Vector Tiles</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5322390">Vega for time series chart with shaded blocks</a></li>
+		<li><a href="http://exposedata.com/parallel/">Vegetable Nutrition w/ Parallel Coordinates</a></li>
+		<li><a href="http://datavelib.com/">Vélib network visualization</a></li>
+		<li><a href="http://create.visual.ly/graphic/venndiagram/">Venn diagram</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1067636">Venn Diagram with Clipping</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1067616">Venn Diagram with Opacity</a></li>
+		<li><a href="http://www.benfrederickson.com/2013/05/09/venn-diagrams-with-d3.js.html">Venn Diagrams with 3+ circles</a></li>
+		<li><a href="http://bl.ocks.org/jasondavies/5452290">Vertical Bullet Charts</a></li>
+		<li><a href="https://github.com/asutherland/d3-threeD">Very limited in-progress attempt to hook d3.js up to three.js</a></li>
+		<li><a href="http://healthviz.appspot.com/display/hs_20001">Veteran Survival Data</a></li>
+		<li><a href="http://www.youtube.com/watch?v=6y9Wbk-ot6w&amp;list=PLMYagHpE41gatCJGq5W5tAcKratzCqw6X">Video tutorials in Japanese</a></li>
+		<li><a href="http://blog.ouseful.info/2012/05/11/viewing-openlearn-mindmaps-using-d3-js/">Viewing OpenLearn Mindmaps Using d3.js</a></li>
+		<li><a href="http://tw.rpi.edu/web/tool/vraer">Viewing Relations, Attributes, and Entities in RDF</a></li>
+		<li><a href="https://dl.dropbox.com/u/3397495/VIM/VIMKEYMAP/manual_svg_014.html">VIM keymap</a></li>
+		<li><a href="http://latentflip.github.com/violin/">Violin: Instrumenting JavaScript</a></li>
+		<li><a href="http://bl.ocks.org/z-m-k/5014368">Violin/Box plots</a></li>
+		<li><a href="http://fanfarefantastique.com/vishna/">Visual Hacker News</a></li>
+		<li><a href="http://www.youtube.com/watch?v=_p6rLW7K_zw">Visual Search</a></li>
+		<li><a href="http://www.visualsedimentation.org/index.html">Visual Sedimentation</a></li>
+		<li><a href="http://playground.anthonyly.com/HTML5/canvas/VSTweet/">Visual Sedimentation Tweet</a></li>
+		<li><a href="http://my.safaribooksonline.com/book/illustration-and-graphics/9780133439649">Visual Storytelling with D3: An Introduction to Data Visualization in JS</a></li>
+		<li><a href="http://blog.visual.ly/visual-ly-meetup-recap-introductory-d3-workshop/">Visual.ly Meetup Recap: Introductory D3 Workshop</a></li>
+		<li><a href="http://visual.ly/search/node?keys=d3.js">Visual.ly tagged D3.js</a></li>
+		<li><a href="http://www.benh.co.uk/datasift/visualising-a-datasift-feed-with-node-and-d3/">Visualising a real-time DataSift feed with Node and D3.js</a></li>
+		<li><a href="http://www.diegovalle.net/maps/secondage">Visualising Change in Presidential Vote</a></li>
+		<li><a href="http://sammyd.github.com/blog/2012/09/16/visualising-conair-data-with-cubism-dot-js/">Visualising ConAir Data With Cubism.js Arduino TempoDB Sinatra</a></li>
+		<li><a href="http://markhansen.co.nz/stolen-vehicles-pt1/">Visualising New Zealand's Stolen Vehicle Database Part1</a></li>
+		<li><a href="http://markhansen.co.nz/stolen-vehicles-pt2/">Visualising New Zealand's Stolen Vehicle Database Part2</a></li>
+		<li><a href="http://scottcheng.github.com/bj-air-vis/">Visualization of Beijing Air Pollution</a></li>
+		<li><a href="http://soundsuggest.wordpress.com/2013/04/13/d3-js-visualization-infovis-whitebox-cf-js/">Visualization of music suggestion</a></li>
+		<li><a href="http://www.tips-for-excel.com/2012/06/using-d3-js-to-visualise-online-conversion-journeys/">Visualize online conversion journeys</a></li>
+		<li><a href="http://hsilomedus.me/wp-content/uploads/javadayd3/index.html">Visualize with d3js: Bring life to your data</a></li>
+		<li><a href="http://www.i-m-code.com/blog/blog/2013/06/10/visualize-words-on-my-blog-using-d3-dot-js/">Visualize Words on My Blog Using D3.js</a></li>
+		<li><a href="http://maxdemarzi.com/2012/02/13/visualizing-a-network-with-cypher/">Visualizing a network with Cypher and d3.js</a></li>
+		<li><a href="http://jerseyshots.com/viz/newborn.html">Visualizing a newborn's feeding and diaper activity</a></li>
+		<li><a href="http://toc.oreilly.com/2013/02/visualizing-book-production.html">Visualizing book production - Tools of Change for Publishing</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/">Visualizing Data with Web Standards Slides</a></li>
+		<li><a href="http://cdn-smooth.ms-studiosmedia.com/events/W3C/Day2/Web_Standards.mp4">Visualizing Data with Web Standards Video</a></li>
+		<li><a href="http://www.davidmasad.com/sandbox/FirmClusters.html">Visualizing document similarity over time</a></li>
+		<li><a href="http://rfw.name/blog/2012/10/23/visualizing_facebook_friends.html">Visualizing Facebook Friends With D3.js</a></li>
+		<li><a href="http://bitaesthetics.com/posts/visualizing-flight-options.html">Visualizing Flight Options</a></li>
+		<li><a href="http://gelicia.com/vizMed/">Visualizing Hospital Price Data</a></li>
+		<li><a href="http://gkarthik.net/2012/">Visualizing my entire website as a network</a></li>
+		<li><a href="http://www.drewconway.com/zia/?p=2765">Visualizing NetworkX graphs in the browser using D3</a></li>
+		<li><a href="http://nandayadav.github.com/nfldrafts_visualization/">Visualizing NFL Draft History</a></li>
+		<li><a href="http://theartofasking.com/question/wjucdg6k">Visualizing opinons around the world (zoomable world map and interactive pie chart)</a></li>
+		<li><a href="http://trends.truliablog.com/vis/pricerange-sf/">Visualizing San Francisco Home Price Ranges</a></li>
+		<li><a href="http://visurus.wordpress.com/2012/08/30/visualizing-swiss-politicians-on-twitter-using-d3-js/">Visualizing Swiss politicians on Twitter using D3.js</a></li>
+		<li><a href="https://appstorerankings.net/visualizing-the-ios-app-store">Visualizing the iOS App Store</a></li>
+		<li><a href="http://metro.ezyang.com/">Visualizing the News through Metro Maps</a></li>
+		<li><a href="http://vallandingham.me/vis/racial_divide.html">Visualizing The Racial Divide</a></li>
+		<li><a href="http://nowherenearithaca.blogspot.com/2012/12/simulating-us-birthsdeaths-in-real-time.html">Visualizing U.S. Births and Deaths in Real-Time</a></li>
+		<li><a href="http://vizwiz.blogspot.ca/2012/08/displaying-time-series-data-stacked.html">VizWiz: Displaying time-series data</a></li>
+		<li><a href="http://www.comeetie.fr/blog/?p=196">VLS&amp;amp;amp;STATS making off « @comeetie :: blog</a></li>
+		<li><a href="http://milafrerichs.github.com/eeg_unternehmen/">Von der EEG Umlage befreite Unternehmen</a></li>
+		<li><a href="http://www.jasondavies.com/voroboids/">Voronoi Boids: Voroboids</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4237768">Voronoi Clipping</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/airports-all.html">Voronoi Diagram</a></li>
+		<li><a href="http://www.christophermanning.org/projects/voronoi-diagram-with-force-directed-nodes-and-delaunay-links/">Voronoi Diagram with Force Directed Nodes and Delaunay Links</a></li>
+		<li><a href="http://bl.ocks.org/syntagmatic/6432815">Voronoi Lookup</a></li>
+		<li><a href="http://xn--dahlstrm-t4a.net/svg/interactivity/voronoi/voronoi-paint.html">Voronoi paint</a></li>
+		<li><a href="http://bl.ocks.org/1405439">Voronoi Picking</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4060366">Voronoi Tesselation</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/665906">Voronoi Tessellation (Redirect)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/667245">Voronoi Tessellation (Redirect)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3962108">Voronoi Test (N=2)</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3846051">Voronoi tests</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1405439">Voronoi-based point picker</a></li>
+		<li><a href="http://vvvvjs.quasipartikel.at/">VVVV viewer</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2941604">W3C Validation Errors</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4487674">Wagner IV</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3710148">Wagner VI Projection</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4465109">Wagner VII</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3854614">Walmart locations</a></li>
+		<li><a href="https://github.com/deepakg/waterfall">Waterfall chart of Tendulkar's ODI career</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4458497">Waterman Butterfly</a></li>
+		<li><a href="http://www.jasondavies.com/wave/">Wave</a></li>
+		<li><a href="http://blog.lightjs.org/2012/09/d3-js-fun-france-2/">We Love France: transition between the Hexagon and a heart</a></li>
+		<li><a href="http://vallandingham.me/vis/movie">We're In The Money: How Much Do The Movies We Love Make?</a></li>
+		<li><a href="http://benheb.github.io/d3-sandbox/world-temperatures.html">Weather of the World</a></li>
+		<li><a href="http://timelyportfolio.blogspot.com/2012/12/d3-shiny-and-r-reporting-performance.html">Web reporting with D3js and R using RStudio Shiny</a></li>
+		<li><a href="http://bl.ocks.org/WardCunningham/5861122">Web Traffic as flying bubbles</a></li>
+		<li><a href="http://ui-cloud.com/web-based-visualization-part-1-the-d3-js-key-concept/">Web-Based Visualization Part 1: The D3.js Key Concept</a></li>
+		<li><a href="http://blog.lightjs.org/2012/10/welcome-to-webplatform-animation-d3js/">Webplatform dancing logo</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3853405">WebPlatform.org SVG Logo</a></li>
+		<li><a href="http://hanhtrinhkientruc.org/">Website Graph Bavigation</a></li>
+		<li><a href="http://ggruiz.me/weeknd3/">Weeknd3</a></li>
+		<li><a href="http://peopleviz.gforge.inria.fr/oecd_BLI_radar_chart/">What do countries look like?</a></li>
+		<li><a href="http://www.datavizchallenge.org/viz/73">What Do You Work For?</a></li>
+		<li><a href="http://prcweb.co.uk/lab/what-makes-us-happy">WHat makes us happy</a></li>
+		<li><a href="http://sizes.darkgreener.com/">What Size Am I? Finding dresses that fit</a></li>
+		<li><a href="http://www.vislives.com/2012/04/when-is-easter-sunday.html">When is Easter?</a></li>
+		<li><a href="http://bl.ocks.org/richardwestenra/raw/129f64bfa2b0d48d27c9/">Which career should I invest in?</a></li>
+		<li><a href="http://www.roadtolarissa.com/whitehouse/?Takeshima%20Dokdo/">White House Petition Choropleth</a></li>
+		<li><a href="http://dataveyes.com/blog/rennes/index-en.html">Who are Rennes Metropolis inhabitants?</a></li>
+		<li><a href="http://whodotheyserve.com/">Who do they serve</a></li>
+		<li><a href="http://www.nytimes.com/interactive/2012/03/07/us/politics/how-candidates-fared-with-different-demographic-groups.html">Who Voted for Rick Santorum and Mitt Romney</a></li>
+		<li><a href="http://blog.polychart.com/2013/01/why-are-people-shooting-up-our-schools.html">Why are people shooting up our schools?</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4463155">Wiechel</a></li>
+		<li><a href="http://sepans.com/wikistalker">Wikistalker</a></li>
+		<li><a href="http://wimbledon.prcweb.co.uk/">Wimbledon</a></li>
+		<li><a href="http://wimbledon.prcweb.co.uk/playerbubbles.html">Wimbledon 2013 Player bubbles</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/865396">Wind</a></li>
+		<li><a href="http://windhistory.com/">Wind History</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3664049">Winkel Tripel Graticule</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3682676">Winkel Tripel Projection</a></li>
+		<li><a href="http://tributary.io/inlet/5106773">Wood Grain</a></li>
+		<li><a href="http://vallandingham.me/bubble_cloud/">Word Frequency Bubble Clouds</a></li>
+		<li><a href="http://www.jasondavies.com/wordtree/">Word Tree</a></li>
+		<li><a href="http://tributary.io/inlet/5320723">Word wrap in SVG using foreignObject</a></li>
+		<li><a href="http://www.jasondavies.com/wordcloud/">WordCloud</a></li>
+		<li><a href="http://visualizing.org/sprint/global-development-sprint">World Bank Global Development Sprint</a></li>
+		<li><a href="http://www.visualizing.org/sprint/global-development-sprint">World Bank Global Development Sprint</a></li>
+		<li><a href="http://bl.ocks.org/4091835">World Boundaries TopoJSON</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4180634">World Map</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4183330">World Tour</a></li>
+		<li><a href="http://www.wimdows.nl/datavis/lib/D3/ciripleth-area-exp.html">World Wide Women's Rights</a></li>
+		<li><a href="http://artzub.com/d3/wbca/">WorldBank Contract Awards</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/3902569">X-Value Mouseover</a></li>
+		<li><a href="http://bl.ocks.org/hlvoorhees/5376764">x3dom event test</a></li>
+		<li><a href="http://tenxer.github.com/xcharts/">xCharts: a D3-based library for building custom charts and graphs</a></li>
+		<li><a href="http://dan.iel.fm/xkcd/">XKCD-style plots</a></li>
+		<li><a href="http://congress.joshreyes.com/">Your Tax-paid Tweets</a></li>
+		<li><a href="http://vis.uell.net/zensus2011/atlas.html">Zensus 2011 Atlas</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2996766">Zero Ticks</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4965422">Zip Codes</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/5180185">Zipdecode</a></li>
+		<li><a href="http://www.somebits.com/weblog/tech/zipdecode-javascript-d3js.html">zipdecode</a></li>
+		<li><a href="http://bl.ocks.org/ZJONSSON">ZJONSSON’s bl.ocks</a></li>
+		<li><a href="http://zacharymaril.com/d3/src/core/nest.html">zmaril/d3 » src › core › nest.js</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6226534">Zoom Center</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4699541">Zoom to Bounding Box</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/6238040">Zoom Transitions</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4015254">Zoomable Area</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/area-gradient.html">Zoomable Area Chart</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/2374239">Zoomable Geography</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/1005873">Zoomable Icicle</a></li>
+		<li><a href="http://tributary.io/inlet/5095947">Zoomable map</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111116/pack-hierarchy.html">Zoomable Pack Layout</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/partition.html">Zoomable Partition Layout</a></li>
+		<li><a href="http://bl.ocks.org/mbostock/4348373">Zoomable Sunburst</a></li>
+		<li><a href="http://mbostock.github.com/d3/talk/20111018/treemap.html">Zoomable Treemap</a></li>
+		<li><a href="http://www.zoomdata.com/">Zoomdata</a></li>
+		<li><a href="http://bl.ocks.org/timelyportfolio/5149102">ZUI in D3.js</a></li>
+	</ol>
+</div>
 </body>
 </html>
