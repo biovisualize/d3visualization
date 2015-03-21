@@ -140,8 +140,8 @@ li a:hover {
             box-shadow: 0px 5px 18px 0px rgba(5,5,5,0.7); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
 }
 .about-box a:visited {
-    opacity: 0.6;
-}
+    opacity: 0.6
+};
 .about-content{
     padding-top: 20px;
     background-color: none;
